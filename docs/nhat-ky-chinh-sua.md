@@ -275,3 +275,22 @@ https://docs.github.com/en/repositories/working-with-files/managing-large-files/
 Giới hạn: chưa ghi nhận hoàn tất push tại thời điểm thêm mục này; sẽ bổ sung
 kết quả sau khi GitHub nhận commit. Không sửa app/database, không chạy lại
 kiểm thử nghiệp vụ; các việc Spark/import/Word/PPT theo task vẫn còn chờ.
+
+
+### Kết quả push GitHub ngày 14/10/2026
+
+- Đã push thành công commit đầu `a97a41b` lên `origin/main` tại
+  https://github.com/LeDongPhuoc/BigData. Git báo nhánh `main` đã theo dõi
+  `origin/main`, tạo nhánh remote thành công và trả exit code 0.
+- GitHub nhận đầy đủ CSV raw. Server cảnh báo file 98,33 MiB vượt mức khuyến
+  nghị 50 MiB; đây là cảnh báo, không phải lỗi từ chối push. Chưa dùng Git LFS.
+- Source, seed/migration, CSV, tài liệu và hướng dẫn cài lại đã được chia sẻ;
+  môi trường Python/node_modules/.env/backup/volume database không được push.
+  Các dữ liệu trên máy vẫn giữ nguyên.
+- Bổ sung mục kết quả này bằng append, kiểm tra prefix lịch sử, rồi commit/push
+  riêng phần nhật ký. Bước xác nhận cuối đối chiếu hash nhánh remote với HEAD
+  và kiểm tra working tree sạch; bằng chứng lưu local trong
+  `dist/share/github-push-2026-10-14.json`.
+
+Không thay đổi nghiệp vụ hoặc dữ liệu database; không chạy lại kiểm thử app.
+Chưa thử clone/cài trên máy khác, chưa chuyển database phát sinh hiện tại.
