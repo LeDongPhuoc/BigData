@@ -1,0 +1,1194 @@
+{
+  "client_date": "2026-10-12",
+  "observed_at_utc": "2026-10-12T03:14:15.969Z",
+  "observed_at_asia_saigon": "2026-10-12T10:14:15.969000+07:00",
+  "database": "job_referral",
+  "engine": "ArangoDB",
+  "version": "3.12.12",
+  "scope": "Non-system collections only; read-only transaction. Counts may change after this snapshot.",
+  "collections": [
+    {
+      "collection": "applications",
+      "type": "document",
+      "count": 1,
+      "matching_seed_ids": 1,
+      "other_ids": 0
+    },
+    {
+      "collection": "audit_logs",
+      "type": "document",
+      "count": 11,
+      "matching_seed_ids": 7,
+      "other_ids": 4
+    },
+    {
+      "collection": "auth_credentials",
+      "type": "document",
+      "count": 1,
+      "matching_seed_ids": 0,
+      "other_ids": 1
+    },
+    {
+      "collection": "auth_families",
+      "type": "document",
+      "count": 1,
+      "matching_seed_ids": 0,
+      "other_ids": 1
+    },
+    {
+      "collection": "auth_sessions",
+      "type": "document",
+      "count": 5,
+      "matching_seed_ids": 0,
+      "other_ids": 5
+    },
+    {
+      "collection": "companies",
+      "type": "document",
+      "count": 6,
+      "matching_seed_ids": 3,
+      "other_ids": 3
+    },
+    {
+      "collection": "connection_controls",
+      "type": "document",
+      "count": 0,
+      "matching_seed_ids": 0,
+      "other_ids": 0
+    },
+    {
+      "collection": "connections",
+      "type": "edge",
+      "count": 18,
+      "matching_seed_ids": 18,
+      "other_ids": 0
+    },
+    {
+      "collection": "has_skill",
+      "type": "edge",
+      "count": 6,
+      "matching_seed_ids": 4,
+      "other_ids": 2
+    },
+    {
+      "collection": "idempotency_records",
+      "type": "document",
+      "count": 0,
+      "matching_seed_ids": 0,
+      "other_ids": 0
+    },
+    {
+      "collection": "job_at_company",
+      "type": "edge",
+      "count": 35,
+      "matching_seed_ids": 6,
+      "other_ids": 29
+    },
+    {
+      "collection": "job_requires_skill",
+      "type": "edge",
+      "count": 103,
+      "matching_seed_ids": 7,
+      "other_ids": 96
+    },
+    {
+      "collection": "jobs",
+      "type": "document",
+      "count": 35,
+      "matching_seed_ids": 6,
+      "other_ids": 29
+    },
+    {
+      "collection": "migration_locks",
+      "type": "document",
+      "count": 0,
+      "matching_seed_ids": 0,
+      "other_ids": 0
+    },
+    {
+      "collection": "notifications",
+      "type": "document",
+      "count": 7,
+      "matching_seed_ids": 7,
+      "other_ids": 0
+    },
+    {
+      "collection": "rate_limits",
+      "type": "document",
+      "count": 15,
+      "matching_seed_ids": 0,
+      "other_ids": 15
+    },
+    {
+      "collection": "referral_requests",
+      "type": "document",
+      "count": 7,
+      "matching_seed_ids": 7,
+      "other_ids": 0
+    },
+    {
+      "collection": "schema_migrations",
+      "type": "document",
+      "count": 5,
+      "matching_seed_ids": 0,
+      "other_ids": 5
+    },
+    {
+      "collection": "skills",
+      "type": "document",
+      "count": 28,
+      "matching_seed_ids": 4,
+      "other_ids": 24
+    },
+    {
+      "collection": "users",
+      "type": "document",
+      "count": 25,
+      "matching_seed_ids": 24,
+      "other_ids": 1
+    },
+    {
+      "collection": "works_at",
+      "type": "edge",
+      "count": 12,
+      "matching_seed_ids": 12,
+      "other_ids": 0
+    }
+  ],
+  "total_records": 321,
+  "edge_records": 174,
+  "document_records": 147,
+  "matching_seed_records": 106,
+  "other_records": 215,
+  "statuses": {
+    "users": [
+      {
+        "value": "active",
+        "count": 24
+      },
+      {
+        "value": "suspended",
+        "count": 1
+      }
+    ],
+    "companies": [
+      {
+        "value": "active",
+        "count": 3
+      },
+      {
+        "value": "archived",
+        "count": 3
+      }
+    ],
+    "jobs": [
+      {
+        "value": "archived",
+        "count": 6
+      },
+      {
+        "value": "open",
+        "count": 29
+      }
+    ],
+    "skills": [
+      {
+        "value": "active",
+        "count": 28
+      }
+    ],
+    "connections": [
+      {
+        "value": "accepted",
+        "count": 15
+      },
+      {
+        "value": "blocked",
+        "count": 1
+      },
+      {
+        "value": "pending",
+        "count": 1
+      },
+      {
+        "value": "rejected",
+        "count": 1
+      }
+    ],
+    "works_at": [
+      {
+        "value": "current",
+        "count": 11
+      },
+      {
+        "value": "ended",
+        "count": 1
+      }
+    ],
+    "applications": [
+      {
+        "value": "submitted",
+        "count": 1
+      }
+    ],
+    "referral_requests": [
+      {
+        "value": "accepted",
+        "count": 1
+      },
+      {
+        "value": "cancelled",
+        "count": 1
+      },
+      {
+        "value": "completed",
+        "count": 1
+      },
+      {
+        "value": "expired",
+        "count": 1
+      },
+      {
+        "value": "pending",
+        "count": 1
+      },
+      {
+        "value": "rejected",
+        "count": 1
+      },
+      {
+        "value": "submitted",
+        "count": 1
+      }
+    ],
+    "auth_sessions": [
+      {
+        "value": "active",
+        "count": 1
+      },
+      {
+        "value": "used",
+        "count": 4
+      }
+    ]
+  },
+  "user_roles": [
+    {
+      "value": "candidate",
+      "count": 25
+    },
+    {
+      "value": "referrer",
+      "count": 24
+    }
+  ],
+  "privacy": {
+    "discoverable": [
+      {
+        "value": false,
+        "count": 1
+      },
+      {
+        "value": true,
+        "count": 24
+      }
+    ],
+    "allow_in_paths": [
+      {
+        "value": false,
+        "count": 1
+      },
+      {
+        "value": true,
+        "count": 24
+      }
+    ],
+    "employment_visible": [
+      {
+        "value": false,
+        "count": 1
+      },
+      {
+        "value": true,
+        "count": 24
+      }
+    ],
+    "skills_visible": [
+      {
+        "value": true,
+        "count": 25
+      }
+    ]
+  },
+  "accounts_with_credentials": [
+    {
+      "value": false,
+      "count": 24
+    },
+    {
+      "value": true,
+      "count": 1
+    }
+  ],
+  "seed_accounts_with_credentials": 0,
+  "notifications": [
+    {
+      "read": false,
+      "count": 7
+    }
+  ],
+  "auth_families": [
+    {
+      "revoked": false,
+      "expired": false,
+      "count": 1
+    }
+  ],
+  "refresh_records_by_lifecycle": [
+    {
+      "status": "active",
+      "expired": false,
+      "count": 1
+    },
+    {
+      "status": "used",
+      "expired": false,
+      "count": 4
+    }
+  ],
+  "rate_limits": [
+    {
+      "operation": "login",
+      "windows": 10,
+      "requests": 10
+    },
+    {
+      "operation": "refresh",
+      "windows": 4,
+      "requests": 4
+    },
+    {
+      "operation": "register",
+      "windows": 1,
+      "requests": 1
+    }
+  ],
+  "idempotency": [],
+  "audit_actions": [
+    {
+      "value": "auth.register",
+      "count": 1
+    },
+    {
+      "value": "demo.referral.seed",
+      "count": 7
+    },
+    {
+      "value": "user.profile",
+      "count": 1
+    },
+    {
+      "value": "user.skill",
+      "count": 2
+    }
+  ],
+  "employment": [
+    {
+      "status": "current",
+      "verified": false,
+      "count": 1
+    },
+    {
+      "status": "current",
+      "verified": true,
+      "count": 10
+    },
+    {
+      "status": "ended",
+      "verified": true,
+      "count": 1
+    }
+  ],
+  "skill_links": [
+    {
+      "verified": false,
+      "count": 6
+    }
+  ],
+  "job_skill_links": [
+    {
+      "value": "preferred",
+      "count": 97
+    },
+    {
+      "value": "required",
+      "count": 6
+    }
+  ],
+  "connections_soft_deleted": [
+    {
+      "deleted": false,
+      "count": 18
+    }
+  ],
+  "company_details": [
+    {
+      "id": "public_bosch_group",
+      "name": "Bosch Group",
+      "status": "active",
+      "jobs": [
+        {
+          "status": "open",
+          "count": 12
+        }
+      ],
+      "employment": [],
+      "members": 0,
+      "verified_members": 0
+    },
+    {
+      "id": "demo_x",
+      "name": "Công ty kiểm thử X",
+      "status": "archived",
+      "jobs": [
+        {
+          "status": "archived",
+          "count": 3
+        }
+      ],
+      "employment": [
+        {
+          "status": "current",
+          "verified": false,
+          "count": 1
+        },
+        {
+          "status": "current",
+          "verified": true,
+          "count": 9
+        },
+        {
+          "status": "ended",
+          "verified": true,
+          "count": 1
+        }
+      ],
+      "members": 1,
+      "verified_members": 1
+    },
+    {
+      "id": "demo_y",
+      "name": "Công ty kiểm thử Y",
+      "status": "archived",
+      "jobs": [
+        {
+          "status": "archived",
+          "count": 2
+        }
+      ],
+      "employment": [
+        {
+          "status": "current",
+          "verified": true,
+          "count": 1
+        }
+      ],
+      "members": 0,
+      "verified_members": 0
+    },
+    {
+      "id": "demo_z",
+      "name": "Công ty kiểm thử Z",
+      "status": "archived",
+      "jobs": [
+        {
+          "status": "archived",
+          "count": 1
+        }
+      ],
+      "employment": [],
+      "members": 0,
+      "verified_members": 0
+    },
+    {
+      "id": "public_grab",
+      "name": "Grab",
+      "status": "active",
+      "jobs": [
+        {
+          "status": "open",
+          "count": 12
+        }
+      ],
+      "employment": [],
+      "members": 0,
+      "verified_members": 0
+    },
+    {
+      "id": "public_kms_technology",
+      "name": "KMS Technology",
+      "status": "active",
+      "jobs": [
+        {
+          "status": "open",
+          "count": 5
+        }
+      ],
+      "employment": [],
+      "members": 0,
+      "verified_members": 0
+    }
+  ],
+  "job_details": [
+    {
+      "id": "demo_backend",
+      "title": "Vị trí kiểm thử: Backend Developer",
+      "status": "archived",
+      "company": "Công ty kiểm thử X",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "mid",
+      "required_skill_links": 3
+    },
+    {
+      "id": "demo_closed",
+      "title": "Vị trí kiểm thử: Closed Backend",
+      "status": "archived",
+      "company": "Công ty kiểm thử X",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "mid",
+      "required_skill_links": 1
+    },
+    {
+      "id": "demo_frontend",
+      "title": "Vị trí kiểm thử: Frontend Developer",
+      "status": "archived",
+      "company": "Công ty kiểm thử X",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "mid",
+      "required_skill_links": 1
+    },
+    {
+      "id": "demo_isolated",
+      "title": "Vị trí kiểm thử: Isolated Python",
+      "status": "archived",
+      "company": "Công ty kiểm thử Z",
+      "location": "hcm",
+      "work_mode": "remote",
+      "level": "mid",
+      "required_skill_links": 1
+    },
+    {
+      "id": "demo_no_requirements",
+      "title": "Vị trí kiểm thử: General Role",
+      "status": "archived",
+      "company": "Công ty kiểm thử Y",
+      "location": "hcm",
+      "work_mode": "remote",
+      "level": "mid",
+      "required_skill_links": 0
+    },
+    {
+      "id": "demo_remote",
+      "title": "Vị trí kiểm thử: Remote Python",
+      "status": "archived",
+      "company": "Công ty kiểm thử Y",
+      "location": "hcm",
+      "work_mode": "remote",
+      "level": "mid",
+      "required_skill_links": 1
+    },
+    {
+      "id": "public_bosch_group_744000154052649",
+      "title": "[ETA] Fresher Embedded Software Engineer (C focused)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "required_skill_links": 0
+    },
+    {
+      "id": "public_bosch_group_744000154236871",
+      "title": "[BDO] Software Developer Intern (.NET & Angular)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "required_skill_links": 6
+    },
+    {
+      "id": "public_bosch_group_744000154302375",
+      "title": "[EPM] Software Integration & DevOps Engineer - Azure Cloud Engineer",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "unspecified",
+      "required_skill_links": 3
+    },
+    {
+      "id": "public_bosch_group_744000154344130",
+      "title": "[SX/EIT-MM] Embedded C++ Engineer (1-year contract)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "unspecified",
+      "required_skill_links": 2
+    },
+    {
+      "id": "public_bosch_group_744000154350000",
+      "title": "[SX/EIT-MM] Component & System Test Engineer (1-year contract)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "Tân Bình",
+      "work_mode": "unspecified",
+      "level": "unspecified",
+      "required_skill_links": 2
+    },
+    {
+      "id": "public_bosch_group_744000154369750",
+      "title": "[EDT] Senior System Test Engineer/Test Function Lead",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "required_skill_links": 3
+    },
+    {
+      "id": "public_bosch_group_744000154384809",
+      "title": "[EAA] Embedded Software Test Engineer Intern (C/C++)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "required_skill_links": 1
+    },
+    {
+      "id": "public_bosch_group_744000154575390",
+      "title": "[EPC]  Embedded Software Engineer _ In-Vehicle Network Communication for EU Project (Fresher)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "required_skill_links": 0
+    },
+    {
+      "id": "public_bosch_group_744000154583399",
+      "title": "[EMN] Electrical Design Engineer Intern (6-month fulltime Internship)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "required_skill_links": 0
+    },
+    {
+      "id": "public_bosch_group_744000154623580",
+      "title": "[EAE] Automotive Embedded System Architect (with Joining Bonus)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "required_skill_links": 0
+    },
+    {
+      "id": "public_bosch_group_744000154641689",
+      "title": "[EPM] SiL/HiL Embedded Engineer (C++) (Joining Bonus)",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "unspecified",
+      "required_skill_links": 4
+    },
+    {
+      "id": "public_bosch_group_744000154648424",
+      "title": "Automotive Embedded Software Engineer / Software Architect / Solution Architect",
+      "status": "open",
+      "company": "Bosch Group",
+      "location": "hanoi",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "required_skill_links": 1
+    },
+    {
+      "id": "public_grab_744000150018969",
+      "title": "Senior Software Engineer, Fullstack",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 8
+    },
+    {
+      "id": "public_grab_744000150349040",
+      "title": "Senior DevOps Engineer, Streaming Platform",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 6
+    },
+    {
+      "id": "public_grab_744000150666319",
+      "title": "Lead Product Manager, Data Platform",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "required_skill_links": 4
+    },
+    {
+      "id": "public_grab_744000150981069",
+      "title": "Senior Software Engineer, Mobile (iOS)",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 2
+    },
+    {
+      "id": "public_grab_744000151320451",
+      "title": "Senior Software Engineer, Backend",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 5
+    },
+    {
+      "id": "public_grab_744000153089529",
+      "title": "Senior Software Engineer in Test",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 2
+    },
+    {
+      "id": "public_grab_744000153410339",
+      "title": "Senior Software Engineer, Customer Data Platform",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 3
+    },
+    {
+      "id": "public_grab_744000153691564",
+      "title": "Senior Software Engineer, Backend",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 6
+    },
+    {
+      "id": "public_grab_744000153692519",
+      "title": "Senior Software Engineer, Backend",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 6
+    },
+    {
+      "id": "public_grab_744000154004729",
+      "title": "Lead Security Engineer, Red Team & Threat Intel",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "required_skill_links": 1
+    },
+    {
+      "id": "public_grab_744000154310252",
+      "title": "Senior Software Engineer, Backend",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 6
+    },
+    {
+      "id": "public_grab_744000154310950",
+      "title": "Senior Software Engineer, Backend - Agent Exprience",
+      "status": "open",
+      "company": "Grab",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "required_skill_links": 6
+    },
+    {
+      "id": "public_kms_technology_744000152103869",
+      "title": "Senior Full-stack Software Engineer (Node.js/ TypeScript)",
+      "status": "open",
+      "company": "KMS Technology",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "senior",
+      "required_skill_links": 8
+    },
+    {
+      "id": "public_kms_technology_744000154586668",
+      "title": "Test Engineer (Manual/QA/QC)",
+      "status": "open",
+      "company": "KMS Technology",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "unspecified",
+      "required_skill_links": 2
+    },
+    {
+      "id": "public_kms_technology_744000154588848",
+      "title": "Test Engineer (Manual/QA/QC), based in Da Nang",
+      "status": "open",
+      "company": "KMS Technology",
+      "location": "da nang",
+      "work_mode": "hybrid",
+      "level": "unspecified",
+      "required_skill_links": 2
+    },
+    {
+      "id": "public_kms_technology_744000154600800",
+      "title": "Senior Test Engineer (Manual/ QA/ QC)",
+      "status": "open",
+      "company": "KMS Technology",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "senior",
+      "required_skill_links": 2
+    },
+    {
+      "id": "public_kms_technology_744000154652029",
+      "title": "Fresher Full-stack Test Engineer (QA/QC/Tester)",
+      "status": "open",
+      "company": "KMS Technology",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "junior",
+      "required_skill_links": 5
+    }
+  ],
+  "skill_details": [
+    {
+      "name": ".NET",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 1
+    },
+    {
+      "name": "Angular",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 1
+    },
+    {
+      "name": "ArangoDB",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 1
+    },
+    {
+      "name": "AWS",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 8
+    },
+    {
+      "name": "C#",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 3
+    },
+    {
+      "name": "C++",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 8
+    },
+    {
+      "name": "Docker",
+      "status": "active",
+      "user_links": 1,
+      "job_links": 4
+    },
+    {
+      "name": "Git",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 7
+    },
+    {
+      "name": "Go",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 7
+    },
+    {
+      "name": "Google Cloud",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 6
+    },
+    {
+      "name": "Java",
+      "status": "active",
+      "user_links": 1,
+      "job_links": 4
+    },
+    {
+      "name": "JavaScript",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 2
+    },
+    {
+      "name": "Kubernetes",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 4
+    },
+    {
+      "name": "Linux",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 3
+    },
+    {
+      "name": "Microsoft Azure",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 3
+    },
+    {
+      "name": "MongoDB",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 0
+    },
+    {
+      "name": "MySQL",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 3
+    },
+    {
+      "name": "Next.js",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 1
+    },
+    {
+      "name": "Node.js",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 4
+    },
+    {
+      "name": "Playwright",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 2
+    },
+    {
+      "name": "PostgreSQL",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 3
+    },
+    {
+      "name": "Python",
+      "status": "active",
+      "user_links": 2,
+      "job_links": 13
+    },
+    {
+      "name": "React",
+      "status": "active",
+      "user_links": 1,
+      "job_links": 2
+    },
+    {
+      "name": "Redis",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 0
+    },
+    {
+      "name": "Selenium",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 4
+    },
+    {
+      "name": "SQL",
+      "status": "active",
+      "user_links": 1,
+      "job_links": 6
+    },
+    {
+      "name": "TypeScript",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 2
+    },
+    {
+      "name": "Vue.js",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 1
+    }
+  ],
+  "graph_connection_coverage": {
+    "users_with_accepted_connections": 15,
+    "users_without_accepted_connections": 10,
+    "highest_degree": 10,
+    "scope": "Stored accepted/nondeleted edges, before actor privacy/block/status filters"
+  },
+  "employment_dates": [
+    {
+      "status": "current",
+      "verified": false,
+      "started": true,
+      "not_ended": true,
+      "count": 1
+    },
+    {
+      "status": "current",
+      "verified": true,
+      "started": false,
+      "not_ended": true,
+      "count": 1
+    },
+    {
+      "status": "current",
+      "verified": true,
+      "started": true,
+      "not_ended": false,
+      "count": 1
+    },
+    {
+      "status": "current",
+      "verified": true,
+      "started": true,
+      "not_ended": true,
+      "count": 8
+    },
+    {
+      "status": "ended",
+      "verified": true,
+      "started": true,
+      "not_ended": false,
+      "count": 1
+    }
+  ],
+  "registered_account_activity": {
+    "users": 1,
+    "connections": 0,
+    "skill_links": 2,
+    "employment_links": 0,
+    "referral_participations": 0
+  },
+  "migrations": [
+    {
+      "version": 1,
+      "status": "applied"
+    },
+    {
+      "version": 2,
+      "status": "applied"
+    },
+    {
+      "version": 3,
+      "status": "applied"
+    },
+    {
+      "version": 4,
+      "status": "applied"
+    },
+    {
+      "version": 5,
+      "status": "applied"
+    }
+  ],
+  "integrity_issues": [],
+  "graphs": [
+    {
+      "name": "jobReferralGraph",
+      "edge_definitions": [
+        {
+          "edge_collection": "connections",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "users"
+          ]
+        },
+        {
+          "edge_collection": "has_skill",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "skills"
+          ]
+        },
+        {
+          "edge_collection": "job_at_company",
+          "from_vertex_collections": [
+            "jobs"
+          ],
+          "to_vertex_collections": [
+            "companies"
+          ]
+        },
+        {
+          "edge_collection": "job_requires_skill",
+          "from_vertex_collections": [
+            "jobs"
+          ],
+          "to_vertex_collections": [
+            "skills"
+          ]
+        },
+        {
+          "edge_collection": "works_at",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "companies"
+          ]
+        }
+      ]
+    }
+  ],
+  "indexes": {
+    "total": 58,
+    "custom": 32
+  },
+  "disposable_test_databases_remaining": 0
+}

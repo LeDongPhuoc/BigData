@@ -1,0 +1,96 @@
+name: job-referral
+services:
+  frontend:
+    build: ./frontend
+    profiles: ["web"]
+    ports:
+      - "127.0.0.1:5173:8080"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m"]
+    pids_limit: 64
+    mem_limit: 128m
+    cpus: 0.5
+    networks:
+      proxy:
+        ipv4_address: ${JRN_PROXY_IP:-172.31.254.2}
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:8080/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
+  backend:
+    build: .
+    profiles: ["api", "web"]
+    environment:
+      ARANGO_URL: http://arangodb:8529
+      ARANGO_DATABASE: ${ARANGO_DATABASE:-job_referral}
+      ARANGO_USERNAME: ${APP_ARANGO_USERNAME:-jrn_api}
+      ARANGO_PASSWORD: ${APP_ARANGO_PASSWORD:-}
+      APP_JWT_SECRET: ${APP_JWT_SECRET:-}
+      APP_CORS_ORIGINS: ${APP_CORS_ORIGINS:-http://localhost:5173}
+      VIETJOBS_RAW_PATH: /data/vietjobs/VietJobs.csv
+    volumes:
+      - ./DATA_/vietjobs-network/data/raw/vietjobs/VietJobs.csv:/data/vietjobs/VietJobs.csv:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      arangodb:
+        condition: service_healthy
+    restart: unless-stopped
+    command: ["uvicorn", "backend.app:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000", "--no-access-log", "--proxy-headers", "--forwarded-allow-ips", "${JRN_PROXY_IP:-172.31.254.2}"]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m"]
+    pids_limit: 128
+    mem_limit: 512m
+    cpus: 1.0
+    networks:
+      default: {}
+      proxy:
+        ipv4_address: ${JRN_API_PROXY_IP:-172.31.254.3}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 15s
+  arangodb:
+    image: arangodb:3.12.12
+    environment:
+      ARANGO_ROOT_PASSWORD: ${ARANGO_PASSWORD:?Set ARANGO_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:8529:8529"
+    volumes:
+      - arango_data:/var/lib/arangodb3
+      - arango_apps:/var/lib/arangodb3-apps
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=128m"]
+    pids_limit: 512
+    mem_limit: 4g
+    cpus: 2.0
+    command: ["arangod", "--query.memory-limit", "67108864", "--query.global-memory-limit", "268435456", "--query.max-runtime", "5"]
+    healthcheck:
+      test: ["CMD-SHELL", "arangosh --server.endpoint tcp://127.0.0.1:8529 --server.username root --server.password \"$$ARANGO_ROOT_PASSWORD\" --javascript.execute-string 'db._version()' >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+volumes:
+  arango_data:
+  arango_apps:
+networks:
+  proxy:
+    ipam:
+      config:
+        - subnet: ${JRN_PROXY_SUBNET:-172.31.254.0/29}

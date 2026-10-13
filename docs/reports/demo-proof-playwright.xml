@@ -1,0 +1,8 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="38.118379">
+<testsuite name="features.spec.ts" timestamp="2026-10-12T03:24:28.460Z" hostname="" tests="2" failures="0" skipped="0" time="34.826" errors="0">
+<testcase name="tin công khai có nguồn, trường chưa chuẩn hóa và không giả quan hệ nhân viên" classname="features.spec.ts" time="7.644">
+</testcase>
+<testcase name="đăng ký → kỹ năng → kết nối → đường giới thiệu → gửi lại sau mất phản hồi → hoàn tất" classname="features.spec.ts" time="27.182">
+</testcase>
+</testsuite>
+</testsuites>

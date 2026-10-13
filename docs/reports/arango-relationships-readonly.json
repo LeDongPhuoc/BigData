@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-10-12T03:53:40.324Z",
+  "read_only": true,
+  "query_outputs": [
+    [
+      {
+        "users": 26,
+        "companies": 6,
+        "jobs": 35,
+        "skills": 28,
+        "connections": 18,
+        "works_at": 12,
+        "has_skill": 6,
+        "job_at_company": 35,
+        "job_requires_skill": 103
+      }
+    ],
+    [
+      {
+        "job_id": "jobs/public_bosch_group_744000154236871",
+        "title": "[BDO] Software Developer Intern (.NET & Angular)",
+        "employer": {
+          "edge_id": "job_at_company/public_bosch_group_744000154236871_company",
+          "company_id": "companies/public_bosch_group",
+          "name": "Bosch Group"
+        },
+        "listed_skills": [
+          {
+            "edge_id": "job_requires_skill/public_bosch_group_744000154236871_sql",
+            "skill_id": "skills/demo_sql",
+            "name": "SQL"
+          },
+          {
+            "edge_id": "job_requires_skill/public_bosch_group_744000154236871_typescript",
+            "skill_id": "skills/public_skill_typescript",
+            "name": "TypeScript"
+          },
+          {
+            "edge_id": "job_requires_skill/public_bosch_group_744000154236871_csharp",
+            "skill_id": "skills/public_skill_csharp",
+            "name": "C#"
+          },
+          {
+            "edge_id": "job_requires_skill/public_bosch_group_744000154236871_dotnet",
+            "skill_id": "skills/public_skill_dotnet",
+            "name": ".NET"
+          },
+          {
+            "edge_id": "job_requires_skill/public_bosch_group_744000154236871_angular",
+            "skill_id": "skills/public_skill_angular",
+            "name": "Angular"
+          },
+          {
+            "edge_id": "job_requires_skill/public_bosch_group_744000154236871_git",
+            "skill_id": "skills/public_skill_git",
+            "name": "Git"
+          }
+        ],
+        "source": {
+          "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154236871--bdo-software-developer-intern-net-angular-",
+          "publisher": "Bosch Group",
+          "external_id": "744000154236871",
+          "retrieved_at": "2026-10-12T02:37:38.410Z",
+          "notes": [
+            "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+            "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+            "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+            "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+          ]
+        }
+      }
+    ]
+  ]
+}

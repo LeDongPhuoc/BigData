@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-14",
+  "scope": "workspace regular files; does not follow symlinks/junctions; logical byte sizes",
+  "total_bytes": 1055218362,
+  "total_MiB": 1006.33,
+  "file_count": 24927,
+  "scan_seconds": 0.99,
+  "errors": [],
+  "top_level_bytes": {
+    ".audit-venv": 451821175,
+    ".venv": 266315957,
+    "frontend": 208043437,
+    "DATA_": 103114184,
+    "docs": 22005490,
+    "backups": 1369994,
+    "docker": 819151
+  },
+  "node_modules_bytes": 206465091,
+  "largest_non_runtime_archives": [
+    {
+      "path": ".audit-venv/arango-image.tar",
+      "bytes": 276346368,
+      "MiB": 263.54
+    },
+    {
+      "path": ".audit-venv/backend-image.tar",
+      "bytes": 68184064,
+      "MiB": 65.03
+    },
+    {
+      "path": ".audit-venv/frontend-patched-image.tar",
+      "bytes": 35188736,
+      "MiB": 33.56
+    },
+    {
+      "path": ".audit-venv/frontend-image.tar",
+      "bytes": 26253824,
+      "MiB": 25.04
+    }
+  ],
+  "archives_total_MiB": 387.17,
+  "environments_and_node_modules_share_percent": 87.62,
+  "without_environments_and_node_modules_MiB": 124.57,
+  "raw_csv": {
+    "path": "DATA_/vietjobs-network/data/raw/vietjobs/VietJobs.csv",
+    "bytes": 103110903,
+    "MiB": 98.33,
+    "retain": true
+  },
+  "skipped_junction": {
+    "path": "DATA_/vietjobs-network/.venv",
+    "target": "D:/vietjobs_env",
+    "reason": "outside workspace; not counted or modified"
+  },
+  "notes": [
+    "Image archives are not referenced by current source/Compose in the checked project files.",
+    "numpy/matplotlib/pymupdf support report generation/validation.",
+    "No files deleted; data, seeds, database volumes and dependencies preserved."
+  ]
+}

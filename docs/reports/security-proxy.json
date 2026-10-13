@@ -1,0 +1,14 @@
+{
+  "http": [
+    {
+      "port": 8000,
+      "status": 401
+    },
+    {
+      "port": 5173,
+      "status": 401
+    }
+  ],
+  "forged_forwarded_ips_not_used": true,
+  "proxy_ip_not_used_as_client_bucket": true
+}

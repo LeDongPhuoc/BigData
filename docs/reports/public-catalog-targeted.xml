@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="11" time="43.597" timestamp="2026-10-12T09:49:49.427505+07:00" hostname="WIN-OI2LL1MLO2V"><testcase classname="tests.backend.test_public_catalog" name="test_optional_provenance_migration_preserves_existing_data" time="2.903" /><testcase classname="tests.backend.test_public_catalog" name="test_public_import_is_idempotent_and_preserves_personal_auth_and_history" time="11.329" /><testcase classname="tests.backend.test_public_catalog" name="test_import_conflict_rolls_back_every_collection" time="3.231" /><testcase classname="tests.backend.test_public_catalog" name="test_import_rejects_edge_identity_collision_without_partial_writes" time="3.756" /><testcase classname="tests.backend.test_public_catalog" name="test_invalid_catalog_is_rejected_before_database_mutation[missing_company]" time="2.187" /><testcase classname="tests.backend.test_public_catalog" name="test_invalid_catalog_is_rejected_before_database_mutation[source_host]" time="2.092" /><testcase classname="tests.backend.test_public_catalog" name="test_invalid_catalog_is_rejected_before_database_mutation[source_identity]" time="1.870" /><testcase classname="tests.backend.test_public_catalog" name="test_invalid_catalog_is_rejected_before_database_mutation[duplicate_job]" time="2.366" /><testcase classname="tests.backend.test_public_catalog" name="test_public_api_exposes_sources_unknown_fields_and_enforces_ownership" time="6.182" /><testcase classname="tests.backend.test_public_catalog" name="test_clients_cannot_forge_public_provenance" time="2.164" /><testcase classname="tests.backend.test_public_catalog" name="test_authorized_job_edit_clears_external_attribution" time="5.288"><failure message="assert 403 == 200&#10; +  where 403 = &lt;Response [403 Forbidden]&gt;.status_code">db = &lt;StandardDatabase jrn_test_b01de837930f4d2884c5fceb81902114&gt;
+client = &lt;starlette.testclient.TestClient object at 0x000002C05EA98220&gt;
+login = &lt;function login.&lt;locals&gt;.authenticate at 0x000002C05EA7CEE0&gt;
+
+    def test_authorized_job_edit_clears_external_attribution(db, client, login):
+        catalog = load_catalog()
+        import_catalog(db, catalog)
+        headers = login("demo_l", admin=True)
+        job = catalog.jobs[0]
+        record = db.collection("jobs").get(job.id)
+        payload = job.model_dump(exclude={"id", "company_id", "skill_slugs", "published_at", "source"})
+        payload["title"] = "Locally edited position"
+        response = client.patch(
+            "/api/v1/jobs/" + job.id, headers={**headers, "If-Match": record["_rev"]}, json=payload
+        )
+&gt;       assert response.status_code == 200
+E       assert 403 == 200
+E        +  where 403 = &lt;Response [403 Forbidden]&gt;.status_code
+
+tests\backend\test_public_catalog.py:183: AssertionError</failure></testcase></testsuite></testsuites>

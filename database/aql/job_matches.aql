@@ -1,0 +1,12 @@
+// @include actor.aql
+// @include matching_rows.aql
+  SORT score DESC, job.published_at DESC, job._id ASC
+  LIMIT @offset, @limit
+  RETURN { job: { id: job._id, title: job.title, company_id: employer,
+                 location: job.location, work_mode: job.work_mode, level: job.level,
+                 salary_min: job.salary_min, salary_max: job.salary_max, source: job.source },
+           score, eligible,
+           explanation: { components: { skill: skill_score, experience: experience_score,
+                                        location: location_score, level: level_score, work_mode: work_score },
+                          weights: @weights, required_ratio, preferred_ratio, missing_required: missing,
+                          requirements, salary_overlap, salary_known } }

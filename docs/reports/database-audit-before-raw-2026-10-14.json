@@ -1,0 +1,235 @@
+{
+  "checked_at": "2026-10-13T17:11:37.446218+00:00",
+  "database": "job_referral",
+  "collections": [
+    {
+      "name": "applications",
+      "type": "document",
+      "count": 1,
+      "seed_count": 1
+    },
+    {
+      "name": "audit_logs",
+      "type": "document",
+      "count": 20,
+      "seed_count": 7
+    },
+    {
+      "name": "auth_credentials",
+      "type": "document",
+      "count": 3,
+      "seed_count": 0
+    },
+    {
+      "name": "auth_families",
+      "type": "document",
+      "count": 6,
+      "seed_count": 0
+    },
+    {
+      "name": "auth_sessions",
+      "type": "document",
+      "count": 6,
+      "seed_count": 0
+    },
+    {
+      "name": "companies",
+      "type": "document",
+      "count": 3,
+      "seed_count": 3
+    },
+    {
+      "name": "connection_controls",
+      "type": "document",
+      "count": 0,
+      "seed_count": 0
+    },
+    {
+      "name": "connections",
+      "type": "edge",
+      "count": 18,
+      "seed_count": 18
+    },
+    {
+      "name": "has_skill",
+      "type": "edge",
+      "count": 7,
+      "seed_count": 4
+    },
+    {
+      "name": "idempotency_records",
+      "type": "document",
+      "count": 0,
+      "seed_count": 0
+    },
+    {
+      "name": "job_at_company",
+      "type": "edge",
+      "count": 6,
+      "seed_count": 6
+    },
+    {
+      "name": "job_requires_skill",
+      "type": "edge",
+      "count": 7,
+      "seed_count": 7
+    },
+    {
+      "name": "jobs",
+      "type": "document",
+      "count": 6,
+      "seed_count": 6
+    },
+    {
+      "name": "migration_locks",
+      "type": "document",
+      "count": 0,
+      "seed_count": 0
+    },
+    {
+      "name": "notifications",
+      "type": "document",
+      "count": 7,
+      "seed_count": 7
+    },
+    {
+      "name": "rate_limits",
+      "type": "document",
+      "count": 9,
+      "seed_count": 0
+    },
+    {
+      "name": "referral_requests",
+      "type": "document",
+      "count": 7,
+      "seed_count": 7
+    },
+    {
+      "name": "schema_migrations",
+      "type": "document",
+      "count": 5,
+      "seed_count": 0
+    },
+    {
+      "name": "skills",
+      "type": "document",
+      "count": 4,
+      "seed_count": 4
+    },
+    {
+      "name": "users",
+      "type": "document",
+      "count": 27,
+      "seed_count": 24
+    },
+    {
+      "name": "works_at",
+      "type": "edge",
+      "count": 12,
+      "seed_count": 12
+    }
+  ],
+  "graphs": [
+    {
+      "name": "jobReferralGraph",
+      "edges": [
+        {
+          "edge_collection": "connections",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "users"
+          ]
+        },
+        {
+          "edge_collection": "has_skill",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "skills"
+          ]
+        },
+        {
+          "edge_collection": "job_at_company",
+          "from_vertex_collections": [
+            "jobs"
+          ],
+          "to_vertex_collections": [
+            "companies"
+          ]
+        },
+        {
+          "edge_collection": "job_requires_skill",
+          "from_vertex_collections": [
+            "jobs"
+          ],
+          "to_vertex_collections": [
+            "skills"
+          ]
+        },
+        {
+          "edge_collection": "works_at",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "companies"
+          ]
+        }
+      ]
+    }
+  ],
+  "catalog": {
+    "total": 5,
+    "seed": 5,
+    "public": 0
+  },
+  "seed_fingerprints": {
+    "applications": "9601e647a996aac89114cd1e97a2fe6e62e4d9c205cb2475d309c9ae85563f4c",
+    "audit_logs": "ed4aabe502d783535ae5e6d3f1688cbf3f56dc35e4963b8d5425a8a973cc561d",
+    "companies": "c5145bbe6bc384d0d2c0dc4300fa3cb6e8b2c7ce36fcbc3e1e870822833caaee",
+    "connections": "c1612dcdad8d643eb1e887645135efe1bbccd9559de903a0a5547b40ee34c77c",
+    "has_skill": "57822f6e069025f022b5c711ac214be2c6589cb1da65de788fa258b017955b25",
+    "job_at_company": "3f39da8c65d4f513493a66e3b0977f8c9ef7668c89f5fcda930b4383a652ce1f",
+    "job_requires_skill": "50e0ef7ce4c94b35a6b721384d9307517201f76b6693f005eddea30e2dc57abe",
+    "jobs": "234c2bcefd5b308a74d751e8ff9f410917d46df7a05ef2af44baf500af654aea",
+    "notifications": "62ea1eda9c5e886ce48ef1b76918c80ae2b587717c43fb8bde094ac69a68d201",
+    "referral_requests": "23e60f6596e451a05505fda480ffbaf6b11adf45c38ebb62c4ad2e5e7a2dcc4b",
+    "skills": "946c774fa9a2ef7e931f6f7c7820b24edc9af9feda8d188f6235c0bcb36ce6dd",
+    "users": "1e816521a7420987c8a8027a92ca86d780ae84b88e5fd8e55e0d285c22077ff3",
+    "works_at": "5d0c71c431b2ec1d64e5a54653cc8b87ea62904331adefba105177f388b39538"
+  },
+  "sample_field_names": {
+    "jobs": [
+      "_key",
+      "_id",
+      "_rev",
+      "created_at",
+      "updated_at",
+      "title",
+      "description",
+      "status",
+      "location",
+      "work_mode",
+      "level",
+      "min_experience_years",
+      "salary_min",
+      "salary_max",
+      "salary_currency",
+      "published_at"
+    ],
+    "skills": [
+      "_key",
+      "_id",
+      "_rev",
+      "created_at",
+      "updated_at",
+      "name",
+      "normalized_name",
+      "category",
+      "status"
+    ]
+  }
+}

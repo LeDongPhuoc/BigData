@@ -1,0 +1,44 @@
+{
+  "name": "job-referral-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write src e2e *.ts *.json index.html",
+    "format:check": "prettier --check src e2e *.ts *.json index.html",
+    "test:e2e": "playwright test",
+    "preview": "vite preview --host 127.0.0.1",
+    "api:types": "openapi-typescript ../docs/api.openapi.json -o src/lib/api.generated.ts"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-router-dom": "7.18.4",
+    "@tanstack/react-query": "5.104.1",
+    "react-hook-form": "7.89.0",
+    "@hookform/resolvers": "5.9.1",
+    "zod": "4.6.5",
+    "@xyflow/react": "12.12.0",
+    "lucide-react": "1.55.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.4",
+    "@vitejs/plugin-react": "6.1.2",
+    "typescript": "5.9.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/node": "26.6.5",
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/vite": "4.3.3",
+    "@playwright/test": "1.64.0",
+    "@axe-core/playwright": "4.13.0",
+    "openapi-typescript": "7.13.0",
+    "prettier": "3.9.10"
+  }
+}

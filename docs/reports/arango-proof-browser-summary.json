@@ -1,0 +1,15 @@
+{
+  "database": "ArangoDB 3.12.12",
+  "real_http": true,
+  "non_root_runtime": true,
+  "mock_business_data": false,
+  "stats": {
+    "startTime": "2026-10-12T03:53:17.560Z",
+    "duration": 34008.266,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "exit_code": 0
+}

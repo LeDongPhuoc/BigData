@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="5" time="20.203" timestamp="2026-10-11T18:19:35.802531+07:00" hostname="WIN-OI2LL1MLO2V"><testcase classname="tests.backend.test_security_review" name="test_public_profile_does_not_disclose_private_salary_preferences" time="4.735"><failure message="assert 12345678.0 is None">client = &lt;starlette.testclient.TestClient object at 0x000001F686E2AF80&gt;
+login = &lt;function login.&lt;locals&gt;.authenticate at 0x000001F686E77EB0&gt;
+
+    def test_public_profile_does_not_disclose_private_salary_preferences(client, login):
+        owner, viewer = login("demo_a"), login("demo_b")
+        me = client.get("/api/v1/users/me", headers=owner)
+        salary = {"salary_min": 12345678, "salary_max": 23456789}
+        saved = client.patch(
+            "/api/v1/profiles/me",
+            headers={**owner, "If-Match": me.headers["ETag"]},
+            json={**me.json()["profile"], **salary},
+        )
+        assert saved.status_code == 200, saved.text
+        assert client.get("/api/v1/profiles/me", headers=owner).json()["profile"][
+            "salary_min"
+        ] == salary["salary_min"]
+        shared = client.get("/api/v1/users/demo_a/profile", headers=viewer)
+        assert shared.status_code == 200, shared.text
+&gt;       assert shared.json()["profile"]["salary_min"] is None
+E       assert 12345678.0 is None
+
+tests\backend\test_security_review.py:29: AssertionError</failure></testcase><testcase classname="tests.backend.test_security_review" name="test_backend_rejects_oversized_and_chunked_bodies_before_parsing" time="3.305"><failure message="AssertionError: {&quot;error&quot;:{&quot;code&quot;:&quot;validation_error&quot;,&quot;message&quot;:&quot;Invalid request&quot;,&quot;request_id&quot;:&quot;38a73dfa85af43978e166e7baf63f0e4&quot;,&quot;details&quot;:[{&quot;field&quot;:&quot;body&quot;,&quot;message&quot;:&quot;model_attributes_type&quot;}]}}&#10;assert 422 == 413&#10; +  where 422 = &lt;Response [422 Unprocessable Entity]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001F686DE5030&gt;
+db = &lt;StandardDatabase jrn_test_9d7593db0486407a9e88376717bcb6aa&gt;
+
+    def test_backend_rejects_oversized_and_chunked_bodies_before_parsing(client, db):
+        before = db.collection("rate_limits").count()
+        payload = b'{"email":"x@example.com","password":"' + b"x" * 131073 + b'"}'
+        declared = client.post("/api/v1/auth/login", content=payload)
+&gt;       assert declared.status_code == 413, declared.text[:200]
+E       AssertionError: {"error":{"code":"validation_error","message":"Invalid request","request_id":"38a73dfa85af43978e166e7baf63f0e4","details":[{"field":"body","message":"model_attributes_type"}]}}
+E       assert 422 == 413
+E        +  where 422 = &lt;Response [422 Unprocessable Entity]&gt;.status_code
+
+tests\backend\test_security_review.py:38: AssertionError</failure></testcase><testcase classname="tests.backend.test_security_review" name="test_startup_rejects_unapplied_and_tampered_migration_history" time="3.361"><failure message="Failed: DID NOT RAISE SchemaDriftError">db = &lt;StandardDatabase jrn_test_090a8d90c3034ce8a70a0241aa256a20&gt;
+api_config = AppSettings(database=Settings(url='http://127.0.0.1:8529', database='job_referral', username='root', password='vB0ihHn...04800, login_limit=10, register_limit=30, connection_limit=20, referral_limit=10, referrers_per_job=3, cors_origins=())
+
+    def test_startup_rejects_unapplied_and_tampered_migration_history(db, api_config):
+        journal = db.collection("schema_migrations")
+        row = journal.get("3")
+        for change in ({"status": "failed"}, {"checksum": "0" * 64}):
+            journal.update({"_key": "3", **change})
+&gt;           with pytest.raises(SchemaDriftError, match="Migration"):
+E           Failed: DID NOT RAISE SchemaDriftError
+
+tests\backend\test_security_review.py:53: Failed</failure></testcase><testcase classname="tests.backend.test_security_review" name="test_every_protected_operation_rejects_anonymous_requests" time="4.703" /><testcase classname="tests.backend.test_security_review" name="test_nonfinite_salary_rejected_without_database_write" time="3.666"><failure message="AssertionError: {&quot;error&quot;:{&quot;code&quot;:&quot;database_unavailable&quot;,&quot;message&quot;:&quot;Database unavailable&quot;,&quot;request_id&quot;:&quot;14a738afb575435588332457859b4296&quot;,&quot;details&quot;:[]}}&#10;assert 503 == 422&#10; +  where 503 = &lt;Response [503 Service Unavailable]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000001F686E28EB0&gt;
+login = &lt;function login.&lt;locals&gt;.authenticate at 0x000001F686F04430&gt;
+db = &lt;StandardDatabase jrn_test_b1979f962fb841009aeb8dbcf025deba&gt;
+
+    def test_nonfinite_salary_rejected_without_database_write(client, login, db):
+        actor = login()
+        me = client.get("/api/v1/users/me", headers=actor)
+        before = db.collection("users").get("demo_a")["_rev"]
+        with TestClient(client.app, raise_server_exceptions=False) as transport:
+            result = transport.patch(
+                "/api/v1/profiles/me",
+                headers={**actor, "If-Match": me.headers["ETag"], "Content-Type": "application/json"},
+                content='{"salary_min":Infinity,"salary_max":Infinity}',
+            )
+&gt;       assert result.status_code == 422, result.text
+E       AssertionError: {"error":{"code":"database_unavailable","message":"Database unavailable","request_id":"14a738afb575435588332457859b4296","details":[]}}
+E       assert 503 == 422
+E        +  where 503 = &lt;Response [503 Service Unavailable]&gt;.status_code
+
+tests\backend\test_security_review.py:88: AssertionError</failure></testcase></testsuite></testsuites>

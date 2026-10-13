@@ -1,0 +1,84 @@
+{
+  "checked_at": "2026-10-12T03:53:00.327Z",
+  "database": "jrn_proof_a6751a7101564f4896e9bd4e20a737ff",
+  "version": "3.12.12",
+  "data_kind": "isolated_test_fixture",
+  "main_database_modified": false,
+  "baseline_paths": [
+    {
+      "vertices": [
+        "users/demo_a",
+        "users/demo_b",
+        "users/demo_c"
+      ],
+      "hops": 2,
+      "path_score": 0.71,
+      "current_verified_employee": true
+    },
+    {
+      "vertices": [
+        "users/demo_a",
+        "users/demo_d",
+        "users/demo_e",
+        "users/demo_c"
+      ],
+      "hops": 3,
+      "path_score": 0.6733333333333333,
+      "current_verified_employee": true
+    }
+  ],
+  "plan_node_types": [
+    "CalculationNode",
+    "FilterNode",
+    "IndexNode",
+    "LimitNode",
+    "ReturnNode",
+    "SingletonNode",
+    "SortNode",
+    "SubqueryEndNode",
+    "SubqueryStartNode",
+    "TraversalNode"
+  ],
+  "plan_index_names": [
+    "company_current_employees",
+    "connections_in_status",
+    "connections_out_status",
+    "edge"
+  ],
+  "profile_statistics": {
+    "execution_time": 0.008132551000016974,
+    "scanned_full": 0,
+    "scanned_index": 128,
+    "peak_memory_usage": 491520
+  },
+  "after_block_b_c": [
+    {
+      "vertices": [
+        "users/demo_a",
+        "users/demo_d",
+        "users/demo_e",
+        "users/demo_c"
+      ],
+      "hops": 3,
+      "path_score": 0.6733333333333333,
+      "current_verified_employee": true
+    }
+  ],
+  "after_b_disallows_paths": [
+    {
+      "vertices": [
+        "users/demo_a",
+        "users/demo_d",
+        "users/demo_e",
+        "users/demo_c"
+      ],
+      "hops": 3,
+      "path_score": 0.6733333333333333,
+      "current_verified_employee": true
+    }
+  ],
+  "after_c_employment_unverified": [],
+  "transaction_schema_error_code": 1620,
+  "transaction_rolled_back": true,
+  "isolated_database_cleaned_up": true
+}

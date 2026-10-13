@@ -1,0 +1,14 @@
+{
+  "origin": "http://127.0.0.1:5173",
+  "compiled_assets": true,
+  "nginx_spa_deep_link": 200,
+  "same_origin_protected_api": 401,
+  "invalid_login_real_backend": 401,
+  "exploration_deep_link": 200,
+  "exploration_protected_api": 401,
+  "raw_deep_link": 200,
+  "raw_protected_api": 401,
+  "csp": true,
+  "uncaught_browser_errors": [],
+  "checked_at": "2026-10-13T18:01:42.330Z"
+}

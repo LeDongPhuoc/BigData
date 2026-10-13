@@ -1,0 +1,30 @@
+FOR v, e, p IN 1..@max_depth ANY @actor_id GRAPH "jobReferralGraph"
+  PRUNE invalid = (e != null AND (e.status != "accepted" OR e.accepted_at == null OR e.deleted_at != null))
+    OR v == null OR v.status != "active" OR v.deleted_at != null
+    OR (v._id != @actor_id AND (!v.privacy.discoverable OR !v.privacy.allow_in_paths))
+    OR v._id IN blocked_ids
+  OPTIONS { order: "bfs", uniqueVertices: "path", uniqueEdges: "path",
+            edgeCollections: ["connections"], vertexCollections: ["users"] }
+  FILTER !invalid
+  FILTER @target_id == null OR v._id == @target_id
+  FILTER company_id == null OR v._id IN employees[*].id
+  LET hops = LENGTH(p.edges)
+  LET trust = AVERAGE(p.edges[* RETURN CURRENT.trust == null ? 0.5 : CURRENT.trust])
+  LET reachability = 1 / hops
+  LET path_score = @path_weights.trust * trust + @path_weights.reachability * reachability
+  LET path_key = CONCAT_SEPARATOR("|", p.vertices[*]._id)
+  SORT (@shortest_only ? hops : 0) ASC, path_score DESC, hops ASC, path_key ASC
+  LIMIT @offset, @limit
+  RETURN {
+    referrer: { id: v._id, display_name: v.display_name, headline: v.profile.headline },
+    hops, trust, path_score, path_key,
+    vertices: p.vertices[* RETURN { id: CURRENT._id, display_name: CURRENT.display_name,
+                                    headline: CURRENT.profile.headline }],
+    edges: p.edges[* RETURN { id: CURRENT._id, status: CURRENT.status,
+                             trust: CURRENT.trust == null ? 0.5 : CURRENT.trust }],
+    current_verified_employee: company_id != null,
+    next_step: { action: "request_referral", referrer_id: v._id, via_user_id: p.vertices[1]._id },
+    explanation: { hops, mean_declared_trust: trust, missing_trust_default: 0.5,
+                   reachability, weights: @path_weights,
+                   ranking: @shortest_only ? "hops_then_path_score" : "path_score_then_hops" }
+  }

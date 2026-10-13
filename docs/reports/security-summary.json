@@ -1,0 +1,388 @@
+{
+  "checked_at": "2026-10-11T12:16:11.611238+00:00",
+  "production_ready": false,
+  "integration": {
+    "report": "security-verified-integration.xml",
+    "tests": 146,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "filesystem_security": {
+    "report": "security-backup-paths.xml",
+    "tests": 7,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "database": "ArangoDB 3.12.12",
+    "real_http": true,
+    "non_root_runtime": true,
+    "mock_business_data": false,
+    "stats": {
+      "startTime": "2026-10-11T11:33:02.123Z",
+      "duration": 110504.86,
+      "expected": 17,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "exit_code": 0
+  },
+  "dependency_advisories": {
+    "python_locked_requirements": 0,
+    "npm_all_dependencies": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    }
+  },
+  "bandit_review": {
+    "report": "security-bandit-final.json",
+    "raw_severity_counts": {
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 41,
+      "SEVERITY.MEDIUM": 7,
+      "SEVERITY.UNDEFINED": 0
+    },
+    "manual_review": "See security-review-2026-10-11.md; raw findings retained"
+  },
+  "image_scanner": {
+    "tool": "Trivy 0.75.0",
+    "scanner_image": "aquasec/trivy@sha256:af6acf9a6b85dfe389a1941505c0ce9efef52a4719635e1a962f022a3d855daa",
+    "scope": "Saved runtime images; no Docker socket; vulnerability DB snapshot",
+    "images": {
+      "backend": {
+        "report": "security-backend-image.json",
+        "recorded_at": "2026-10-11T11:58:26.556075853Z",
+        "scanned_image_config_digest": "sha256:fd45b963e97db3783d84fd2238c0ad4f2f71949fd47fcdbad12df50e63971df1",
+        "package_cve_entries_by_severity": {
+          "LOW": 62,
+          "HIGH": 44,
+          "MEDIUM": 63,
+          "UNKNOWN": 3
+        },
+        "distinct_high_critical_ids": [
+          "CVE-2025-69720",
+          "CVE-2026-16742",
+          "CVE-2026-54369",
+          "CVE-2026-76642",
+          "CVE-2026-78408",
+          "CVE-2026-78409",
+          "CVE-2026-78410",
+          "CVE-2026-9538"
+        ],
+        "high_critical_entries_with_fixed_version": 0,
+        "api_exploitability_proven": false
+      },
+      "frontend": {
+        "report": "security-frontend-image-after.json",
+        "recorded_at": "2026-10-11T12:09:14.025494014Z",
+        "scanned_image_config_digest": "sha256:0b72e0954f4e1f5e26c423af75eb044403cff1cbdc6901749b7914cd28abd41f",
+        "package_cve_entries_by_severity": {},
+        "distinct_high_critical_ids": [],
+        "high_critical_entries_with_fixed_version": 0,
+        "api_exploitability_proven": false
+      },
+      "arangodb": {
+        "report": "security-arango-image.json",
+        "recorded_at": "2026-10-11T12:02:48.900476052Z",
+        "scanned_image_config_digest": "sha256:cba0fe1176757afc0d96ceaa2b6d0b2c9c6e5a7c99e3d4d188b2c7740201efb9",
+        "package_cve_entries_by_severity": {
+          "MEDIUM": 17,
+          "HIGH": 9,
+          "LOW": 2,
+          "UNKNOWN": 11
+        },
+        "distinct_high_critical_ids": [
+          "CVE-2026-102276",
+          "CVE-2026-102278",
+          "CVE-2026-78667",
+          "CVE-2026-78669",
+          "CVE-2026-97031"
+        ],
+        "high_critical_entries_with_fixed_version": 9,
+        "api_exploitability_proven": false
+      }
+    }
+  },
+  "database": {
+    "version": "3.12.12",
+    "schema_indexes_graph": "pass",
+    "integrity_issues": [],
+    "user_count": 24,
+    "main_migration": {
+      "migration_versions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "all_business_document_hashes_unchanged": true,
+      "backup": "backups/security-migration-20ae6e8b872c43cb8f09d8c3c81082bd",
+      "business_collection_hashes": {
+        "rate_limits": "87d87519f876d2929bf72525ba1b77230e1f1fcd67c341810e7b89b83b8044e2",
+        "job_at_company": "6a393ba3e8ef9df6d44ec6078053de8e37f07ef7d65a2c9e379e9b2051014849",
+        "audit_logs": "1e0e164fa914ea045a5fdb961053b06fd8e2eecb271e194b18d10cbd4fef233d",
+        "idempotency_records": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "skills": "0f1e520163a8c22ae565323dd66c147a17e20ef1a9e179c80d41ec41f8721c2f",
+        "users": "c93c7acb2ad877cad91a51ba4296f1d4ab9d9dd1fae62473d9b1a8b2567884e8",
+        "notifications": "64d6442f368322d85b72b16656dfa67dd819fd82a64bbc5073bbebb8912d1120",
+        "auth_sessions": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "job_requires_skill": "b9b5800bd5a066e7af0e4a20e1903c33a9038be9572c3f865eda10868afd0fb9",
+        "jobs": "d50c42e294257bbd0349e851709f2c660ca7058c372940750cdaaa15aeb1f34c",
+        "has_skill": "7c84a5ec1c34f5a50f4980ab2c36c280065f45087cf4f81b0dfca84194471434",
+        "referral_requests": "4b63eac76525e3be8ea675b31ae70d5345c54935f494b932bfbf9536fd337848",
+        "works_at": "e0edd6e07e7b2869b8a0feb0db0ff2a9d78df6629102f96ead79560f59521f34",
+        "auth_families": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "companies": "3d78734c3a7dc8a5f6d5ab597e435cf8d4c083f5ca207fff938846322d658ff0",
+        "connection_controls": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "applications": "e6d279fdd73e64a6df0b93642446f17bd1fcbc73b11c1a115e8556155c732dfd",
+        "connections": "4614e083899d4c9770f3eba8d43dd7c930249030995dcd0bd7d46623c45aaec9",
+        "auth_credentials": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "user_count": 24
+    },
+    "query_index_limits": {
+      "database": "3.12.12",
+      "migration_versions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_indexes": {
+        "companies": [
+          {
+            "type": "EnumerateCollectionNode",
+            "indexes": []
+          },
+          {
+            "type": "SortNode",
+            "indexes": []
+          }
+        ],
+        "skills": [
+          {
+            "type": "EnumerateCollectionNode",
+            "indexes": []
+          },
+          {
+            "type": "SortNode",
+            "indexes": []
+          }
+        ]
+      },
+      "after_indexes": {
+        "companies": [
+          {
+            "type": "IndexNode",
+            "indexes": [
+              "companies_status_created"
+            ]
+          },
+          {
+            "type": "SortNode",
+            "indexes": []
+          }
+        ],
+        "skills": [
+          {
+            "type": "IndexNode",
+            "indexes": [
+              "skills_status_created"
+            ]
+          },
+          {
+            "type": "SortNode",
+            "indexes": []
+          }
+        ]
+      },
+      "business_counts_unchanged": true,
+      "integrity_issues": [],
+      "query_aborts": {
+        "runtime": {
+          "error_code": 1500,
+          "elapsed_ms": 57.95,
+          "limits": {
+            "max_runtime": 0.05,
+            "memory_limit": 1048576
+          }
+        },
+        "memory": {
+          "error_code": 32,
+          "elapsed_ms": 16.9,
+          "limits": {
+            "max_runtime": 2,
+            "memory_limit": 1048576
+          }
+        }
+      }
+    },
+    "graph_benchmark_report": "security-graph-benchmark.json",
+    "disposable_audit_databases_remaining": 0,
+    "disposable_audit_users_remaining": 0
+  },
+  "runtime": {
+    "arangodb": {
+      "healthy": true,
+      "image_reference": "arangodb:3.12.12",
+      "runtime_image_digest": "sha256:4bc086d5050ca7ea11c6d00a36d8b910c838bb54ad553f8c1b715769d3499bcf",
+      "restart_count": 0,
+      "oom_killed": false
+    },
+    "backend": {
+      "healthy": true,
+      "image_reference": "job-referral-backend",
+      "runtime_image_digest": "sha256:f442b64926eb855ba19ec70052281deb49f51b9ce3349884e52481effd325364",
+      "restart_count": 0,
+      "oom_killed": false
+    },
+    "frontend": {
+      "healthy": true,
+      "image_reference": "job-referral-frontend",
+      "runtime_image_digest": "sha256:14ffb65285c0ed7cd9bac7fa0745de6325e820b3f68c56011bb468f8a5cd83d8",
+      "restart_count": 0,
+      "oom_killed": false
+    }
+  },
+  "docker_hardening": {
+    "containers": {
+      "arangodb": {
+        "healthy": true,
+        "user": "",
+        "read_only": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_opt": [
+          "no-new-privileges:true"
+        ],
+        "pids_limit": 512,
+        "memory_limit": 4294967296,
+        "loopback_only": true
+      },
+      "backend": {
+        "healthy": true,
+        "user": "10001",
+        "read_only": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_opt": [
+          "no-new-privileges:true"
+        ],
+        "pids_limit": 128,
+        "memory_limit": 536870912,
+        "loopback_only": true
+      },
+      "frontend": {
+        "healthy": true,
+        "user": "nginx",
+        "read_only": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_opt": [
+          "no-new-privileges:true"
+        ],
+        "pids_limit": 64,
+        "memory_limit": 134217728,
+        "loopback_only": true
+      }
+    },
+    "oversized_http": {
+      "8000_chunked_False": 413,
+      "8000_chunked_True": 413,
+      "5173_chunked_False": 413,
+      "5173_chunked_True": 413
+    },
+    "database_os_user_is_root": true
+  },
+  "proxy_header_check": {
+    "http": [
+      {
+        "port": 8000,
+        "status": 401
+      },
+      {
+        "port": 5173,
+        "status": 401
+      }
+    ],
+    "forged_forwarded_ips_not_used": true,
+    "proxy_ip_not_used_as_client_bucket": true
+  },
+  "backend_tcp_check": {
+    "checked_at": "2026-10-11T12:12:38.058Z",
+    "base_url": "http://127.0.0.1:8000",
+    "transport": "TCP HTTP",
+    "checks": {
+      "/health/live": 200,
+      "/health/ready": 200,
+      "/api/v1/jobs": 401,
+      "/missing": 404
+    },
+    "operations": 66,
+    "openapi_matches_export": true
+  },
+  "compiled_frontend_check": {
+    "origin": "http://127.0.0.1:5173",
+    "compiled_assets": true,
+    "nginx_spa_deep_link": 200,
+    "same_origin_protected_api": 401,
+    "invalid_login_real_backend": 401,
+    "csp": true,
+    "uncaught_browser_errors": [],
+    "checked_at": "2026-10-11T12:09:02.827Z"
+  },
+  "backup_restore": {
+    "client_date": "2026-10-11",
+    "version": "3.12.12",
+    "backup": "backups\\recovery-73bd0ea804774394bd01cacbfc674bb8",
+    "source_counts": {
+      "auth_families": 0,
+      "connection_controls": 0,
+      "companies": 3,
+      "schema_migrations": 4,
+      "referral_requests": 7,
+      "works_at": 12,
+      "auth_credentials": 0,
+      "rate_limits": 8,
+      "applications": 1,
+      "migration_locks": 0,
+      "connections": 18,
+      "skills": 4,
+      "idempotency_records": 0,
+      "job_at_company": 6,
+      "audit_logs": 7,
+      "auth_sessions": 0,
+      "jobs": 6,
+      "job_requires_skill": 7,
+      "has_skill": 4,
+      "notifications": 7,
+      "users": 24
+    },
+    "schema": "pass",
+    "integrity": "pass",
+    "path_hops": [
+      2,
+      3
+    ],
+    "source_unchanged": true,
+    "restore_target": "disposable owned database"
+  },
+  "source_secret_scan_report": "security-source.json",
+  "open_release_conditions": [
+    "HIGH backend/ArangoDB image findings; patch/reachability assessment incomplete",
+    "TLS/public ingress and production HTTP/graph/jobs/concurrency workload unverified",
+    "ArangoDB OS UID 0; persistent volume ownership rehearsal needed before changing UID",
+    "Production PII retention/purge, encrypted backups and periodic restore unverified",
+    "Email verification/password reset and signed object downloads not implemented"
+  ]
+}

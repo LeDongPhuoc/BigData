@@ -1,0 +1,11 @@
+FOR employment IN works_at
+  FILTER employment._to == company_id AND employment.status == "current" AND employment.verified
+  FILTER employment.start_at <= @as_of
+  FILTER employment.end_at == null OR employment.end_at > @as_of
+  LET employee = DOCUMENT(employment._from)
+  FILTER employee != null AND employee.status == "active" AND employee.deleted_at == null
+  FILTER employee.privacy.discoverable AND employee.privacy.employment_visible
+  FILTER employee._id NOT IN blocked_ids
+  SORT employee._id
+  RETURN { id: employee._id, display_name: employee.display_name, headline: employee.profile.headline,
+           title: employment.title, verified: true }

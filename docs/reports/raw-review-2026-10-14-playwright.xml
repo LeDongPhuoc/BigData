@@ -1,0 +1,51 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="1" time="30.592997999999998">
+<testsuite name="exploration.spec.ts" timestamp="2026-10-13T17:26:31.072Z" hostname="" tests="1" failures="0" skipped="0" time="7.131" errors="0">
+<testcase name="khám phá seed: tìm việc, gợi ý gap, graph và analytics" classname="exploration.spec.ts" time="7.131">
+</testcase>
+</testsuite>
+<testsuite name="raw-data.spec.ts" timestamp="2026-10-13T17:26:31.072Z" hostname="" tests="1" failures="0" skipped="0" time="21.284" errors="1">
+<testcase name="raw VietJobs đầy đủ: chất lượng, lọc toàn file, chi tiết, seed và Top-K" classname="raw-data.spec.ts" time="21.284">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\frontend\test-results\browser\raw-data-raw-VietJobs-đầy--5f4bc-file-chi-tiết-seed-và-Top-K\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\frontend\test-results\browser\raw-data-raw-VietJobs-đầy--5f4bc-file-chi-tiết-seed-và-Top-K\error-context.md]]
+]]>
+</system-out>
+<error message="locator.uncheck: Clicking the checkbox did not change its state" type="Error">
+<![CDATA[  raw-data.spec.ts:4:1 › raw VietJobs đầy đủ: chất lượng, lọc toàn file, chi tiết, seed và Top-K ───
+
+    Error: locator.uncheck: Clicking the checkbox did not change its state
+    Call log:
+      - waiting for getByLabel('Ẩn dòng trùng hoàn toàn', { exact: true })
+        - locator resolved to <input checked type="checkbox"/>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing click action
+        - click action done
+        - waiting for scheduled navigations to finish
+        - navigations have finished
+
+
+      37 |     .getByRole("button", { name: "Xóa bộ lọc raw", exact: true })
+      38 |     .click();
+    > 39 |   await page.getByLabel("Ẩn dòng trùng hoàn toàn", { exact: true }).uncheck();
+         |                                                                     ^
+      40 |   await expect(
+      41 |     page.getByRole("heading", { name: "48.092 bản ghi phù hợp", exact: true }),
+      42 |   ).toBeVisible();
+        at E:\Hoc BigData\bigdata\bigdata\frontend\e2e\raw-data.spec.ts:39:69
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\browser\raw-data-raw-VietJobs-đầy--5f4bc-file-chi-tiết-seed-và-Top-K\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\browser\raw-data-raw-VietJobs-đầy--5f4bc-file-chi-tiết-seed-và-Top-K\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>

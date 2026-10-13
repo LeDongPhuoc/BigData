@@ -1,0 +1,593 @@
+{
+  "version": 5,
+  "description": "Optional public-source provenance and explicitly unknown imported job fields",
+  "schema_updates": {
+    "companies": {
+      "before": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z0-9-]+$"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "archived"
+              ]
+            },
+            "members": {
+              "type": "array",
+              "maxItems": 100,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "user_id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^users/[A-Za-z0-9_-]+$"
+                  },
+                  "role": {
+                    "type": "string",
+                    "enum": [
+                      "owner",
+                      "recruiter"
+                    ]
+                  },
+                  "verified": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "user_id",
+                  "role",
+                  "verified"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "name",
+            "slug",
+            "status",
+            "members"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "after": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z0-9-]+$"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "archived"
+              ]
+            },
+            "members": {
+              "type": "array",
+              "maxItems": 100,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "user_id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^users/[A-Za-z0-9_-]+$"
+                  },
+                  "role": {
+                    "type": "string",
+                    "enum": [
+                      "owner",
+                      "recruiter"
+                    ]
+                  },
+                  "verified": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "user_id",
+                  "role",
+                  "verified"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "source": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "maxLength": 2000,
+                  "pattern": "^https://[A-Za-z0-9.-]+(?:/[^\\s]*)?$"
+                },
+                "publisher": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "external_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "retrieved_at": {
+                  "type": "string",
+                  "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+                },
+                "notes": {
+                  "type": "array",
+                  "maxItems": 10,
+                  "items": {
+                    "type": "string",
+                    "maxLength": 500
+                  }
+                }
+              },
+              "required": [
+                "url",
+                "publisher",
+                "external_id",
+                "retrieved_at",
+                "notes"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "name",
+            "slug",
+            "status",
+            "members"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "jobs": {
+      "before": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "open",
+                "closed",
+                "archived"
+              ]
+            },
+            "location": {
+              "type": "string",
+              "minLength": 1
+            },
+            "work_mode": {
+              "type": "string",
+              "enum": [
+                "remote",
+                "hybrid",
+                "onsite"
+              ]
+            },
+            "level": {
+              "type": "string",
+              "enum": [
+                "junior",
+                "mid",
+                "senior",
+                "lead"
+              ]
+            },
+            "min_experience_years": {
+              "type": "number",
+              "minimum": 0
+            },
+            "salary_min": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "salary_max": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "salary_currency": {
+              "type": "string",
+              "enum": [
+                "VND"
+              ]
+            },
+            "published_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "title",
+            "description",
+            "status",
+            "location",
+            "work_mode",
+            "level",
+            "min_experience_years",
+            "salary_min",
+            "salary_max",
+            "salary_currency",
+            "published_at"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "after": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "open",
+                "closed",
+                "archived"
+              ]
+            },
+            "location": {
+              "type": "string",
+              "minLength": 1
+            },
+            "work_mode": {
+              "type": "string",
+              "enum": [
+                "remote",
+                "hybrid",
+                "onsite",
+                "unspecified"
+              ]
+            },
+            "level": {
+              "type": "string",
+              "enum": [
+                "junior",
+                "mid",
+                "senior",
+                "lead",
+                "unspecified"
+              ]
+            },
+            "min_experience_years": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "salary_min": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "salary_max": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "salary_currency": {
+              "type": "string",
+              "enum": [
+                "VND"
+              ]
+            },
+            "published_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "source": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "maxLength": 2000,
+                  "pattern": "^https://[A-Za-z0-9.-]+(?:/[^\\s]*)?$"
+                },
+                "publisher": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "external_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "retrieved_at": {
+                  "type": "string",
+                  "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+                },
+                "notes": {
+                  "type": "array",
+                  "maxItems": 10,
+                  "items": {
+                    "type": "string",
+                    "maxLength": 500
+                  }
+                }
+              },
+              "required": [
+                "url",
+                "publisher",
+                "external_id",
+                "retrieved_at",
+                "notes"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "title",
+            "description",
+            "status",
+            "location",
+            "work_mode",
+            "level",
+            "min_experience_years",
+            "salary_min",
+            "salary_max",
+            "salary_currency",
+            "published_at"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "skills": {
+      "before": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "normalized_name": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z0-9+#. -]+$"
+            },
+            "category": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "archived"
+              ]
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "name",
+            "normalized_name",
+            "category",
+            "status"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "after": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "normalized_name": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z0-9+#. -]+$"
+            },
+            "category": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "archived"
+              ]
+            },
+            "source": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "maxLength": 2000,
+                  "pattern": "^https://[A-Za-z0-9.-]+(?:/[^\\s]*)?$"
+                },
+                "publisher": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "external_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "retrieved_at": {
+                  "type": "string",
+                  "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+                },
+                "notes": {
+                  "type": "array",
+                  "maxItems": 10,
+                  "items": {
+                    "type": "string",
+                    "maxLength": 500
+                  }
+                }
+              },
+              "required": [
+                "url",
+                "publisher",
+                "external_id",
+                "retrieved_at",
+                "notes"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "name",
+            "normalized_name",
+            "category",
+            "status"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "indexes": {
+    "jobs": [
+      {
+        "type": "persistent",
+        "name": "job_public_source_unique",
+        "fields": [
+          "source.publisher",
+          "source.external_id"
+        ],
+        "unique": true,
+        "sparse": true
+      }
+    ]
+  },
+  "recovery": "Forward-only optional schema extension; retain existing documents and graph references"
+}

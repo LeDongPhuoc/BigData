@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-referral-foundation"
+version = "0.2.0"
+description = "Job Referral Network backend with real ArangoDB integration"
+requires-python = ">=3.10"
+dependencies = [
+  "python-arango==8.3.6", "fastapi==0.143.0", "pydantic==2.14.0",
+  "uvicorn==0.54.0", "argon2-cffi==25.1.0", "email-validator==2.3.0",
+  "PyJWT==2.15.1", "starlette==1.7.0", "anyio==4.15.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "ruff==0.17.0", "httpx==0.28.1"]
+
+[project.scripts]
+jrn-db = "database.cli:main"
+jrn-admin = "backend.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["database*", "backend*"]
+
+[tool.setuptools.package-data]
+database = ["migrations/*.json", "aql/*.aql", "catalog/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --import-mode=importlib"
+markers = ["integration: requires a real ArangoDB server"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+extend-exclude = ["build", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

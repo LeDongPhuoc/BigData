@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-12T04:34:32.584Z",
+  "base_url": "http://127.0.0.1:8000",
+  "transport": "TCP HTTP",
+  "checks": {
+    "/health/live": 200,
+    "/health/ready": 200,
+    "/api/v1/jobs": 401,
+    "/missing": 404
+  },
+  "operations": 66,
+  "openapi_matches_export": true
+}

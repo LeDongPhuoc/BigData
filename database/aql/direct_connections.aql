@@ -1,0 +1,9 @@
+// @include actor.aql
+FOR v, e IN 1..1 ANY @actor_id GRAPH "jobReferralGraph"
+  OPTIONS { edgeCollections: ["connections"], vertexCollections: ["users"], uniqueVertices: "path" }
+  FILTER e.status == "accepted" AND e.accepted_at != null AND e.deleted_at == null
+  FILTER v != null AND v.status == "active" AND v.deleted_at == null
+  FILTER v.privacy.discoverable AND v._id NOT IN blocked_ids
+  SORT v._id
+  LIMIT @offset, @limit
+  RETURN { id: v._id, display_name: v.display_name, headline: v.profile.headline }

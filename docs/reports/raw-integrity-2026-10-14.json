@@ -1,0 +1,11 @@
+{
+  "missing_new_links": [],
+  "historical_missing_links": [
+    "docs\\nhat-ky-chinh-sua.md: ke-hoach-vietjobs-3-ngay.md"
+  ],
+  "raw_sha256": "85862b06fda4e814fe0c1d8622f173d189c92758345f77df16d1232d0c49d477",
+  "seed_fingerprints_unchanged": true,
+  "journal_prefix_unchanged": true,
+  "browser_passed": 22,
+  "browser_failed": 0
+}

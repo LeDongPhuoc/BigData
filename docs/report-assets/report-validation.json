@@ -1,0 +1,38 @@
+{
+  "document": "C:\\Users\\NGUYEN THANH NAM\\Downloads\\Mau bao cao_Do an_Khoa luan_Huong ung dung.docx",
+  "pages": 45,
+  "chapters": 5,
+  "tables": 14,
+  "report_figures": 7,
+  "automatic_lists": 3,
+  "template_backup": "C:\\Users\\NGUYEN THANH NAM\\Downloads\\Mau bao cao_Do an_Khoa luan_Huong ung dung_Mau_goc.docx",
+  "format_checks": "pass",
+  "field_checks": "pass",
+  "existing_test_evidence": {
+    "recommendations-regression.xml": {
+      "tests": "167",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    "arango-proof-tests.xml": {
+      "tests": "21",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    "recommendations-verified-playwright.xml": {
+      "tests": "20",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  },
+  "new_system_tests_run_for_report": false,
+  "administrative_fields_pending": [
+    "Loại báo cáo",
+    "Ngành",
+    "Sinh viên/MSSV/Lớp",
+    "Giảng viên hướng dẫn"
+  ]
+}

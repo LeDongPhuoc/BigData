@@ -1,0 +1,234 @@
+{
+  "version": 2,
+  "description": "Business uniqueness and query indexes",
+  "indexes": {
+    "users": [
+      {
+        "name": "user_email_unique",
+        "type": "persistent",
+        "fields": [
+          "email"
+        ],
+        "unique": true,
+        "sparse": false
+      }
+    ],
+    "companies": [
+      {
+        "name": "company_slug_unique",
+        "type": "persistent",
+        "fields": [
+          "slug"
+        ],
+        "unique": true,
+        "sparse": false
+      }
+    ],
+    "skills": [
+      {
+        "name": "skill_name_unique",
+        "type": "persistent",
+        "fields": [
+          "normalized_name"
+        ],
+        "unique": true,
+        "sparse": false
+      }
+    ],
+    "jobs": [
+      {
+        "name": "jobs_open_recent",
+        "type": "persistent",
+        "fields": [
+          "status",
+          "published_at"
+        ],
+        "unique": false,
+        "sparse": false
+      }
+    ],
+    "connections": [
+      {
+        "name": "connection_pair_unique",
+        "type": "persistent",
+        "fields": [
+          "pair_key"
+        ],
+        "unique": true,
+        "sparse": false
+      },
+      {
+        "name": "connections_out_status",
+        "type": "persistent",
+        "fields": [
+          "_from",
+          "status",
+          "deleted_at"
+        ],
+        "unique": false,
+        "sparse": false
+      },
+      {
+        "name": "connections_in_status",
+        "type": "persistent",
+        "fields": [
+          "_to",
+          "status",
+          "deleted_at"
+        ],
+        "unique": false,
+        "sparse": false
+      }
+    ],
+    "works_at": [
+      {
+        "name": "employment_pair_unique",
+        "type": "persistent",
+        "fields": [
+          "_from",
+          "_to"
+        ],
+        "unique": true,
+        "sparse": false
+      },
+      {
+        "name": "company_current_employees",
+        "type": "persistent",
+        "fields": [
+          "_to",
+          "status",
+          "verified",
+          "end_at"
+        ],
+        "unique": false,
+        "sparse": false
+      }
+    ],
+    "has_skill": [
+      {
+        "name": "user_skill_unique",
+        "type": "persistent",
+        "fields": [
+          "_from",
+          "_to"
+        ],
+        "unique": true,
+        "sparse": false
+      }
+    ],
+    "job_requires_skill": [
+      {
+        "name": "job_skill_unique",
+        "type": "persistent",
+        "fields": [
+          "_from",
+          "_to"
+        ],
+        "unique": true,
+        "sparse": false
+      }
+    ],
+    "job_at_company": [
+      {
+        "name": "job_company_unique",
+        "type": "persistent",
+        "fields": [
+          "_from"
+        ],
+        "unique": true,
+        "sparse": false
+      },
+      {
+        "name": "company_jobs",
+        "type": "persistent",
+        "fields": [
+          "_to"
+        ],
+        "unique": false,
+        "sparse": false
+      }
+    ],
+    "applications": [
+      {
+        "name": "application_candidate_job_unique",
+        "type": "persistent",
+        "fields": [
+          "candidate_id",
+          "job_id"
+        ],
+        "unique": true,
+        "sparse": false
+      }
+    ],
+    "referral_requests": [
+      {
+        "name": "referral_triplet_unique",
+        "type": "persistent",
+        "fields": [
+          "candidate_id",
+          "referrer_id",
+          "job_id"
+        ],
+        "unique": true,
+        "sparse": false
+      },
+      {
+        "name": "referral_idempotency_unique",
+        "type": "persistent",
+        "fields": [
+          "candidate_id",
+          "idempotency_key"
+        ],
+        "unique": true,
+        "sparse": false
+      },
+      {
+        "name": "referrer_inbox",
+        "type": "persistent",
+        "fields": [
+          "referrer_id",
+          "status",
+          "created_at"
+        ],
+        "unique": false,
+        "sparse": false
+      }
+    ],
+    "notifications": [
+      {
+        "name": "notification_event_unique",
+        "type": "persistent",
+        "fields": [
+          "recipient_id",
+          "event_key"
+        ],
+        "unique": true,
+        "sparse": false
+      },
+      {
+        "name": "notifications_inbox",
+        "type": "persistent",
+        "fields": [
+          "recipient_id",
+          "read_at",
+          "created_at"
+        ],
+        "unique": false,
+        "sparse": false
+      }
+    ],
+    "audit_logs": [
+      {
+        "name": "audit_resource_history",
+        "type": "persistent",
+        "fields": [
+          "resource_id",
+          "created_at"
+        ],
+        "unique": false,
+        "sparse": false
+      }
+    ]
+  },
+  "recovery": "Forward-only. Resolve duplicate legacy data from a reviewed backup before retrying unique-index creation. Never silently deduplicate."
+}

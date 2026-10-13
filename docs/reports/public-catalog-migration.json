@@ -1,0 +1,33 @@
+{
+  "migration_versions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "all_business_document_hashes_unchanged": true,
+  "backup": "backups/security-migration-9c08408b023f4dc6919d7b62f2802d6f",
+  "business_collection_hashes": {
+    "auth_families": "a3b8104bc1b92a0f62eb48b299f61cc29bb8470dcb8844b1c470ef7911d51191",
+    "connection_controls": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "companies": "3d78734c3a7dc8a5f6d5ab597e435cf8d4c083f5ca207fff938846322d658ff0",
+    "referral_requests": "4b63eac76525e3be8ea675b31ae70d5345c54935f494b932bfbf9536fd337848",
+    "works_at": "e0edd6e07e7b2869b8a0feb0db0ff2a9d78df6629102f96ead79560f59521f34",
+    "auth_credentials": "6533aa5a513d1afde9ef68732aa5b1b7224580db30a2a158a9c62aad6abcd388",
+    "rate_limits": "6381b9717d756056828bf36f371b5a9cf5fb987263480afbfb69b85413b2f814",
+    "applications": "e6d279fdd73e64a6df0b93642446f17bd1fcbc73b11c1a115e8556155c732dfd",
+    "connections": "4614e083899d4c9770f3eba8d43dd7c930249030995dcd0bd7d46623c45aaec9",
+    "skills": "0f1e520163a8c22ae565323dd66c147a17e20ef1a9e179c80d41ec41f8721c2f",
+    "idempotency_records": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "job_at_company": "6a393ba3e8ef9df6d44ec6078053de8e37f07ef7d65a2c9e379e9b2051014849",
+    "audit_logs": "27d37c7498e6df56b9fd75049c03e0253c4a7d5b5569f1e4b44f2c34b1de302a",
+    "auth_sessions": "b19ebf7e736bdf22121212e13b3bafd69e16d855f73aa719b1dacadd864378d1",
+    "jobs": "d50c42e294257bbd0349e851709f2c660ca7058c372940750cdaaa15aeb1f34c",
+    "job_requires_skill": "b9b5800bd5a066e7af0e4a20e1903c33a9038be9572c3f865eda10868afd0fb9",
+    "has_skill": "7c84a5ec1c34f5a50f4980ab2c36c280065f45087cf4f81b0dfca84194471434",
+    "notifications": "64d6442f368322d85b72b16656dfa67dd819fd82a64bbc5073bbebb8912d1120",
+    "users": "a6730cd519206bc4fde17bab5642cbe555f2e3ba52536e06c9757b08542f59bf"
+  },
+  "user_count": 25
+}

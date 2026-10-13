@@ -1,0 +1,2 @@
+# Preserve the exact bytes of the original dataset across Windows/Linux clones.
+DATA_/vietjobs-network/data/raw/vietjobs/VietJobs.csv -text

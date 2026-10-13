@@ -1,0 +1,48 @@
+<testsuites id="" name="" tests="21" failures="0" skipped="0" errors="0" time="124.706504">
+<testsuite name="exploration.spec.ts" timestamp="2026-10-13T16:29:52.447Z" hostname="" tests="1" failures="0" skipped="0" time="7.031" errors="0">
+<testcase name="khám phá seed: tìm việc, gợi ý gap, graph và analytics" classname="exploration.spec.ts" time="7.031">
+</testcase>
+</testsuite>
+<testsuite name="features.spec.ts" timestamp="2026-10-13T16:29:52.447Z" hostname="" tests="20" failures="0" skipped="0" time="115.172" errors="0">
+<testcase name="tin công khai có nguồn, trường chưa chuẩn hóa và không giả quan hệ nhân viên" classname="features.spec.ts" time="3.106">
+</testcase>
+<testcase name="security: stored HTML stays text and another account cannot read salary preferences" classname="features.spec.ts" time="3.25">
+</testcase>
+<testcase name="security: oversized body over real HTTP is rejected and server stays healthy" classname="features.spec.ts" time="0.257">
+</testcase>
+<testcase name="đăng nhập: validation, mật khẩu sai, phiên và đăng xuất được thu hồi ở server" classname="features.spec.ts" time="2.585">
+</testcase>
+<testcase name="hồ sơ: lưu thật, validation lương và xung đột phiên bản giữ bản nháp" classname="features.spec.ts" time="3.599">
+</testcase>
+<testcase name="tìm việc: bộ lọc toàn bộ database, phân trang, empty state và chi tiết phù hợp" classname="features.spec.ts" time="4.066">
+</testcase>
+<testcase name="gợi ý theo hồ sơ: lưu Java PostgreSQL AWS, thấy kỹ năng khớp và cập nhật khi xóa" classname="features.spec.ts" time="7.282">
+</testcase>
+<testcase name="gợi ý theo hồ sơ: loading lỗi kết nối và thử lại đọc API thật" classname="features.spec.ts" time="3.279">
+</testcase>
+<testcase name="đăng ký → kỹ năng → kết nối → đường giới thiệu → gửi lại sau mất phản hồi → hoàn tất" classname="features.spec.ts" time="12.899">
+</testcase>
+<testcase name="hủy yêu cầu và thu hồi lời mời đều xác nhận và cập nhật database" classname="features.spec.ts" time="4.242">
+</testcase>
+<testcase name="thông báo: đánh dấu đã đọc bằng API thật và empty state tài khoản chưa có hoạt động" classname="features.spec.ts" time="5.559">
+</testcase>
+<testcase name="mạng lưới: chọn đường, giới hạn độ sâu và ẩn tài khoản không được chia sẻ" classname="features.spec.ts" time="4.491">
+</testcase>
+<testcase name="quyền riêng tư: phân biệt thông tin ẩn và rỗng, cập nhật thật chặn xem hồ sơ" classname="features.spec.ts" time="17.926">
+</testcase>
+<testcase name="phân quyền: admin không có thao tác ứng viên, request người khác bị từ chối" classname="features.spec.ts" time="3.652">
+</testcase>
+<testcase name="loading/error/retry dùng phản hồi API thật và lỗi kết nối được chèn có kiểm soát" classname="features.spec.ts" time="3.271">
+</testcase>
+<testcase name="refresh đồng thời chỉ xoay token một lần; đổi tài khoản xóa dữ liệu người trước" classname="features.spec.ts" time="4.936">
+</testcase>
+<testcase name="phản hồi cập nhật đến trễ sau khi đổi tài khoản không được đưa vào cache phiên mới" classname="features.spec.ts" time="2.314">
+</testcase>
+<testcase name="responsive và accessibility ở 1440px: tổng quan, việc làm, graph, hồ sơ" classname="features.spec.ts" time="9.85">
+</testcase>
+<testcase name="responsive và accessibility ở 768px: tổng quan, việc làm, graph, hồ sơ" classname="features.spec.ts" time="10.142">
+</testcase>
+<testcase name="responsive và accessibility ở 390px: tổng quan, việc làm, graph, hồ sơ" classname="features.spec.ts" time="8.466">
+</testcase>
+</testsuite>
+</testsuites>

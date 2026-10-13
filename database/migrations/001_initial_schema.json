@@ -1,0 +1,1064 @@
+{
+  "version": 1,
+  "description": "Strict document schemas, typed collections and named graph",
+  "collections": {
+    "users": {
+      "edge": false,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "email": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+            },
+            "display_name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "roles": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "candidate",
+                  "referrer",
+                  "recruiter",
+                  "admin"
+                ]
+              },
+              "uniqueItems": true,
+              "maxItems": 100
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "suspended",
+                "deleted"
+              ]
+            },
+            "deleted_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "privacy": {
+              "type": "object",
+              "properties": {
+                "discoverable": {
+                  "type": "boolean"
+                },
+                "allow_in_paths": {
+                  "type": "boolean"
+                },
+                "employment_visible": {
+                  "type": "boolean"
+                },
+                "skills_visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "discoverable",
+                "allow_in_paths",
+                "employment_visible",
+                "skills_visible"
+              ],
+              "additionalProperties": false
+            },
+            "profile": {
+              "type": "object",
+              "properties": {
+                "headline": {
+                  "type": "string",
+                  "maxLength": 200
+                },
+                "experience_years": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "level": {
+                  "type": "string",
+                  "enum": [
+                    "junior",
+                    "mid",
+                    "senior",
+                    "lead"
+                  ]
+                },
+                "location": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "work_modes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "remote",
+                      "hybrid",
+                      "onsite"
+                    ]
+                  },
+                  "uniqueItems": true,
+                  "maxItems": 100
+                },
+                "salary_min": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "salary_max": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "headline",
+                "experience_years",
+                "level",
+                "location",
+                "work_modes",
+                "salary_min",
+                "salary_max"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "email",
+            "display_name",
+            "roles",
+            "status",
+            "deleted_at",
+            "privacy",
+            "profile"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "companies": {
+      "edge": false,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z0-9-]+$"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "archived"
+              ]
+            },
+            "members": {
+              "type": "array",
+              "maxItems": 100,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "user_id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^users/[A-Za-z0-9_-]+$"
+                  },
+                  "role": {
+                    "type": "string",
+                    "enum": [
+                      "owner",
+                      "recruiter"
+                    ]
+                  },
+                  "verified": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "user_id",
+                  "role",
+                  "verified"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "name",
+            "slug",
+            "status",
+            "members"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "jobs": {
+      "edge": false,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "open",
+                "closed",
+                "archived"
+              ]
+            },
+            "location": {
+              "type": "string",
+              "minLength": 1
+            },
+            "work_mode": {
+              "type": "string",
+              "enum": [
+                "remote",
+                "hybrid",
+                "onsite"
+              ]
+            },
+            "level": {
+              "type": "string",
+              "enum": [
+                "junior",
+                "mid",
+                "senior",
+                "lead"
+              ]
+            },
+            "min_experience_years": {
+              "type": "number",
+              "minimum": 0
+            },
+            "salary_min": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "salary_max": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "salary_currency": {
+              "type": "string",
+              "enum": [
+                "VND"
+              ]
+            },
+            "published_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "title",
+            "description",
+            "status",
+            "location",
+            "work_mode",
+            "level",
+            "min_experience_years",
+            "salary_min",
+            "salary_max",
+            "salary_currency",
+            "published_at"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "skills": {
+      "edge": false,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "normalized_name": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z0-9+#. -]+$"
+            },
+            "category": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "archived"
+              ]
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "name",
+            "normalized_name",
+            "category",
+            "status"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "applications": {
+      "edge": false,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "candidate_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^users/[A-Za-z0-9_-]+$"
+            },
+            "job_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^jobs/[A-Za-z0-9_-]+$"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "submitted",
+                "reviewing",
+                "interview",
+                "offered",
+                "rejected",
+                "withdrawn"
+              ]
+            },
+            "resume_ref": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "consent": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "candidate_id",
+            "job_id",
+            "status",
+            "resume_ref",
+            "consent"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "referral_requests": {
+      "edge": false,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "candidate_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^users/[A-Za-z0-9_-]+$"
+            },
+            "referrer_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^users/[A-Za-z0-9_-]+$"
+            },
+            "job_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^jobs/[A-Za-z0-9_-]+$"
+            },
+            "application_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^applications/[A-Za-z0-9_-]+$"
+            },
+            "message": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "accepted",
+                "rejected",
+                "cancelled",
+                "expired",
+                "submitted",
+                "completed"
+              ]
+            },
+            "idempotency_key": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "accepted_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "rejected_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "cancelled_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "submitted_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "completed_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "expires_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "evidence_ref": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "history": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 100,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "pending",
+                      "accepted",
+                      "rejected",
+                      "cancelled",
+                      "expired",
+                      "submitted",
+                      "completed"
+                    ]
+                  },
+                  "actor_id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^users/[A-Za-z0-9_-]+$"
+                  },
+                  "at": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+                  },
+                  "reason": {
+                    "type": "string",
+                    "maxLength": 1000
+                  }
+                },
+                "required": [
+                  "status",
+                  "actor_id",
+                  "at",
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "candidate_id",
+            "referrer_id",
+            "job_id",
+            "application_id",
+            "message",
+            "status",
+            "idempotency_key",
+            "accepted_at",
+            "rejected_at",
+            "cancelled_at",
+            "submitted_at",
+            "completed_at",
+            "expires_at",
+            "evidence_ref",
+            "history"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "notifications": {
+      "edge": false,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "recipient_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^users/[A-Za-z0-9_-]+$"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "connection_request",
+                "referral_created",
+                "referral_status"
+              ]
+            },
+            "resource_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "event_key": {
+              "type": "string",
+              "minLength": 1
+            },
+            "read_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "recipient_id",
+            "kind",
+            "resource_id",
+            "event_key",
+            "read_at"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "audit_logs": {
+      "edge": false,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "actor_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^users/[A-Za-z0-9_-]+$"
+            },
+            "action": {
+              "type": "string",
+              "minLength": 1
+            },
+            "resource_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "metadata": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "status",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "actor_id",
+            "action",
+            "resource_id",
+            "request_id",
+            "metadata"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "connections": {
+      "edge": true,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "pair_key": {
+              "type": "string",
+              "minLength": 1
+            },
+            "invited_by": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^users/[A-Za-z0-9_-]+$"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "accepted",
+                "rejected",
+                "blocked"
+              ]
+            },
+            "accepted_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "deleted_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "trust": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "pair_key",
+            "invited_by",
+            "status",
+            "accepted_at",
+            "deleted_at",
+            "trust"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "computed_values": [
+        {
+          "name": "pair_key",
+          "expression": "RETURN CONCAT_SEPARATOR('|', SORTED([@doc._from, @doc._to]))",
+          "overwrite": true,
+          "computeOn": [
+            "insert",
+            "update",
+            "replace"
+          ],
+          "keepNull": false,
+          "failOnWarning": true
+        }
+      ]
+    },
+    "works_at": {
+      "edge": true,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "department": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "current",
+                "ended"
+              ]
+            },
+            "verified": {
+              "type": "boolean"
+            },
+            "start_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "end_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "title",
+            "department",
+            "status",
+            "verified",
+            "start_at",
+            "end_at"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "has_skill": {
+      "edge": true,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "proficiency": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "years_experience": {
+              "type": "number",
+              "minimum": 0
+            },
+            "verified": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "proficiency",
+            "years_experience",
+            "verified"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "job_requires_skill": {
+      "edge": true,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "required",
+                "preferred"
+              ]
+            },
+            "min_proficiency": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "min_years": {
+              "type": "number",
+              "minimum": 0
+            },
+            "importance": {
+              "type": "number",
+              "minimum": 0,
+              "exclusiveMinimum": true
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at",
+            "kind",
+            "min_proficiency",
+            "min_years",
+            "importance"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "job_at_company": {
+      "edge": true,
+      "schema": {
+        "level": "strict",
+        "message": "Invalid Job Referral v1 document",
+        "rule": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "updated_at": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            }
+          },
+          "required": [
+            "created_at",
+            "updated_at"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "graph": {
+    "name": "jobReferralGraph",
+    "edge_definitions": [
+      {
+        "edge_collection": "connections",
+        "from_vertex_collections": [
+          "users"
+        ],
+        "to_vertex_collections": [
+          "users"
+        ]
+      },
+      {
+        "edge_collection": "works_at",
+        "from_vertex_collections": [
+          "users"
+        ],
+        "to_vertex_collections": [
+          "companies"
+        ]
+      },
+      {
+        "edge_collection": "has_skill",
+        "from_vertex_collections": [
+          "users"
+        ],
+        "to_vertex_collections": [
+          "skills"
+        ]
+      },
+      {
+        "edge_collection": "job_requires_skill",
+        "from_vertex_collections": [
+          "jobs"
+        ],
+        "to_vertex_collections": [
+          "skills"
+        ]
+      },
+      {
+        "edge_collection": "job_at_company",
+        "from_vertex_collections": [
+          "jobs"
+        ],
+        "to_vertex_collections": [
+          "companies"
+        ]
+      }
+    ],
+    "orphan_collections": [
+      "applications",
+      "referral_requests",
+      "notifications",
+      "audit_logs"
+    ]
+  },
+  "recovery": "Forward-only. On partial failure rerun the same immutable migration. No data deletion or automatic rollback. Backup before schema changes."
+}

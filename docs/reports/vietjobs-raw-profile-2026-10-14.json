@@ -1,0 +1,3163 @@
+{
+  "available": true,
+  "file_name": "VietJobs.csv",
+  "source_sha256": "85862b06fda4e814fe0c1d8622f173d189c92758345f77df16d1232d0c49d477",
+  "source_bytes": 103110903,
+  "pipeline": "python-csv-raw-inspection-v1",
+  "profiled_at": "2026-10-13T17:10:18.241120+00:00",
+  "database_imported": false,
+  "spark_processed": false,
+  "rows": 48092,
+  "usable_rows": 48092,
+  "column_count": 18,
+  "unique_rows": 47707,
+  "exact_duplicate_rows": 385,
+  "malformed_rows": 0,
+  "multi_location_rows": 2766,
+  "unknown_experience_rows": 0,
+  "fields": [
+    {
+      "name": "job_title",
+      "missing": 0,
+      "max_length": 216
+    },
+    {
+      "name": "location",
+      "missing": 0,
+      "max_length": 171
+    },
+    {
+      "name": "country",
+      "missing": 0,
+      "max_length": 11
+    },
+    {
+      "name": "qualifications",
+      "missing": 370,
+      "max_length": 840
+    },
+    {
+      "name": "technical_skills",
+      "missing": 6437,
+      "max_length": 1021
+    },
+    {
+      "name": "soft_skills",
+      "missing": 2641,
+      "max_length": 720
+    },
+    {
+      "name": "languages_required",
+      "missing": 35796,
+      "max_length": 106
+    },
+    {
+      "name": "experience_required",
+      "missing": 0,
+      "max_length": 13
+    },
+    {
+      "name": "salary",
+      "missing": 0,
+      "max_length": 19
+    },
+    {
+      "name": "contract_type",
+      "missing": 0,
+      "max_length": 29
+    },
+    {
+      "name": "working_hours",
+      "missing": 4982,
+      "max_length": 252
+    },
+    {
+      "name": "benefits",
+      "missing": 39,
+      "max_length": 1990
+    },
+    {
+      "name": "description",
+      "missing": 0,
+      "max_length": 4408
+    },
+    {
+      "name": "requirements_text",
+      "missing": 9,
+      "max_length": 3669
+    },
+    {
+      "name": "category",
+      "missing": 0,
+      "max_length": 48
+    },
+    {
+      "name": "salary_min",
+      "missing": 0,
+      "max_length": 3
+    },
+    {
+      "name": "salary_max",
+      "missing": 0,
+      "max_length": 3
+    },
+    {
+      "name": "salary_avg",
+      "missing": 0,
+      "max_length": 10
+    }
+  ],
+  "list_fields": [
+    {
+      "name": "qualifications",
+      "empty_or_missing": 386,
+      "invalid": 0
+    },
+    {
+      "name": "technical_skills",
+      "empty_or_missing": 6558,
+      "invalid": 0
+    },
+    {
+      "name": "soft_skills",
+      "empty_or_missing": 2799,
+      "invalid": 0
+    },
+    {
+      "name": "languages_required",
+      "empty_or_missing": 35796,
+      "invalid": 12296
+    },
+    {
+      "name": "benefits",
+      "empty_or_missing": 46,
+      "invalid": 0
+    }
+  ],
+  "quality_flags": [
+    {
+      "label": "salary_zero_placeholder",
+      "count": 13730
+    },
+    {
+      "label": "invalid_languages_required",
+      "count": 12296
+    },
+    {
+      "label": "salary_text_numeric_conflict",
+      "count": 1355
+    },
+    {
+      "label": "salary_incomplete_bounds",
+      "count": 47
+    }
+  ],
+  "categories": [
+    {
+      "label": "kinh_doanh_bán_hàng_chăm_sóc_khách_hàng",
+      "count": 8276
+    },
+    {
+      "label": "sản_xuất_lao_động_phổ_thông_cơ_khí",
+      "count": 6407
+    },
+    {
+      "label": "marketing_truyền_thông_quảng_cáo_nội_dung",
+      "count": 5950
+    },
+    {
+      "label": "tài_chính_kế_toán_ngân_hàng_bảo_hiểm",
+      "count": 5530
+    },
+    {
+      "label": "du_lịch_nhà_hàng_khách_sạn_dịch_vụ",
+      "count": 4243
+    },
+    {
+      "label": "thiết_kế_nghệ_thuật_giải_trí_truyền_hình_báo_chí",
+      "count": 3465
+    },
+    {
+      "label": "nhân_sự_hành_chính_pháp_chế_tư_vấn",
+      "count": 3276
+    },
+    {
+      "label": "xây_dựng_kiến_trúc_bất_động_sản",
+      "count": 2811
+    },
+    {
+      "label": "công_nghệ_thông_tin_kỹ_thuật_số",
+      "count": 1906
+    },
+    {
+      "label": "logistics_vận_tải_chuỗi_cung_ứng",
+      "count": 1813
+    },
+    {
+      "label": "kỹ_thuật_điện_điện_tử_viễn_thông",
+      "count": 1236
+    },
+    {
+      "label": "giáo_dục_đào_tạo_nghiên_cứu",
+      "count": 1165
+    },
+    {
+      "label": "y_tế_dược_chăm_sóc_sức_khỏe_công_nghệ_sinh_học",
+      "count": 963
+    },
+    {
+      "label": "ngôn_ngữ_dịch_thuật",
+      "count": 384
+    },
+    {
+      "label": "nhóm_nghề_khác",
+      "count": 345
+    },
+    {
+      "label": "nông_nghiệp_năng_lượng_môi_trường",
+      "count": 322
+    }
+  ],
+  "countries": [
+    {
+      "label": "Việt Nam",
+      "count": 47957
+    },
+    {
+      "label": "Mỹ",
+      "count": 91
+    },
+    {
+      "label": "Nhật Bản",
+      "count": 21
+    },
+    {
+      "label": "Lào",
+      "count": 6
+    },
+    {
+      "label": "Đức",
+      "count": 5
+    },
+    {
+      "label": "Campuchia",
+      "count": 4
+    },
+    {
+      "label": "Mozambique",
+      "count": 3
+    },
+    {
+      "label": "Philippines",
+      "count": 3
+    },
+    {
+      "label": "Anh",
+      "count": 1
+    },
+    {
+      "label": "Singapore",
+      "count": 1
+    }
+  ],
+  "contracts": [
+    {
+      "label": "Toàn thời gian",
+      "count": 46058
+    },
+    {
+      "label": "Bán thời gian",
+      "count": 874
+    },
+    {
+      "label": "Thực tập",
+      "count": 822
+    },
+    {
+      "label": "Khác",
+      "count": 165
+    },
+    {
+      "label": "Thời vụ",
+      "count": 92
+    },
+    {
+      "label": "Cộng tác viên",
+      "count": 54
+    },
+    {
+      "label": "Toàn thời gian, Bán thời gian",
+      "count": 16
+    },
+    {
+      "label": "Toàn thời gian, Thực tập",
+      "count": 10
+    },
+    {
+      "label": "Thời vụ, Cộng tác viên",
+      "count": 1
+    }
+  ],
+  "experience": [
+    {
+      "label": "1 năm",
+      "count": 15372
+    },
+    {
+      "label": "Không yêu cầu",
+      "count": 12345
+    },
+    {
+      "label": "2 năm",
+      "count": 9781
+    },
+    {
+      "label": "3 năm",
+      "count": 5595
+    },
+    {
+      "label": "6 tháng",
+      "count": 2258
+    },
+    {
+      "label": "5 năm",
+      "count": 1934
+    },
+    {
+      "label": "4 năm",
+      "count": 399
+    },
+    {
+      "label": "3 tháng",
+      "count": 142
+    },
+    {
+      "label": "7 năm",
+      "count": 91
+    },
+    {
+      "label": "10 năm",
+      "count": 64
+    },
+    {
+      "label": "8 năm",
+      "count": 34
+    },
+    {
+      "label": "6 năm",
+      "count": 30
+    },
+    {
+      "label": "18 tháng",
+      "count": 19
+    },
+    {
+      "label": "2 tháng",
+      "count": 10
+    },
+    {
+      "label": "9 tháng",
+      "count": 7
+    },
+    {
+      "label": "30 tháng",
+      "count": 5
+    },
+    {
+      "label": "15 năm",
+      "count": 3
+    },
+    {
+      "label": "12 năm",
+      "count": 2
+    },
+    {
+      "label": "8 tháng",
+      "count": 1
+    }
+  ],
+  "locations": [
+    {
+      "label": "hà nội",
+      "count": 19774
+    },
+    {
+      "label": "hồ chí minh",
+      "count": 17019
+    },
+    {
+      "label": "hà đông",
+      "count": 1215
+    },
+    {
+      "label": "hải phòng",
+      "count": 1108
+    },
+    {
+      "label": "bắc ninh",
+      "count": 1086
+    },
+    {
+      "label": "đà nẵng",
+      "count": 1083
+    },
+    {
+      "label": "hưng yên",
+      "count": 798
+    },
+    {
+      "label": "đồng nai",
+      "count": 678
+    },
+    {
+      "label": "tây ninh",
+      "count": 562
+    },
+    {
+      "label": "ninh bình",
+      "count": 516
+    },
+    {
+      "label": "thanh hoá",
+      "count": 252
+    },
+    {
+      "label": "nghệ an",
+      "count": 244
+    },
+    {
+      "label": "phú thọ",
+      "count": 234
+    },
+    {
+      "label": "cần thơ",
+      "count": 214
+    },
+    {
+      "label": "quảng ninh",
+      "count": 206
+    },
+    {
+      "label": "thủ đức",
+      "count": 196
+    },
+    {
+      "label": "gia lai",
+      "count": 195
+    },
+    {
+      "label": "tp vinh",
+      "count": 188
+    },
+    {
+      "label": "bắc từ liêm",
+      "count": 183
+    },
+    {
+      "label": "nam từ liêm",
+      "count": 161
+    },
+    {
+      "label": "cầu giấy",
+      "count": 160
+    },
+    {
+      "label": "quận 7",
+      "count": 157
+    },
+    {
+      "label": "thừa thiên huế",
+      "count": 154
+    },
+    {
+      "label": "thái nguyên",
+      "count": 146
+    },
+    {
+      "label": "bình thạnh",
+      "count": 132
+    },
+    {
+      "label": "lâm đồng",
+      "count": 117
+    },
+    {
+      "label": "an giang",
+      "count": 116
+    },
+    {
+      "label": "đắk lắk",
+      "count": 112
+    },
+    {
+      "label": "khánh hoà",
+      "count": 110
+    },
+    {
+      "label": "vĩnh long",
+      "count": 102
+    },
+    {
+      "label": "đồng tháp",
+      "count": 102
+    },
+    {
+      "label": "nhà bè",
+      "count": 100
+    },
+    {
+      "label": "củ chi",
+      "count": 91
+    },
+    {
+      "label": "đống đa",
+      "count": 91
+    },
+    {
+      "label": "quận 12",
+      "count": 83
+    },
+    {
+      "label": "quận 1",
+      "count": 77
+    },
+    {
+      "label": "tân bình",
+      "count": 73
+    },
+    {
+      "label": "long biên",
+      "count": 70
+    },
+    {
+      "label": "hóc môn",
+      "count": 66
+    },
+    {
+      "label": "hà tĩnh",
+      "count": 65
+    },
+    {
+      "label": "nha trang",
+      "count": 65
+    },
+    {
+      "label": "quảng ngãi",
+      "count": 65
+    },
+    {
+      "label": "bến cát",
+      "count": 63
+    },
+    {
+      "label": "quận 2",
+      "count": 63
+    },
+    {
+      "label": "đông anh",
+      "count": 60
+    },
+    {
+      "label": "cà mau",
+      "count": 59
+    },
+    {
+      "label": "bình tân",
+      "count": 58
+    },
+    {
+      "label": "tp nha trang",
+      "count": 55
+    },
+    {
+      "label": "thanh xuân",
+      "count": 53
+    },
+    {
+      "label": "tp buôn ma thuột",
+      "count": 53
+    },
+    {
+      "label": "biên hoà",
+      "count": 52
+    },
+    {
+      "label": "gò vấp",
+      "count": 52
+    },
+    {
+      "label": "gia lâm",
+      "count": 51
+    },
+    {
+      "label": "san francisco",
+      "count": 51
+    },
+    {
+      "label": "quảng trị",
+      "count": 50
+    },
+    {
+      "label": "hoàng mai",
+      "count": 49
+    },
+    {
+      "label": "lào cai",
+      "count": 49
+    },
+    {
+      "label": "dĩ an",
+      "count": 47
+    },
+    {
+      "label": "quận 3",
+      "count": 43
+    },
+    {
+      "label": "hoà bình",
+      "count": 42
+    },
+    {
+      "label": "quận 10",
+      "count": 41
+    },
+    {
+      "label": "hai bà trưng",
+      "count": 39
+    },
+    {
+      "label": "ba đình",
+      "count": 37
+    },
+    {
+      "label": "chương mỹ",
+      "count": 35
+    },
+    {
+      "label": "phú quốc",
+      "count": 34
+    },
+    {
+      "label": "long khánh",
+      "count": 33
+    },
+    {
+      "label": "quận 9",
+      "count": 33
+    },
+    {
+      "label": "tp đà lạt",
+      "count": 32
+    },
+    {
+      "label": "tân phú",
+      "count": 32
+    },
+    {
+      "label": "đà lạt",
+      "count": 31
+    },
+    {
+      "label": "phú nhuận",
+      "count": 29
+    },
+    {
+      "label": "hạ long",
+      "count": 27
+    },
+    {
+      "label": "new york",
+      "count": 27
+    },
+    {
+      "label": "ninh thuận",
+      "count": 25
+    },
+    {
+      "label": "thủ dầu một",
+      "count": 25
+    },
+    {
+      "label": "biên hòa",
+      "count": 24
+    },
+    {
+      "label": "bình chánh",
+      "count": 24
+    },
+    {
+      "label": "thường tín",
+      "count": 24
+    },
+    {
+      "label": "tp phủ lý",
+      "count": 24
+    },
+    {
+      "label": "tp quy nhơn",
+      "count": 23
+    },
+    {
+      "label": "mỹ hào",
+      "count": 22
+    },
+    {
+      "label": "quốc oai",
+      "count": 21
+    },
+    {
+      "label": "tuyên quang",
+      "count": 21
+    },
+    {
+      "label": "long thành",
+      "count": 19
+    },
+    {
+      "label": "quận 11",
+      "count": 19
+    },
+    {
+      "label": "quận 4",
+      "count": 19
+    },
+    {
+      "label": "quận 6",
+      "count": 19
+    },
+    {
+      "label": "thuận an",
+      "count": 19
+    },
+    {
+      "label": "tây hồ",
+      "count": 19
+    },
+    {
+      "label": "điện bàn",
+      "count": 19
+    },
+    {
+      "label": "đắc nông",
+      "count": 19
+    },
+    {
+      "label": "yên mỹ",
+      "count": 18
+    },
+    {
+      "label": "nhật bản",
+      "count": 17
+    },
+    {
+      "label": "tp cam ranh",
+      "count": 16
+    },
+    {
+      "label": "tp hạ long",
+      "count": 16
+    },
+    {
+      "label": "từ sơn",
+      "count": 16
+    },
+    {
+      "label": "bến lức",
+      "count": 15
+    },
+    {
+      "label": "lạng sơn",
+      "count": 15
+    },
+    {
+      "label": "nước ngoài",
+      "count": 15
+    },
+    {
+      "label": "sơn la",
+      "count": 15
+    },
+    {
+      "label": "đan phượng",
+      "count": 14
+    },
+    {
+      "label": "điện biên",
+      "count": 14
+    },
+    {
+      "label": "hoài đức",
+      "count": 13
+    },
+    {
+      "label": "hoàn kiếm",
+      "count": 13
+    },
+    {
+      "label": "quận 8",
+      "count": 13
+    },
+    {
+      "label": "tp tuy hoà",
+      "count": 13
+    },
+    {
+      "label": "['hà nội'",
+      "count": 12
+    },
+    {
+      "label": "bảo lộc",
+      "count": 12
+    },
+    {
+      "label": "cẩm giàng",
+      "count": 11
+    },
+    {
+      "label": "tp mỹ tho",
+      "count": 11
+    },
+    {
+      "label": "đơn dương",
+      "count": 11
+    },
+    {
+      "label": "bình xuyên",
+      "count": 10
+    },
+    {
+      "label": "bỉm sơn",
+      "count": 10
+    },
+    {
+      "label": "duy tiên",
+      "count": 10
+    },
+    {
+      "label": "hội an",
+      "count": 10
+    },
+    {
+      "label": "nhơn trạch",
+      "count": 10
+    },
+    {
+      "label": "phúc yên",
+      "count": 10
+    },
+    {
+      "label": "quận 5",
+      "count": 10
+    },
+    {
+      "label": "seattle",
+      "count": 10
+    },
+    {
+      "label": "tp bắc ninh",
+      "count": 10
+    },
+    {
+      "label": "tp hoà bình",
+      "count": 10
+    },
+    {
+      "label": "tân an",
+      "count": 10
+    },
+    {
+      "label": "'hồ chí minh'",
+      "count": 9
+    },
+    {
+      "label": "cao bằng",
+      "count": 9
+    },
+    {
+      "label": "cái răng",
+      "count": 9
+    },
+    {
+      "label": "quy nhơn",
+      "count": 9
+    },
+    {
+      "label": "tp rạch giá",
+      "count": 9
+    },
+    {
+      "label": "tp vĩnh yên",
+      "count": 9
+    },
+    {
+      "label": "cần giuộc",
+      "count": 8
+    },
+    {
+      "label": "cẩm phả",
+      "count": 8
+    },
+    {
+      "label": "khánh hòa",
+      "count": 8
+    },
+    {
+      "label": "mê linh",
+      "count": 8
+    },
+    {
+      "label": "ngọc lặc",
+      "count": 8
+    },
+    {
+      "label": "phú mỹ",
+      "count": 8
+    },
+    {
+      "label": "thành phố thủ đức",
+      "count": 8
+    },
+    {
+      "label": "tp móng cái",
+      "count": 8
+    },
+    {
+      "label": "ho chi minh city",
+      "count": 7
+    },
+    {
+      "label": "sa pa",
+      "count": 7
+    },
+    {
+      "label": "thanh trì",
+      "count": 7
+    },
+    {
+      "label": "tp hội an",
+      "count": 7
+    },
+    {
+      "label": "tp phan rang tháp chàm",
+      "count": 7
+    },
+    {
+      "label": "tp pleiku",
+      "count": 7
+    },
+    {
+      "label": "tp đồng hới",
+      "count": 7
+    },
+    {
+      "label": "văn giang",
+      "count": 7
+    },
+    {
+      "label": "đại kim",
+      "count": 7
+    },
+    {
+      "label": "phổ yên",
+      "count": 6
+    },
+    {
+      "label": "thành phố hồ chí minh",
+      "count": 6
+    },
+    {
+      "label": "thủ đức - tp hcm",
+      "count": 6
+    },
+    {
+      "label": "tp cẩm phả",
+      "count": 6
+    },
+    {
+      "label": "tp huế",
+      "count": 6
+    },
+    {
+      "label": "tp quảng ngãi",
+      "count": 6
+    },
+    {
+      "label": "tp sông công",
+      "count": 6
+    },
+    {
+      "label": "tp việt trì",
+      "count": 6
+    },
+    {
+      "label": "tp vũng tàu",
+      "count": 6
+    },
+    {
+      "label": "tân uyên",
+      "count": 6
+    },
+    {
+      "label": "'hải phòng']",
+      "count": 5
+    },
+    {
+      "label": "bình lợi",
+      "count": 5
+    },
+    {
+      "label": "cụm công nghiệp cư kuin",
+      "count": 5
+    },
+    {
+      "label": "huyện cư kuin",
+      "count": 5
+    },
+    {
+      "label": "hồng bàng",
+      "count": 5
+    },
+    {
+      "label": "phan thiết",
+      "count": 5
+    },
+    {
+      "label": "phường 13",
+      "count": 5
+    },
+    {
+      "label": "thanh hóa",
+      "count": 5
+    },
+    {
+      "label": "thạch thất",
+      "count": 5
+    },
+    {
+      "label": "tiên lãng",
+      "count": 5
+    },
+    {
+      "label": "tp hải phòng",
+      "count": 5
+    },
+    {
+      "label": "tp đồng xoài",
+      "count": 5
+    },
+    {
+      "label": "vĩnh yên",
+      "count": 5
+    },
+    {
+      "label": "xã dray bhăng",
+      "count": 5
+    },
+    {
+      "label": "đức",
+      "count": 5
+    },
+    {
+      "label": "đức hoà",
+      "count": 5
+    },
+    {
+      "label": "đức trọng",
+      "count": 5
+    },
+    {
+      "label": "'hà nội']",
+      "count": 4
+    },
+    {
+      "label": "hà nội & hồ chí minh",
+      "count": 4
+    },
+    {
+      "label": "hà nội/hồ chí minh",
+      "count": 4
+    },
+    {
+      "label": "hưng nguyên",
+      "count": 4
+    },
+    {
+      "label": "nghi lộc",
+      "count": 4
+    },
+    {
+      "label": "núi thành",
+      "count": 4
+    },
+    {
+      "label": "phú lộc",
+      "count": 4
+    },
+    {
+      "label": "quế võ",
+      "count": 4
+    },
+    {
+      "label": "sơn trà",
+      "count": 4
+    },
+    {
+      "label": "tam điệp",
+      "count": 4
+    },
+    {
+      "label": "thanh oai",
+      "count": 4
+    },
+    {
+      "label": "thăng bình",
+      "count": 4
+    },
+    {
+      "label": "thủ đức hoặc dĩ an",
+      "count": 4
+    },
+    {
+      "label": "toàn quốc",
+      "count": 4
+    },
+    {
+      "label": "tp hà tĩnh",
+      "count": 4
+    },
+    {
+      "label": "tp hưng yên",
+      "count": 4
+    },
+    {
+      "label": "tp ninh bình",
+      "count": 4
+    },
+    {
+      "label": "tp thanh hoá",
+      "count": 4
+    },
+    {
+      "label": "tp uông bí",
+      "count": 4
+    },
+    {
+      "label": "tp.hcm",
+      "count": 4
+    },
+    {
+      "label": "trảng bàng",
+      "count": 4
+    },
+    {
+      "label": "từ liêm",
+      "count": 4
+    },
+    {
+      "label": "đông triều",
+      "count": 4
+    },
+    {
+      "label": "'bắc ninh'",
+      "count": 3
+    },
+    {
+      "label": "'hải phòng'",
+      "count": 3
+    },
+    {
+      "label": "'hồ chí minh']",
+      "count": 3
+    },
+    {
+      "label": "'quảng ninh'",
+      "count": 3
+    },
+    {
+      "label": "'quảng ninh']",
+      "count": 3
+    },
+    {
+      "label": "['hải phòng'",
+      "count": 3
+    },
+    {
+      "label": "an khê",
+      "count": 3
+    },
+    {
+      "label": "buôn ma thuột",
+      "count": 3
+    },
+    {
+      "label": "bàu bàng",
+      "count": 3
+    },
+    {
+      "label": "châu đốc",
+      "count": 3
+    },
+    {
+      "label": "châu đức",
+      "count": 3
+    },
+    {
+      "label": "chợ gạo",
+      "count": 3
+    },
+    {
+      "label": "cư kuin",
+      "count": 3
+    },
+    {
+      "label": "district 7",
+      "count": 3
+    },
+    {
+      "label": "diên khánh",
+      "count": 3
+    },
+    {
+      "label": "huế",
+      "count": 3
+    },
+    {
+      "label": "hưng tây",
+      "count": 3
+    },
+    {
+      "label": "hương trà",
+      "count": 3
+    },
+    {
+      "label": "lai châu",
+      "count": 3
+    },
+    {
+      "label": "linh đàm",
+      "count": 3
+    },
+    {
+      "label": "lê chân",
+      "count": 3
+    },
+    {
+      "label": "lạng giang",
+      "count": 3
+    },
+    {
+      "label": "mountain view",
+      "count": 3
+    },
+    {
+      "label": "mozambique",
+      "count": 3
+    },
+    {
+      "label": "phú xuyên",
+      "count": 3
+    },
+    {
+      "label": "phường 25",
+      "count": 3
+    },
+    {
+      "label": "phường an phú",
+      "count": 3
+    },
+    {
+      "label": "phường linh xuân",
+      "count": 3
+    },
+    {
+      "label": "quảng yên",
+      "count": 3
+    },
+    {
+      "label": "tam đảo",
+      "count": 3
+    },
+    {
+      "label": "thành phố thái nguyên",
+      "count": 3
+    },
+    {
+      "label": "thủy nguyên",
+      "count": 3
+    },
+    {
+      "label": "tokyo",
+      "count": 3
+    },
+    {
+      "label": "tp lào cai",
+      "count": 3
+    },
+    {
+      "label": "tp thanh hóa",
+      "count": 3
+    },
+    {
+      "label": "tp thái nguyên",
+      "count": 3
+    },
+    {
+      "label": "tp điện biên phủ",
+      "count": 3
+    },
+    {
+      "label": "tp. thủ đức",
+      "count": 3
+    },
+    {
+      "label": "uông bí",
+      "count": 3
+    },
+    {
+      "label": "vinh",
+      "count": 3
+    },
+    {
+      "label": "việt trì",
+      "count": 3
+    },
+    {
+      "label": "vĩnh tuy",
+      "count": 3
+    },
+    {
+      "label": "wa",
+      "count": 3
+    },
+    {
+      "label": "yên phong",
+      "count": 3
+    },
+    {
+      "label": "ân thi",
+      "count": 3
+    },
+    {
+      "label": "'hà nội'",
+      "count": 2
+    },
+    {
+      "label": "'hưng yên'",
+      "count": 2
+    },
+    {
+      "label": "'lào cai'",
+      "count": 2
+    },
+    {
+      "label": "'đồng nai'",
+      "count": 2
+    },
+    {
+      "label": "['bắc ninh'",
+      "count": 2
+    },
+    {
+      "label": "bà nà hills",
+      "count": 2
+    },
+    {
+      "label": "bãi cháy",
+      "count": 2
+    },
+    {
+      "label": "bắc hà",
+      "count": 2
+    },
+    {
+      "label": "ca",
+      "count": 2
+    },
+    {
+      "label": "cai lậy",
+      "count": 2
+    },
+    {
+      "label": "cái bè",
+      "count": 2
+    },
+    {
+      "label": "cần giờ",
+      "count": 2
+    },
+    {
+      "label": "cẩm giàng)",
+      "count": 2
+    },
+    {
+      "label": "cẩm hưng",
+      "count": 2
+    },
+    {
+      "label": "cẩm lệ",
+      "count": 2
+    },
+    {
+      "label": "duy xuyên",
+      "count": 2
+    },
+    {
+      "label": "hoài nhơn",
+      "count": 2
+    },
+    {
+      "label": "hà nội & hải phòng",
+      "count": 2
+    },
+    {
+      "label": "hà nội & đà nẵng",
+      "count": 2
+    },
+    {
+      "label": "hà nội'",
+      "count": 2
+    },
+    {
+      "label": "hóc môn & binh tân",
+      "count": 2
+    },
+    {
+      "label": "hưng yên'",
+      "count": 2
+    },
+    {
+      "label": "hải an",
+      "count": 2
+    },
+    {
+      "label": "hải châu",
+      "count": 2
+    },
+    {
+      "label": "hồ chí minh & vũng tàu",
+      "count": 2
+    },
+    {
+      "label": "kcn quang minh",
+      "count": 2
+    },
+    {
+      "label": "khắc niệm",
+      "count": 2
+    },
+    {
+      "label": "lâm hà",
+      "count": 2
+    },
+    {
+      "label": "lương sơn",
+      "count": 2
+    },
+    {
+      "label": "móng cái",
+      "count": 2
+    },
+    {
+      "label": "mỹ đình",
+      "count": 2
+    },
+    {
+      "label": "nghi sơn",
+      "count": 2
+    },
+    {
+      "label": "nghĩa đàn",
+      "count": 2
+    },
+    {
+      "label": "ngũ hành sơn",
+      "count": 2
+    },
+    {
+      "label": "phú nhuận - tp hcm",
+      "count": 2
+    },
+    {
+      "label": "phú đô",
+      "count": 2
+    },
+    {
+      "label": "phường an thới",
+      "count": 2
+    },
+    {
+      "label": "phường phủ lý",
+      "count": 2
+    },
+    {
+      "label": "phủ lý",
+      "count": 2
+    },
+    {
+      "label": "pleiku",
+      "count": 2
+    },
+    {
+      "label": "quận 1 - tp hcm",
+      "count": 2
+    },
+    {
+      "label": "quận 2 - tp hcm",
+      "count": 2
+    },
+    {
+      "label": "số 126 trần hưng đạo",
+      "count": 2
+    },
+    {
+      "label": "tam kỳ",
+      "count": 2
+    },
+    {
+      "label": "tam trinh",
+      "count": 2
+    },
+    {
+      "label": "thành phố huế",
+      "count": 2
+    },
+    {
+      "label": "thành phố vinh",
+      "count": 2
+    },
+    {
+      "label": "tiên du",
+      "count": 2
+    },
+    {
+      "label": "tp cao lãnh",
+      "count": 2
+    },
+    {
+      "label": "tp hồng ngự",
+      "count": 2
+    },
+    {
+      "label": "tp lai châu",
+      "count": 2
+    },
+    {
+      "label": "tp sa đéc",
+      "count": 2
+    },
+    {
+      "label": "tp tam kỳ",
+      "count": 2
+    },
+    {
+      "label": "tp tuyên quang",
+      "count": 2
+    },
+    {
+      "label": "tp. hcm",
+      "count": 2
+    },
+    {
+      "label": "tp.hải phòng",
+      "count": 2
+    },
+    {
+      "label": "tx kỳ anh",
+      "count": 2
+    },
+    {
+      "label": "tân sơn nhì",
+      "count": 2
+    },
+    {
+      "label": "tây hoà",
+      "count": 2
+    },
+    {
+      "label": "tỉnh đắk lắk",
+      "count": 2
+    },
+    {
+      "label": "vĩnh cửu",
+      "count": 2
+    },
+    {
+      "label": "xuyên mộc",
+      "count": 2
+    },
+    {
+      "label": "xuân lộc",
+      "count": 2
+    },
+    {
+      "label": "xã kẻ sặt",
+      "count": 2
+    },
+    {
+      "label": "đông giang",
+      "count": 2
+    },
+    {
+      "label": "đông hưng",
+      "count": 2
+    },
+    {
+      "label": "đạ huoai",
+      "count": 2
+    },
+    {
+      "label": "đắk lắk & lâm đồng",
+      "count": 2
+    },
+    {
+      "label": "định quán",
+      "count": 2
+    },
+    {
+      "label": "đức thượng",
+      "count": 2
+    },
+    {
+      "label": "'chương mỹ",
+      "count": 1
+    },
+    {
+      "label": "'cần thơ'",
+      "count": 1
+    },
+    {
+      "label": "'gia lâm - hà nội'",
+      "count": 1
+    },
+    {
+      "label": "'giáp bát",
+      "count": 1
+    },
+    {
+      "label": "'hai bà trưng",
+      "count": 1
+    },
+    {
+      "label": "'hoà bình'",
+      "count": 1
+    },
+    {
+      "label": "'hoà bình']",
+      "count": 1
+    },
+    {
+      "label": "'hà đông - hà nội'",
+      "count": 1
+    },
+    {
+      "label": "'kcn tân quang",
+      "count": 1
+    },
+    {
+      "label": "'khu đô thị meyhome capital phú quốc",
+      "count": 1
+    },
+    {
+      "label": "'kim đồng",
+      "count": 1
+    },
+    {
+      "label": "'lâm đồng'",
+      "count": 1
+    },
+    {
+      "label": "'nghệ an'",
+      "count": 1
+    },
+    {
+      "label": "'phan thiết'",
+      "count": 1
+    },
+    {
+      "label": "'quận 7 - tp hcm']",
+      "count": 1
+    },
+    {
+      "label": "'sa pa - lào cai']",
+      "count": 1
+    },
+    {
+      "label": "'thanh hoá'",
+      "count": 1
+    },
+    {
+      "label": "'thái nguyên']",
+      "count": 1
+    },
+    {
+      "label": "'thủ đức - tp hcm']",
+      "count": 1
+    },
+    {
+      "label": "'tp móng cái",
+      "count": 1
+    },
+    {
+      "label": "'tp quy nhơn",
+      "count": 1
+    },
+    {
+      "label": "'tp tuy hoà",
+      "count": 1
+    },
+    {
+      "label": "'tp vinh",
+      "count": 1
+    },
+    {
+      "label": "'tp vũng tàu']",
+      "count": 1
+    },
+    {
+      "label": "'tp đà lạt'",
+      "count": 1
+    },
+    {
+      "label": "'tuyên quang'",
+      "count": 1
+    },
+    {
+      "label": "'văn giang - hưng yên'",
+      "count": 1
+    },
+    {
+      "label": "'xuân mai']",
+      "count": 1
+    },
+    {
+      "label": "'đà nẵng']",
+      "count": 1
+    },
+    {
+      "label": "'đông triều",
+      "count": 1
+    },
+    {
+      "label": "'đồng nai']",
+      "count": 1
+    },
+    {
+      "label": "176/1 -176/3",
+      "count": 1
+    },
+    {
+      "label": "203 ông ích khiêm",
+      "count": 1
+    },
+    {
+      "label": "219 trung kính",
+      "count": 1
+    },
+    {
+      "label": "219b nơ trang long",
+      "count": 1
+    },
+    {
+      "label": "55 đường d",
+      "count": 1
+    },
+    {
+      "label": "59 đường 31e",
+      "count": 1
+    },
+    {
+      "label": "72 nguyễn trãi",
+      "count": 1
+    },
+    {
+      "label": "72a đ. nguyễn trãi",
+      "count": 1
+    },
+    {
+      "label": "79 đồng khởi",
+      "count": 1
+    },
+    {
+      "label": "87c đặng dung",
+      "count": 1
+    },
+    {
+      "label": "['cần thơ'",
+      "count": 1
+    },
+    {
+      "label": "['hoa lư",
+      "count": 1
+    },
+    {
+      "label": "['hưng yên'",
+      "count": 1
+    },
+    {
+      "label": "['hồ chí minh'",
+      "count": 1
+    },
+    {
+      "label": "['lâm đồng'",
+      "count": 1
+    },
+    {
+      "label": "['mỹ hào",
+      "count": 1
+    },
+    {
+      "label": "['ninh bình'",
+      "count": 1
+    },
+    {
+      "label": "['quảng ninh'",
+      "count": 1
+    },
+    {
+      "label": "['đồng nai'",
+      "count": 1
+    },
+    {
+      "label": "an dương",
+      "count": 1
+    },
+    {
+      "label": "an khánh",
+      "count": 1
+    },
+    {
+      "label": "an lão",
+      "count": 1
+    },
+    {
+      "label": "an nhơn",
+      "count": 1
+    },
+    {
+      "label": "ba chẽ",
+      "count": 1
+    },
+    {
+      "label": "ba vì",
+      "count": 1
+    },
+    {
+      "label": "ba đình - hà nội",
+      "count": 1
+    },
+    {
+      "label": "bcons tower 1",
+      "count": 1
+    },
+    {
+      "label": "berlin",
+      "count": 1
+    },
+    {
+      "label": "buôn hồ - đắk lắk",
+      "count": 1
+    },
+    {
+      "label": "bá thước",
+      "count": 1
+    },
+    {
+      "label": "bù đốp",
+      "count": 1
+    },
+    {
+      "label": "bắc ninh: lô 5",
+      "count": 1
+    },
+    {
+      "label": "bắc ninh; hà nội; hưng yên",
+      "count": 1
+    },
+    {
+      "label": "bồng sơn",
+      "count": 1
+    },
+    {
+      "label": "cao lãnh",
+      "count": 1
+    },
+    {
+      "label": "châu thành",
+      "count": 1
+    },
+    {
+      "label": "chí linh",
+      "count": 1
+    },
+    {
+      "label": "chợ mới",
+      "count": 1
+    },
+    {
+      "label": "cn6 cụm công nghiệp tập trung từ liêm",
+      "count": 1
+    },
+    {
+      "label": "cu chi",
+      "count": 1
+    },
+    {
+      "label": "cát hải - hải phòng",
+      "count": 1
+    },
+    {
+      "label": "công trình thủy điện namneun1",
+      "count": 1
+    },
+    {
+      "label": "cần thơ/lâm đồng",
+      "count": 1
+    },
+    {
+      "label": "cầu giấy - hà nội",
+      "count": 1
+    },
+    {
+      "label": "cầu giấy)",
+      "count": 1
+    },
+    {
+      "label": "cẩm lệ - đà nẵng",
+      "count": 1
+    },
+    {
+      "label": "cờ đỏ",
+      "count": 1
+    },
+    {
+      "label": "cụm cn hoài tân",
+      "count": 1
+    },
+    {
+      "label": "cụm công nghiệp liên phương",
+      "count": 1
+    },
+    {
+      "label": "cự khối",
+      "count": 1
+    },
+    {
+      "label": "di trạch",
+      "count": 1
+    },
+    {
+      "label": "district 10",
+      "count": 1
+    },
+    {
+      "label": "dương kinh",
+      "count": 1
+    },
+    {
+      "label": "dương nội",
+      "count": 1
+    },
+    {
+      "label": "dầu tiếng",
+      "count": 1
+    },
+    {
+      "label": "gia bình",
+      "count": 1
+    },
+    {
+      "label": "gia lai'",
+      "count": 1
+    },
+    {
+      "label": "giống riềng",
+      "count": 1
+    },
+    {
+      "label": "gò công",
+      "count": 1
+    },
+    {
+      "label": "ho chi minh",
+      "count": 1
+    },
+    {
+      "label": "hoài đức - hà nội",
+      "count": 1
+    },
+    {
+      "label": "huyện dakchung",
+      "count": 1
+    },
+    {
+      "label": "huyện hoa lư",
+      "count": 1
+    },
+    {
+      "label": "huyện nọng hét",
+      "count": 1
+    },
+    {
+      "label": "huyện thường tín",
+      "count": 1
+    },
+    {
+      "label": "hà nội & bắc ninh",
+      "count": 1
+    },
+    {
+      "label": "hà nội & tphcm",
+      "count": 1
+    },
+    {
+      "label": "hà nội (bắc từ liêm",
+      "count": 1
+    },
+    {
+      "label": "hà nội (hòa lạc",
+      "count": 1
+    },
+    {
+      "label": "hà nội và bắc ninh",
+      "count": 1
+    },
+    {
+      "label": "hà nội và hcm",
+      "count": 1
+    },
+    {
+      "label": "hà nội và hồ chí minh",
+      "count": 1
+    },
+    {
+      "label": "hà nội/ hồ chí minh",
+      "count": 1
+    },
+    {
+      "label": "hà nội/nghệ an",
+      "count": 1
+    },
+    {
+      "label": "hà nội: khu công nghiệp lai xá",
+      "count": 1
+    },
+    {
+      "label": "hà nội: km10 đường nguyễn trãi - phường văn quán",
+      "count": 1
+    },
+    {
+      "label": "hà nội: lô 3",
+      "count": 1
+    },
+    {
+      "label": "hà nội: số 6 ngách 34 ngõ 61 hoàng cầu",
+      "count": 1
+    },
+    {
+      "label": "hà nội; hồ chí minh",
+      "count": 1
+    },
+    {
+      "label": "hà nội; hồ chí minh; an giang (khu đô thị meyhomes capital phú quốc",
+      "count": 1
+    },
+    {
+      "label": "hà nội; nghệ an",
+      "count": 1
+    },
+    {
+      "label": "hà tiên",
+      "count": 1
+    },
+    {
+      "label": "hòa vang",
+      "count": 1
+    },
+    {
+      "label": "hưng hà",
+      "count": 1
+    },
+    {
+      "label": "hưng yên & 2 nơi khác",
+      "count": 1
+    },
+    {
+      "label": "hưng yên/ninh bình/hải phòng/quảng ninh/phú thọ/phú thọ/sơn la/ninh bình/ninh bình/tuyên quang/lào cai",
+      "count": 1
+    },
+    {
+      "label": "hưng yên; hà nội; quảng ninh; hưng yên; hải phòng; hải phòng",
+      "count": 1
+    },
+    {
+      "label": "hương khê",
+      "count": 1
+    },
+    {
+      "label": "hương thuỷ",
+      "count": 1
+    },
+    {
+      "label": "hải châu - đà nẵng",
+      "count": 1
+    },
+    {
+      "label": "hải phòng & 2 nơi khác",
+      "count": 1
+    },
+    {
+      "label": "hải phòng (cổ loa",
+      "count": 1
+    },
+    {
+      "label": "hải phòng (nhà xưởng đông đô",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh & long thành - đồng nai",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh (phú nhuận district)",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh (văn phòng xl - 167 trần não",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: 15-17 đường 57a",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: 17 công lý",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: 192 ung văn khiêm",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: 67 hoa sữa",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: 93 tô ngọc vân phường thạnh xuân 2",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: an phú",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: cvpm quang trung",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: phú thuận",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: quận 7",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: r4-59 đường nội khu hưng gia 2",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: the rivus - phước thiện",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh: tân cảng",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh; cầu giấy",
+      "count": 1
+    },
+    {
+      "label": "hồ chí minh; sân bay long thành",
+      "count": 1
+    },
+    {
+      "label": "hồ tràm",
+      "count": 1
+    },
+    {
+      "label": "hồng lĩnh",
+      "count": 1
+    },
+    {
+      "label": "kcn hòa phú",
+      "count": 1
+    },
+    {
+      "label": "kcn việt hưng",
+      "count": 1
+    },
+    {
+      "label": "kcn vsip",
+      "count": 1
+    },
+    {
+      "label": "kcn đồng an",
+      "count": 1
+    },
+    {
+      "label": "khu chế xuất tân thuận",
+      "count": 1
+    },
+    {
+      "label": "khu công nghiệp di trạch",
+      "count": 1
+    },
+    {
+      "label": "khu công nghiệp nhơn trạch iii",
+      "count": 1
+    },
+    {
+      "label": "khu công nghiệp đình trám",
+      "count": 1
+    },
+    {
+      "label": "khu phố 9",
+      "count": 1
+    },
+    {
+      "label": "khu tái định cư lộc an (sân bay long thành)",
+      "count": 1
+    },
+    {
+      "label": "khu đô thi văn khê",
+      "count": 1
+    },
+    {
+      "label": "khánh sơn",
+      "count": 1
+    },
+    {
+      "label": "kim bảng",
+      "count": 1
+    },
+    {
+      "label": "kim chung",
+      "count": 1
+    },
+    {
+      "label": "kim động",
+      "count": 1
+    },
+    {
+      "label": "krông pa",
+      "count": 1
+    },
+    {
+      "label": "kđt lakeview city",
+      "count": 1
+    },
+    {
+      "label": "kỳ anh",
+      "count": 1
+    },
+    {
+      "label": "london",
+      "count": 1
+    },
+    {
+      "label": "long xuyên",
+      "count": 1
+    },
+    {
+      "label": "lào",
+      "count": 1
+    },
+    {
+      "label": "lô 5 +6 kcn lai xá",
+      "count": 1
+    },
+    {
+      "label": "lạc dương",
+      "count": 1
+    },
+    {
+      "label": "lạc thị",
+      "count": 1
+    },
+    {
+      "label": "minh khai",
+      "count": 1
+    },
+    {
+      "label": "mộc châu",
+      "count": 1
+    },
+    {
+      "label": "mỹ tho",
+      "count": 1
+    },
+    {
+      "label": "nam sơn",
+      "count": 1
+    },
+    {
+      "label": "nam trực",
+      "count": 1
+    },
+    {
+      "label": "nghĩa trụ",
+      "count": 1
+    },
+    {
+      "label": "nghệ an'",
+      "count": 1
+    },
+    {
+      "label": "nguyễn văn thương",
+      "count": 1
+    },
+    {
+      "label": "ngũ hành sơn - đà nẵng",
+      "count": 1
+    },
+    {
+      "label": "ngọc hồi",
+      "count": 1
+    },
+    {
+      "label": "ngọc liệp",
+      "count": 1
+    },
+    {
+      "label": "nhà điều hành cát tường phú hưng",
+      "count": 1
+    },
+    {
+      "label": "nhật tân",
+      "count": 1
+    },
+    {
+      "label": "ninh bình'",
+      "count": 1
+    },
+    {
+      "label": "ny",
+      "count": 1
+    },
+    {
+      "label": "nông cống",
+      "count": 1
+    },
+    {
+      "label": "p.tân định",
+      "count": 1
+    },
+    {
+      "label": "phong điền",
+      "count": 1
+    },
+    {
+      "label": "phú giáo",
+      "count": 1
+    },
+    {
+      "label": "phú mỹ & phước hưng",
+      "count": 1
+    },
+    {
+      "label": "phú mỹ hưng)",
+      "count": 1
+    },
+    {
+      "label": "phú quốc - an giang",
+      "count": 1
+    },
+    {
+      "label": "phú thượng",
+      "count": 1
+    },
+    {
+      "label": "phương canh",
+      "count": 1
+    },
+    {
+      "label": "phước long",
+      "count": 1
+    },
+    {
+      "label": "phường",
+      "count": 1
+    },
+    {
+      "label": "phường 12",
+      "count": 1
+    },
+    {
+      "label": "phường 7",
+      "count": 1
+    },
+    {
+      "label": "phường an khánh",
+      "count": 1
+    },
+    {
+      "label": "phường bình hòa",
+      "count": 1
+    },
+    {
+      "label": "phường bình thọ",
+      "count": 1
+    },
+    {
+      "label": "phường bến nghé",
+      "count": 1
+    },
+    {
+      "label": "phường hoài tân",
+      "count": 1
+    },
+    {
+      "label": "phường minh khai",
+      "count": 1
+    },
+    {
+      "label": "phường nếnh",
+      "count": 1
+    },
+    {
+      "label": "phường tân chánh hiệp",
+      "count": 1
+    },
+    {
+      "label": "phường tân phong",
+      "count": 1
+    },
+    {
+      "label": "phường tân tạo",
+      "count": 1
+    },
+    {
+      "label": "phường yên hòa",
+      "count": 1
+    },
+    {
+      "label": "quảng ninh'",
+      "count": 1
+    },
+    {
+      "label": "quận 10 - tp hcm",
+      "count": 1
+    },
+    {
+      "label": "quận 1; hồ chí minh",
+      "count": 1
+    },
+    {
+      "label": "quận 7 (the peak - midtown",
+      "count": 1
+    },
+    {
+      "label": "quận 7 - tp hcm",
+      "count": 1
+    },
+    {
+      "label": "quận 9 - tp hcm",
+      "count": 1
+    },
+    {
+      "label": "quận bình thạnh",
+      "count": 1
+    },
+    {
+      "label": "quận hai bà trưng",
+      "count": 1
+    },
+    {
+      "label": "quế phong",
+      "count": 1
+    },
+    {
+      "label": "r2 - royal city",
+      "count": 1
+    },
+    {
+      "label": "rạch giá",
+      "count": 1
+    },
+    {
+      "label": "sala urban area",
+      "count": 1
+    },
+    {
+      "label": "singapore",
+      "count": 1
+    },
+    {
+      "label": "sân bay quốc tế cam ranh",
+      "count": 1
+    },
+    {
+      "label": "sóc sơn - hà nội",
+      "count": 1
+    },
+    {
+      "label": "sơn trung",
+      "count": 1
+    },
+    {
+      "label": "sơn tây; nhà xưởng đông đô",
+      "count": 1
+    },
+    {
+      "label": "số 38 nguyễn ngọc doãn",
+      "count": 1
+    },
+    {
+      "label": "số 5 khuất duy tiến",
+      "count": 1
+    },
+    {
+      "label": "thanh khê",
+      "count": 1
+    },
+    {
+      "label": "thanh thuỷ",
+      "count": 1
+    },
+    {
+      "label": "thiệu hoá",
+      "count": 1
+    },
+    {
+      "label": "thu duc",
+      "count": 1
+    },
+    {
+      "label": "thu duc city",
+      "count": 1
+    },
+    {
+      "label": "thành phố hà nội",
+      "count": 1
+    },
+    {
+      "label": "thành phố thanh hoá",
+      "count": 1
+    },
+    {
+      "label": "thành phố thuận an",
+      "count": 1
+    },
+    {
+      "label": "thôn vân la",
+      "count": 1
+    },
+    {
+      "label": "thượng đìn",
+      "count": 1
+    },
+    {
+      "label": "thạch thất)",
+      "count": 1
+    },
+    {
+      "label": "thạch thất; nhà máy điện rác seraphin",
+      "count": 1
+    },
+    {
+      "label": "thị trấn sapa",
+      "count": 1
+    },
+    {
+      "label": "thị trấn trần đề",
+      "count": 1
+    },
+    {
+      "label": "thị xã phú mỹ",
+      "count": 1
+    },
+    {
+      "label": "thủ thừa",
+      "count": 1
+    },
+    {
+      "label": "thủ đức)",
+      "count": 1
+    },
+    {
+      "label": "tiến hưng",
+      "count": 1
+    },
+    {
+      "label": "tiền hải",
+      "count": 1
+    },
+    {
+      "label": "tp biên hòa",
+      "count": 1
+    },
+    {
+      "label": "tp buôn ma thuột - đắk lắk",
+      "count": 1
+    },
+    {
+      "label": "tp cà mau",
+      "count": 1
+    },
+    {
+      "label": "tp hcm",
+      "count": 1
+    },
+    {
+      "label": "tp hạ long - quảng ninh",
+      "count": 1
+    },
+    {
+      "label": "tp nha trang - khánh hoà",
+      "count": 1
+    },
+    {
+      "label": "tp thủ đức",
+      "count": 1
+    },
+    {
+      "label": "tp tuy hòa",
+      "count": 1
+    },
+    {
+      "label": "tp uông bí - quảng ninh",
+      "count": 1
+    },
+    {
+      "label": "tp vinh - nghệ an",
+      "count": 1
+    },
+    {
+      "label": "tp vũng tàu - bà rịa vũng tàu",
+      "count": 1
+    },
+    {
+      "label": "tp. hạ long",
+      "count": 1
+    },
+    {
+      "label": "tp. nha trang",
+      "count": 1
+    },
+    {
+      "label": "tp. phú quốc']",
+      "count": 1
+    },
+    {
+      "label": "tp. phú quốc)",
+      "count": 1
+    },
+    {
+      "label": "tp. vinh",
+      "count": 1
+    },
+    {
+      "label": "tp.thủ đức",
+      "count": 1
+    },
+    {
+      "label": "tp.vinh",
+      "count": 1
+    },
+    {
+      "label": "trương định",
+      "count": 1
+    },
+    {
+      "label": "trần đề",
+      "count": 1
+    },
+    {
+      "label": "tttm royal city",
+      "count": 1
+    },
+    {
+      "label": "tx cai lậy",
+      "count": 1
+    },
+    {
+      "label": "tx cần thơ",
+      "count": 1
+    },
+    {
+      "label": "tân châu",
+      "count": 1
+    },
+    {
+      "label": "tân phước",
+      "count": 1
+    },
+    {
+      "label": "tân thới nhì",
+      "count": 1
+    },
+    {
+      "label": "tân định",
+      "count": 1
+    },
+    {
+      "label": "tây mỗ",
+      "count": 1
+    },
+    {
+      "label": "tây ninh; hồ chí minh",
+      "count": 1
+    },
+    {
+      "label": "tầng 1a – tháp c tòa nhà central point",
+      "count": 1
+    },
+    {
+      "label": "tỉnh saitama",
+      "count": 1
+    },
+    {
+      "label": "tỉnh sekong",
+      "count": 1
+    },
+    {
+      "label": "tỉnh xiêng khoảng",
+      "count": 1
+    },
+    {
+      "label": "vinhome greenbay mễ trì",
+      "count": 1
+    },
+    {
+      "label": "vinhomes ocean park",
+      "count": 1
+    },
+    {
+      "label": "việt nam",
+      "count": 1
+    },
+    {
+      "label": "việt yên",
+      "count": 1
+    },
+    {
+      "label": "văn khê",
+      "count": 1
+    },
+    {
+      "label": "văn lâm",
+      "count": 1
+    },
+    {
+      "label": "vĩnh tường",
+      "count": 1
+    },
+    {
+      "label": "vũ thư",
+      "count": 1
+    },
+    {
+      "label": "vũng tàu",
+      "count": 1
+    },
+    {
+      "label": "vạn ninh",
+      "count": 1
+    },
+    {
+      "label": "xuân diệu",
+      "count": 1
+    },
+    {
+      "label": "xã an cư",
+      "count": 1
+    },
+    {
+      "label": "xã hòa phú",
+      "count": 1
+    },
+    {
+      "label": "xã hồng quang",
+      "count": 1
+    },
+    {
+      "label": "xã hồng vân",
+      "count": 1
+    },
+    {
+      "label": "xã kim chung",
+      "count": 1
+    },
+    {
+      "label": "xã long hưng",
+      "count": 1
+    },
+    {
+      "label": "xã long thọ",
+      "count": 1
+    },
+    {
+      "label": "xã ninh hải",
+      "count": 1
+    },
+    {
+      "label": "xã tóc tiên",
+      "count": 1
+    },
+    {
+      "label": "xóm thị",
+      "count": 1
+    },
+    {
+      "label": "{{ featurejob.short_cities }}",
+      "count": 1
+    },
+    {
+      "label": "đà nẵng; hà nội; hồ chí minh",
+      "count": 1
+    },
+    {
+      "label": "đà nẵng; hồ chí minh",
+      "count": 1
+    },
+    {
+      "label": "đông anh; phenikaa hòa lạc",
+      "count": 1
+    },
+    {
+      "label": "đông hà",
+      "count": 1
+    },
+    {
+      "label": "đông la",
+      "count": 1
+    },
+    {
+      "label": "đại mỗ",
+      "count": 1
+    },
+    {
+      "label": "đảo rều",
+      "count": 1
+    },
+    {
+      "label": "đắk lắk']",
+      "count": 1
+    },
+    {
+      "label": "đống đa - hà nội",
+      "count": 1
+    },
+    {
+      "label": "đồng hới",
+      "count": 1
+    },
+    {
+      "label": "đồng nai & nghệ an",
+      "count": 1
+    },
+    {
+      "label": "đồng nai: hương lộ 2",
+      "count": 1
+    },
+    {
+      "label": "đồng nai; ecopark vinh",
+      "count": 1
+    },
+    {
+      "label": "đồng xoài",
+      "count": 1
+    },
+    {
+      "label": "đội 3",
+      "count": 1
+    },
+    {
+      "label": "đức hòa",
+      "count": 1
+    },
+    {
+      "label": "đức linh",
+      "count": 1
+    },
+    {
+      "label": "ấp 5",
+      "count": 1
+    },
+    {
+      "label": "ấp 6",
+      "count": 1
+    },
+    {
+      "label": "ấp cảng",
+      "count": 1
+    }
+  ],
+  "top_technical_skills": [
+    {
+      "label": "excel",
+      "count": 2698
+    },
+    {
+      "label": "autocad",
+      "count": 2392
+    },
+    {
+      "label": "photoshop",
+      "count": 2316
+    },
+    {
+      "label": "tin học văn phòng",
+      "count": 1719
+    },
+    {
+      "label": "kỹ năng giao tiếp",
+      "count": 1544
+    },
+    {
+      "label": "capcut",
+      "count": 1197
+    },
+    {
+      "label": "word",
+      "count": 1035
+    },
+    {
+      "label": "illustrator",
+      "count": 976
+    },
+    {
+      "label": "kỹ năng đàm phán",
+      "count": 909
+    },
+    {
+      "label": "canva",
+      "count": 826
+    },
+    {
+      "label": "thành thạo tin học văn phòng",
+      "count": 814
+    },
+    {
+      "label": "after effects",
+      "count": 778
+    },
+    {
+      "label": "sketchup",
+      "count": 725
+    },
+    {
+      "label": "adobe premiere",
+      "count": 706
+    },
+    {
+      "label": "premiere",
+      "count": 674
+    },
+    {
+      "label": "adobe photoshop",
+      "count": 646
+    },
+    {
+      "label": "kỹ năng bán hàng",
+      "count": 641
+    },
+    {
+      "label": "revit",
+      "count": 581
+    },
+    {
+      "label": "tin học văn phòng (word, excel, powerpoint)",
+      "count": 565
+    },
+    {
+      "label": "powerpoint",
+      "count": 563
+    }
+  ],
+  "top_soft_skills": [
+    {
+      "label": "trung thực",
+      "count": 7918
+    },
+    {
+      "label": "cẩn thận",
+      "count": 6852
+    },
+    {
+      "label": "kỹ năng giao tiếp",
+      "count": 6465
+    },
+    {
+      "label": "nhanh nhẹn",
+      "count": 5165
+    },
+    {
+      "label": "giao tiếp tốt",
+      "count": 4305
+    },
+    {
+      "label": "làm việc nhóm",
+      "count": 3815
+    },
+    {
+      "label": "chăm chỉ",
+      "count": 3685
+    },
+    {
+      "label": "nhiệt tình",
+      "count": 3619
+    },
+    {
+      "label": "chủ động",
+      "count": 3394
+    },
+    {
+      "label": "năng động",
+      "count": 3375
+    },
+    {
+      "label": "sáng tạo",
+      "count": 2983
+    },
+    {
+      "label": "giao tiếp",
+      "count": 2712
+    },
+    {
+      "label": "tỉ mỉ",
+      "count": 2567
+    },
+    {
+      "label": "chịu được áp lực công việc",
+      "count": 2463
+    },
+    {
+      "label": "kỹ năng giao tiếp tốt",
+      "count": 2294
+    },
+    {
+      "label": "ham học hỏi",
+      "count": 2276
+    },
+    {
+      "label": "chịu khó",
+      "count": 2184
+    },
+    {
+      "label": "giải quyết vấn đề",
+      "count": 2112
+    },
+    {
+      "label": "làm việc độc lập",
+      "count": 2088
+    },
+    {
+      "label": "kỹ năng làm việc nhóm",
+      "count": 1965
+    }
+  ],
+  "languages": [],
+  "salary": {
+    "unit": "million_VND_per_month",
+    "source": "https://aclanthology.org/2026.lrec-1.501.pdf",
+    "zero_placeholder_rows": 13730,
+    "text_numeric_conflict_rows": 1355,
+    "eligible_raw_rows": 33000,
+    "excluded_raw_rows": 15092,
+    "median_midpoint_million": 13.5
+  },
+  "examples": {
+    "salary_text_numeric_conflict": [
+      {
+        "row_number": 3,
+        "salary": "9.4 - 12.0 triệu",
+        "salary_min": "9",
+        "salary_max": "12"
+      },
+      {
+        "row_number": 112,
+        "salary": "8.5 - 15.0 triệu",
+        "salary_min": "8",
+        "salary_max": "15"
+      },
+      {
+        "row_number": 183,
+        "salary": "9.5 - 12.0 triệu",
+        "salary_min": "9",
+        "salary_max": "12"
+      }
+    ],
+    "invalid_languages_required": [
+      {
+        "row_number": 9,
+        "salary": "12.0 - 20.0 triệu",
+        "salary_min": "12",
+        "salary_max": "20"
+      },
+      {
+        "row_number": 15,
+        "salary": "0.0 triệu",
+        "salary_min": "0",
+        "salary_max": "0"
+      },
+      {
+        "row_number": 22,
+        "salary": "9.0 - 13.0 triệu",
+        "salary_min": "9",
+        "salary_max": "13"
+      }
+    ],
+    "salary_zero_placeholder": [
+      {
+        "row_number": 10,
+        "salary": "0.0 triệu",
+        "salary_min": "0",
+        "salary_max": "0"
+      },
+      {
+        "row_number": 12,
+        "salary": "0.0 triệu",
+        "salary_min": "0",
+        "salary_max": "0"
+      },
+      {
+        "row_number": 15,
+        "salary": "0.0 triệu",
+        "salary_min": "0",
+        "salary_max": "0"
+      }
+    ],
+    "salary_incomplete_bounds": [
+      {
+        "row_number": 673,
+        "salary": "0.1 - 7.5 triệu",
+        "salary_min": "0",
+        "salary_max": "7"
+      },
+      {
+        "row_number": 2206,
+        "salary": "0.3 - 1.0 triệu",
+        "salary_min": "0",
+        "salary_max": "1"
+      },
+      {
+        "row_number": 2592,
+        "salary": "0.5 - 10.0 triệu",
+        "salary_min": "0",
+        "salary_max": "10"
+      }
+    ]
+  },
+  "absent_fields": [
+    "company",
+    "job_url",
+    "published_at",
+    "work_mode",
+    "level",
+    "candidate",
+    "employee",
+    "referral"
+  ]
+}

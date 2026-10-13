@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-10-11T09:17:25.007Z",
+  "database_version": "3.12.12",
+  "database_mode": "real ArangoDB; isolated databases; no mocks",
+  "runs": [
+    {
+      "artifact": "docs/reports/backend-integration.xml",
+      "tests": 135,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 965.749
+    },
+    {
+      "artifact": "docs/reports/backend-final-checks.xml",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 68.247
+    }
+  ],
+  "unique_tests": 136,
+  "backend_api_tests": 64,
+  "database_graph_matching_tests": 72,
+  "ruff": "pass",
+  "compileall": "pass",
+  "pip_check": "pass",
+  "runtime_database_user": "jrn_api",
+  "container_uid": 10001,
+  "docker_python": "3.12.15",
+  "openapi_operations": 66,
+  "frontend_developed": false
+}

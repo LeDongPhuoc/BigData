@@ -1,0 +1,53 @@
+{
+  "containers": {
+    "arangodb": {
+      "healthy": true,
+      "user": "",
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "pids_limit": 512,
+      "memory_limit": 4294967296,
+      "loopback_only": true
+    },
+    "backend": {
+      "healthy": true,
+      "user": "10001",
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "pids_limit": 128,
+      "memory_limit": 536870912,
+      "loopback_only": true
+    },
+    "frontend": {
+      "healthy": true,
+      "user": "nginx",
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "pids_limit": 64,
+      "memory_limit": 134217728,
+      "loopback_only": true
+    }
+  },
+  "oversized_http": {
+    "8000_chunked_False": 413,
+    "8000_chunked_True": 413,
+    "5173_chunked_False": 413,
+    "5173_chunked_True": 413
+  },
+  "database_os_user_is_root": true
+}

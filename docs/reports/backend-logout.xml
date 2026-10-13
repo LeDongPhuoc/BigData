@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="7.912" timestamp="2026-10-11T16:10:01.469165+07:00" hostname="WIN-OI2LL1MLO2V"><testcase classname="tests.backend.test_logout" name="test_logout_refresh_body_must_belong_to_access_session" time="7.836" /></testsuite></testsuites>

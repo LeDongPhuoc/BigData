@@ -1,0 +1,77 @@
+{
+  "database": "3.12.12",
+  "migration_versions": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "before_indexes": {
+    "companies": [
+      {
+        "type": "EnumerateCollectionNode",
+        "indexes": []
+      },
+      {
+        "type": "SortNode",
+        "indexes": []
+      }
+    ],
+    "skills": [
+      {
+        "type": "EnumerateCollectionNode",
+        "indexes": []
+      },
+      {
+        "type": "SortNode",
+        "indexes": []
+      }
+    ]
+  },
+  "after_indexes": {
+    "companies": [
+      {
+        "type": "IndexNode",
+        "indexes": [
+          "companies_status_created"
+        ]
+      },
+      {
+        "type": "SortNode",
+        "indexes": []
+      }
+    ],
+    "skills": [
+      {
+        "type": "IndexNode",
+        "indexes": [
+          "skills_status_created"
+        ]
+      },
+      {
+        "type": "SortNode",
+        "indexes": []
+      }
+    ]
+  },
+  "business_counts_unchanged": true,
+  "integrity_issues": [],
+  "query_aborts": {
+    "runtime": {
+      "error_code": 1500,
+      "elapsed_ms": 57.95,
+      "limits": {
+        "max_runtime": 0.05,
+        "memory_limit": 1048576
+      }
+    },
+    "memory": {
+      "error_code": 32,
+      "elapsed_ms": 16.9,
+      "limits": {
+        "max_runtime": 2,
+        "memory_limit": 1048576
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "slide": 1,
+    "title": "Ứng dụng ArangoDB",
+    "speaker_notes": "Giới thiệu tên đề tài và sản phẩm Job Referral Network. Điền thông tin nhóm, MSSV, lớp và giảng viên trước buổi trình bày; các thông tin này chưa được cung cấp. Bài trình bày dự kiến 12–15 phút, dành thêm thời gian nếu demo trực tiếp. Ngày chốt nội dung 12/10/2026.",
+    "visible_words": 40
+  },
+  {
+    "slide": 2,
+    "title": "BÀI TOÁN VÀ MỤC TIÊU",
+    "speaker_notes": "Mô hình nghiệp vụ giả định, chưa có khảo sát phỏng vấn doanh nghiệp cụ thể. Hai bài toán riêng: đối chiếu hồ sơ với công việc và tìm người giới thiệu qua mạng lưới. Source: detai.md; docs/requirements.md; báo cáo chương 1–2.",
+    "visible_words": 64
+  },
+  {
+    "slide": 3,
+    "title": "ARANGODB LÀ GÌ?",
+    "speaker_notes": "ArangoDB 3.12 lưu các thực thể như JSON documents và quan hệ qua edges trong property graph. Cạnh _from/_to luôn có chiều nhưng traversal ANY có thể đi hai chiều. Named graph khai báo loại quan hệ. Nguồn chính thức: https://docs.arango.ai/arangodb/3.12/graphs/ ; https://docs.arango.ai/arangodb/3.12/aql/ . Truy cập khi biên soạn báo cáo ngày 12/10/2026.",
+    "visible_words": 46
+  },
+  {
+    "slide": 4,
+    "title": "VÌ SAO CHỌN ARANGODB?",
+    "speaker_notes": "Lựa chọn dựa trên sự phù hợp mô hình của bài toán, không phải phép so sánh hiệu năng với SQL hoặc Neo4j. Named graph không tự bảo đảm toàn vẹn khi mọi thao tác đều đi qua raw document API: dự án kiểm tra bổ sung tại service/repository. Nguồn: docs/database/graph-schema.md; docs/database/query-design.md; tài liệu Graphs chính thức.",
+    "visible_words": 55
+  },
+  {
+    "slide": 5,
+    "title": "KIẾN TRÚC HỆ THỐNG",
+    "speaker_notes": "React/TypeScript dùng TanStack Query; Nginx proxy sang FastAPI; backend chia API/schema/service/repository; python-arango gọi AQL/transaction. Frontend không truy cập database trực tiếp. Nguồn: compose.yaml; backend/modules/; frontend/src/; docs/architecture.md.",
+    "visible_words": 43
+  },
+  {
+    "slide": 6,
+    "title": "MÔ HÌNH GRAPH CỐT LÕI",
+    "speaker_notes": "Named graph: jobReferralGraph. connections chỉ một cạnh/cặp canonical người dùng, traversal ANY. works_at: user→company; has_skill: user→skill; job_requires_skill: job→skill; job_at_company: job→company. Không suy ra quen biết từ cùng công ty/kỹ năng. Nguồn: database/migrations/; docs/database/graph-schema.md.",
+    "visible_words": 44
+  },
+  {
+    "slide": 7,
+    "title": "DỮ LIỆU: CÔNG KHAI VÀ KIỂM THỬ",
+    "speaker_notes": "Snapshot ngày 12/10/2026: KMS 5 jobs, Bosch 12, Grab 12; 28 skills. Dữ liệu chuẩn hóa không đại diện toàn bộ tin tuyển dụng của các công ty. Tin thiếu lương/kinh nghiệm không được điền giả; skills trích từ nguồn lưu preferred nếu chưa xác định required. Công ty public chưa có nhân viên được xác minh trong ứng dụng. Nguồn: docs/public-data.md; database/catalog/public_jobs_2026-10-12.json.",
+    "visible_words": 67
+  },
+  {
+    "slide": 8,
+    "title": "GỢI Ý VIỆC LÀM: ĐIỂM CÓ GIẢI THÍCH",
+    "speaker_notes": "Công thức database/queries.py và database/aql/matching_rows.aql: S=.4K+.2E+.15L+.15V+.1W. K dùng required/preferred importance, xét proficiency/years; nếu có cả hai: .8R+.2P. E=min(1,years/min_years), min=0→1, dữ liệu yêu cầu thiếu→0. Remote hoặc location bằng nhau→L=1. Level exact→V=1. Work mode trong preference→W=1. Salary_overlap chỉ diagnostic. Đây là quy tắc, chưa được hiệu chỉnh theo labels tuyển dụng. Eligible khác matched_only.",
+    "visible_words": 68
+  },
+  {
+    "slide": 9,
+    "title": "TÌM ĐƯỜNG TỚI NGƯỜI GIỚI THIỆU",
+    "speaker_notes": "Ví dụ fixture A→B→C với C làm tại X current/verified. Hops chỉ đếm connections, không tính works_at. Tối đa 3 hops; ANY trên named graph nhưng chỉ duyệt connections/users. Endpoint cần employment current/verified và visibility. Khi không có nhân viên public được xác minh, danh sách rỗng là đúng. Nguồn: path_rows.aql; employees_rows.aql; arango-behavior-proof.json.",
+    "visible_words": 52
+  },
+  {
+    "slide": 10,
+    "title": "AQL: DUYỆT GRAPH VÀ LOẠI NHÁNH",
+    "speaker_notes": "Đoạn code là trích rút để giải thích, không phải query đầy đủ. PRUNE phải có guard e!=null ở root. FILTER !invalid loại node tại điểm dừng. uniqueVertices=path giữ đường thay thế và tránh lặp đỉnh trên đường. Nguồn chính xác: database/aql/path_rows.aql và database/queries.py. Tài liệu: https://docs.arango.ai/arangodb/3.12/aql/graph-queries/traversals/ .",
+    "visible_words": 64
+  },
+  {
+    "slide": 11,
+    "title": "XẾP HẠNG ĐƯỜNG GIỚI THIỆU",
+    "speaker_notes": "D=.6×mean declared trust+.4×1/hops. Fixture 2 hops mean trust=.85→.71. Đường 3 hops có .673333. Missing trust=.5; không phải xác suất. Shortest mode sort hops trước score; mặc định score trước hops. Jobs_with_referral giữ eligible rồi sort job_score trước path_score. Nguồn: path_rows.aql; jobs_with_referral.aql; arango-behavior-proof.json.",
+    "visible_words": 62
+  },
+  {
+    "slide": 12,
+    "title": "SẢN PHẨM: GỢI Ý THEO HỒ SƠ",
+    "speaker_notes": "Ảnh artifact browser trên fixture, không phải nhân viên hoặc vị trí tuyển dụng thực đã xác minh. Dashboard gọi /matching/jobs; /jobs?view=recommended hỗ trợ filter/pagination. Thêm/xóa skill invalidates query cache; headline không tự chuyển thành skill. matched_only=true yêu cầu ít nhất một skill matched. Nguồn: docs/reports/frontend-dashboard-1440.png; recommendations-fix-2026-10-12.md.",
+    "visible_words": 39
+  },
+  {
+    "slide": 13,
+    "title": "SẢN PHẨM: ĐƯỜNG KẾT NỐI",
+    "speaker_notes": "Ảnh artifact frontend-paths-1440.png trên fixture. React Flow vẽ vertices và edges từ response /graph/referral-paths; không tự tính đường tại browser. Hiển thị hai đường thay thế, hops, trust, điểm và current_verified_employee. Referrer C trong ảnh là kiểm thử. Source: docs/reports/frontend-paths-1440.png; docs/arango-proof-guide.md.",
+    "visible_words": 37
+  },
+  {
+    "slide": 14,
+    "title": "QUY TRÌNH GIỚI THIỆU",
+    "speaker_notes": "Đường chính pending→accepted→submitted→completed. pending có thể rejected/cancelled/expired; accepted có thể cancelled/expired. Candidate hủy; referrer xử lý. Create/accept/submit kiểm tra lại policy/job/employment/path. Submitted lưu evidence_ref, chưa gửi email hoặc ATS. Ghi referral/history/notification/audit trong transaction, revision If-Match và idempotency chống trùng. Nguồn: backend/modules/referrals/; docs/backend.md.",
+    "visible_words": 62
+  },
+  {
+    "slide": 15,
+    "title": "CHỨNG MINH ARANGODB THỰC SỰ THAM GIA",
+    "speaker_notes": "Artifact arango-behavior-proof.json ngày 12/10/2026: baseline 2/3 hops. after_block_b_c còn 3 hops; after_b_disallows_paths còn 3 hops; after_c_employment_unverified=[]; plan có TraversalNode/IndexNode và company_current_employees; schema error1620 transaction_rolled_back=true; main_database_modified=false và isolated_database_cleaned_up=true. Script scripts/prove_arangodb.py dùng database UUID thật, không mutate main.",
+    "visible_words": 62
+  },
+  {
+    "slide": 16,
+    "title": "KẾT QUẢ KIỂM THỬ",
+    "speaker_notes": "Số liệu từ artifact đã có, không phải lượt chạy mới khi biên soạn PPT. recommendations-regression.xml: 167 tests, không fail/error/skip, 533,522 giây. recommendations-verified-playwright.xml: 20 tests, không fail/error/skip, 124,387 giây. arango-proof-tests.xml: 21 tests, không fail/error/skip, 141,334 giây. Các tập có thể chồng lặp, không cộng thành 188. Fixtures nghiệp vụ giả lập nhưng DB/HTTP thật; ArangoDB 3.12.12. Lượt browser đầu có 19 pass, 1 fail do email .test; sửa fixture sang .com rồi chạy lại đạt 20 pass.",
+    "visible_words": 48
+  },
+  {
+    "slide": 17,
+    "title": "HIỆU NĂNG: KẾT QUẢ LOCAL",
+    "speaker_notes": "Nguồn: docs/reports/benchmark.json, ghi cho ngày 11/10/2026, trước cập nhật catalog public và giao diện gợi ý. Dataset synthetic có 1.134 users, 1.128 connections, 1.012 works_at; branching 10, depth 3. Mỗi query chạy 20 lần tuần tự, warm, local Docker. p95: job_matches 14,4849 ms; paths_depth_3 388,7014 ms; jobs_with_referral 580,4688 ms. Đây chưa là benchmark catalog hiện tại, không đo concurrency, SLA hoặc cluster. Cần chạy lại khi dữ liệu và cấu hình thay đổi.",
+    "visible_words": 45
+  },
+  {
+    "slide": 18,
+    "title": "DEMO SẢN PHẨM: 4 BƯỚC",
+    "speaker_notes": "Chuẩn bị Docker healthy, python -m database.cli verify. Demo dữ liệu public cho nguồn và matching; fixture riêng cho graph/referral. Chạy scripts/prove_arangodb.py để chứng minh mutation/index/rollback. Browser interactive: PowerShell env:JRN_E2E_REPORT_PREFIX=arango-interactive; .venv\\Scripts\\python.exe scripts/check_frontend.py --debug --grep \"đăng ký →\". Script tạo backend/Vite ports riêng và UUID DB/user, cleanup khi kết thúc. Không cần mutate main DB hoặc gán nhân viên giả cho public employers. Chi tiết docs/demo-guide.md, docs/arango-proof-guide.md.",
+    "visible_words": 49
+  },
+  {
+    "slide": 19,
+    "title": "GIỚI HẠN VÀ HƯỚNG PHÁT TRIỂN",
+    "speaker_notes": "Nguồn: docs/demo-guide.md, public-data.md, deployment.md, security-summary.json và security-review-2026-10-11.md. Trọng số chưa được hiệu chỉnh bằng nhãn thực; chưa đánh giá Precision@K/NDCG. Catalog là snapshot, chưa có scheduler cập nhật; các công ty public chưa có nhân viên được xác minh. Upload CV, email và ATS chưa triển khai. Depth tối đa 3 và khóa transaction rộng; benchmark tuần tự. production_ready=false; image findings mức HIGH, TLS, tải và vận hành còn cần xử lý. Hướng phát triển là kế hoạch, chưa được tính là kết quả hoàn thành.",
+    "visible_words": 64
+  },
+  {
+    "slide": 20,
+    "title": "KẾT LUẬN VÀ TRAO ĐỔI",
+    "speaker_notes": "ArangoDB lưu thực thể và quan hệ, thực thi AQL cho matching và traversal. Sản phẩm có luồng giao diện–API–database, điểm giải thích và workflow; bằng chứng kiểm thử graph/rollback trên local. Không suy ra xác suất tuyển dụng hoặc production readiness. Tài liệu chính thức đã đọc: https://docs.arango.ai/arangodb/3.12/graphs/ ; https://docs.arango.ai/arangodb/3.12/aql/ ; https://docs.arango.ai/arangodb/3.12/aql/graph-queries/traversals/ . Source: D:\\bigdata; docs/bao-cao-arangodb.md; docs/reports/; docs/arango-proof-guide.md. Thông tin nhóm và giảng viên còn cần bổ sung.",
+    "visible_words": 64
+  }
+]

@@ -1,0 +1,8 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="13.397806000000001">
+<testsuite name="features.spec.ts" timestamp="2026-10-12T04:26:43.493Z" hostname="" tests="2" failures="0" skipped="0" time="11.345" errors="0">
+<testcase name="gợi ý theo hồ sơ: lưu Java PostgreSQL AWS, thấy kỹ năng khớp và cập nhật khi xóa" classname="features.spec.ts" time="8.028">
+</testcase>
+<testcase name="gợi ý theo hồ sơ: loading lỗi kết nối và thử lại đọc API thật" classname="features.spec.ts" time="3.317">
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="24.216101000000002">
+<testsuite name="raw-data.spec.ts" timestamp="2026-10-13T17:34:52.634Z" hostname="" tests="1" failures="0" skipped="0" time="22.744" errors="0">
+<testcase name="raw VietJobs đầy đủ: chất lượng, lọc toàn file, chi tiết, seed và Top-K" classname="raw-data.spec.ts" time="22.744">
+</testcase>
+</testsuite>
+</testsuites>

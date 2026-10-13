@@ -1,0 +1,15 @@
+// @include actor.aql
+LET company_id = @company_id
+LET company = company_id == null ? null : DOCUMENT(company_id)
+FILTER company_id == null OR (company != null AND company.status == "active")
+LET job = @job_id == null ? null : DOCUMENT(@job_id)
+LET linked = @job_id == null ? [] : (
+  FOR link IN job_at_company
+    FILTER link._from == @job_id AND link._to == company_id
+    RETURN link._to
+)
+FILTER @job_id == null OR (job != null AND job.status == "open" AND LENGTH(linked) == 1)
+LET employees = (
+  // @include employees_rows.aql
+)
+// @include path_rows.aql

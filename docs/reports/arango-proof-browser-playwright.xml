@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="34.008266000000006">
+<testsuite name="features.spec.ts" timestamp="2026-10-12T03:53:17.945Z" hostname="" tests="1" failures="0" skipped="0" time="29.459" errors="0">
+<testcase name="đăng ký → kỹ năng → kết nối → đường giới thiệu → gửi lại sau mất phản hồi → hoàn tất" classname="features.spec.ts" time="29.459">
+</testcase>
+</testsuite>
+</testsuites>

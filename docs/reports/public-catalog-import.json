@@ -1,0 +1,81 @@
+{
+  "checked_at": "2026-10-12T03:06:06.430Z",
+  "database": "job_referral",
+  "version": "3.12.12",
+  "import": {
+    "catalog_retrieved_at": "2026-10-12T02:37:38.410Z",
+    "created": {
+      "companies": 3,
+      "skills": 24,
+      "jobs": 29,
+      "job_at_company": 29,
+      "job_requires_skill": 96
+    },
+    "updated": {
+      "skills": 4,
+      "companies": 3,
+      "jobs": 6,
+      "users": 24
+    },
+    "unchanged": {},
+    "integrity": "pass"
+  },
+  "collection_counts": {
+    "auth_families": 1,
+    "connection_controls": 0,
+    "companies": 6,
+    "schema_migrations": 5,
+    "referral_requests": 7,
+    "works_at": 12,
+    "auth_credentials": 1,
+    "rate_limits": 12,
+    "applications": 1,
+    "migration_locks": 0,
+    "connections": 18,
+    "skills": 28,
+    "idempotency_records": 0,
+    "job_at_company": 35,
+    "audit_logs": 8,
+    "auth_sessions": 4,
+    "jobs": 35,
+    "job_requires_skill": 103,
+    "has_skill": 4,
+    "notifications": 7,
+    "users": 25
+  },
+  "total_records": 312,
+  "public_jobs": [
+    {
+      "publisher": "Bosch Group",
+      "count": 12
+    },
+    {
+      "publisher": "Grab",
+      "count": 12
+    },
+    {
+      "publisher": "KMS Technology",
+      "count": 5
+    }
+  ],
+  "registered_users_preserved": 1,
+  "protected_document_hashes_unchanged": true,
+  "protected_collection_hashes": {
+    "auth_credentials": "cc0037ec22d49e4a5806d123c5c02e6d584ca00ea902ac4c151b4590480fbcc0",
+    "auth_sessions": "ebdef62f02442bbb14fffec0cf35f729a80b616c088f8ee76f52c9b953cae9a7",
+    "auth_families": "79b8fc88a32ac2f61fe59861aceac91c8ab1f6a37c2574098dcfab36d47ea094",
+    "audit_logs": "2272f70dd2623323c5c297d275fb0e6e665c633fe78dde7b400ec3eeaad8a9c9",
+    "applications": "8c4c202fc13cd6e3dd31dbd1113a7df306db30229c19e29d49d2d33a7629314e",
+    "referral_requests": "fd4f13649ceb655276f6cb209a62d18b781b0c24e4389e5dd8dab0997d0ac6cd",
+    "notifications": "9cd84a66b257803639e04de44f0a7717cce21183a8662e832489b7f6b360b5ff",
+    "connections": "3a9e0fe958ed7ae8d10b64ee9b92625118d1712f2306c01d1944e2d9beb226a6",
+    "works_at": "d8dc6f82d0fe40354b879a905e2c05ed86bdbed8e3a864ff3eab433d360cc25c",
+    "has_skill": "ef914812d629f272177b52515cd004ba2df1eade25324d5cb8ff9e3a1f5c9869",
+    "rate_limits": "f2c52051777e1473eaf73247e4624c750c70de53631dc5e37f70d353e099334f",
+    "idempotency_records": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "connection_controls": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "registered_users": "b1b3a77e540c1f7a7c3bbfa38fa8fa854d8c53d6bf6896c0c7079bf946f31f5f"
+  },
+  "graph_integrity_issues": [],
+  "fake_employer_memberships_created": 0
+}

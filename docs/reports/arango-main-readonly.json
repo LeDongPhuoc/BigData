@@ -1,0 +1,110 @@
+{
+  "checked_at": "2026-10-12T03:48:08.816Z",
+  "database": "job_referral",
+  "version": "3.12.12",
+  "read_only": true,
+  "counts": {
+    "users": 26,
+    "companies": 6,
+    "jobs": 35,
+    "skills": 28,
+    "connections": 18,
+    "works_at": 12,
+    "has_skill": 6,
+    "job_at_company": 35,
+    "job_requires_skill": 103
+  },
+  "public_open_jobs_by_source": [
+    {
+      "publisher": "Bosch Group",
+      "count": 12
+    },
+    {
+      "publisher": "Grab",
+      "count": 12
+    },
+    {
+      "publisher": "KMS Technology",
+      "count": 5
+    }
+  ],
+  "graph": {
+    "name": "jobReferralGraph",
+    "vertex_collections": [
+      "applications",
+      "audit_logs",
+      "companies",
+      "jobs",
+      "notifications",
+      "referral_requests",
+      "skills",
+      "users"
+    ],
+    "edge_definitions": [
+      {
+        "edge_collection": "connections",
+        "from_vertex_collections": [
+          "users"
+        ],
+        "to_vertex_collections": [
+          "users"
+        ]
+      },
+      {
+        "edge_collection": "has_skill",
+        "from_vertex_collections": [
+          "users"
+        ],
+        "to_vertex_collections": [
+          "skills"
+        ]
+      },
+      {
+        "edge_collection": "job_at_company",
+        "from_vertex_collections": [
+          "jobs"
+        ],
+        "to_vertex_collections": [
+          "companies"
+        ]
+      },
+      {
+        "edge_collection": "job_requires_skill",
+        "from_vertex_collections": [
+          "jobs"
+        ],
+        "to_vertex_collections": [
+          "skills"
+        ]
+      },
+      {
+        "edge_collection": "works_at",
+        "from_vertex_collections": [
+          "users"
+        ],
+        "to_vertex_collections": [
+          "companies"
+        ]
+      }
+    ]
+  },
+  "company_current_employees_index": [
+    {
+      "id": "680",
+      "fields": [
+        "_to",
+        "status",
+        "verified",
+        "end_at"
+      ],
+      "type": "persistent",
+      "name": "company_current_employees",
+      "deduplicate": true,
+      "sparse": false,
+      "unique": false,
+      "selectivity": 0.4166666666666667,
+      "cacheEnabled": false,
+      "estimates": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+LET actor = DOCUMENT(@actor_id)
+FILTER actor != null AND actor.status == "active" AND actor.deleted_at == null
+LET blocked_ids = (
+  FOR rel IN connections
+    FILTER rel.status == "blocked" AND rel.deleted_at == null
+    FILTER rel._from == @actor_id OR rel._to == @actor_id
+    RETURN rel._from == @actor_id ? rel._to : rel._from
+)

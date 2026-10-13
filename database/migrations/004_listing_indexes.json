@@ -1,0 +1,24 @@
+{
+  "version": 4,
+  "description": "Index active company and skill listings discovered by security review",
+  "indexes": {
+    "companies": [
+      {
+        "name": "companies_status_created",
+        "type": "persistent",
+        "fields": ["status", "created_at"],
+        "unique": false,
+        "sparse": false
+      }
+    ],
+    "skills": [
+      {
+        "name": "skills_status_created",
+        "type": "persistent",
+        "fields": ["status", "created_at"],
+        "unique": false,
+        "sparse": false
+      }
+    ]
+  }
+}

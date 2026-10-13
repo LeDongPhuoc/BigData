@@ -1,0 +1,159 @@
+{
+  "config": {
+    "argv": [
+      "D:\\For_node\\node.EXE",
+      "E:\\Hoc BigData\\bigdata\\bigdata\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "raw-data.spec.ts"
+    ],
+    "configFile": "E:\\Hoc BigData\\bigdata\\bigdata\\frontend\\playwright.config.ts",
+    "rootDir": "E:/Hoc BigData/bigdata/bigdata/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "E:/Hoc BigData/bigdata/bigdata/frontend/test-results/browser",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "E:/Hoc BigData/bigdata/bigdata/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "E:\\Hoc BigData\\bigdata\\bigdata\\frontend\\test-results\\browser",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "E:\\Hoc BigData\\bigdata\\bigdata\\frontend\\e2e",
+        "snapshotDir": "E:\\Hoc BigData\\bigdata\\bigdata\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:51073",
+          "browserName": "chromium",
+          "channel": "msedge",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screenshot": "only-on-failure",
+          "trace": "off",
+          "video": "off"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "../docs/reports/raw-review-2026-10-14-v4-playwright.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/reports/raw-review-2026-10-14-v4-playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "raw-data.spec.ts",
+      "file": "raw-data.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "raw VietJobs đầy đủ: chất lượng, lọc toàn file, chi tiết, seed và Top-K",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28266,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-13T17:47:43.071Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "99b2392014aef304160b-9b40328673209d937a37",
+          "file": "raw-data.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-13T17:47:42.285Z",
+    "duration": 29824.613,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

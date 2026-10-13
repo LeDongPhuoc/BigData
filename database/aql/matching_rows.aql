@@ -1,0 +1,54 @@
+LET user_skills = (
+  FOR edge IN has_skill
+    FILTER edge._from == @actor_id
+    LET skill = DOCUMENT(edge._to)
+    FILTER skill != null AND skill.status == "active"
+    RETURN { id: edge._to, proficiency: edge.proficiency, years: edge.years_experience }
+)
+FOR job IN jobs
+  FILTER job.status == "open"
+  FILTER @job_id == null OR job._id == @job_id
+  FILTER @work_mode == null OR job.work_mode == @work_mode
+  FILTER @level == null OR job.level == @level
+  FILTER @location == "" OR CONTAINS(LOWER(job.location), @location)
+  LET employer = FIRST(FOR link IN job_at_company FILTER link._from == job._id RETURN link._to)
+  LET company = employer == null ? null : DOCUMENT(employer)
+  FILTER company != null AND company.status == "active"
+  FILTER @company_id == null OR employer == @company_id
+  LET requirements = (
+    FOR edge IN job_requires_skill
+      FILTER edge._from == job._id
+      LET skill = DOCUMENT(edge._to)
+      LET held = FIRST(FOR item IN user_skills FILTER item.id == edge._to RETURN item)
+      RETURN { id: edge._to, name: skill == null ? "unavailable" : skill.name, kind: edge.kind,
+               importance: edge.importance,
+               matched: skill != null AND skill.status == "active" AND held != null
+                 AND held.proficiency >= edge.min_proficiency AND held.years >= edge.min_years }
+  )
+  FILTER @q == "" OR CONTAINS(LOWER(job.title), @q)
+    OR CONTAINS(LOWER(job.description), @q) OR CONTAINS(LOWER(company.name), @q)
+    OR LENGTH(requirements[* FILTER CONTAINS(LOWER(CURRENT.name), @q)]) > 0
+  FILTER !@matched_only OR LENGTH(requirements[* FILTER CURRENT.matched]) > 0
+  LET required = requirements[* FILTER CURRENT.kind == "required"]
+  LET preferred = requirements[* FILTER CURRENT.kind == "preferred"]
+  LET missing = required[* FILTER !CURRENT.matched RETURN CURRENT.id]
+  LET required_ratio = LENGTH(required) == 0 ? 0 :
+    SUM(required[* FILTER CURRENT.matched RETURN CURRENT.importance]) / SUM(required[*].importance)
+  LET preferred_ratio = LENGTH(preferred) == 0 ? 0 :
+    SUM(preferred[* FILTER CURRENT.matched RETURN CURRENT.importance]) / SUM(preferred[*].importance)
+  LET skill_score = LENGTH(required) > 0 AND LENGTH(preferred) > 0
+    ? 0.8 * required_ratio + 0.2 * preferred_ratio
+    : (LENGTH(required) > 0 ? required_ratio : preferred_ratio)
+  LET experience_score = job.min_experience_years == null ? 0 : job.min_experience_years == 0 ? 1 :
+    MIN([1, actor.profile.experience_years / job.min_experience_years])
+  LET location_score = job.work_mode == "remote" OR actor.profile.location == job.location ? 1 : 0
+  LET level_score = actor.profile.level == job.level ? 1 : 0
+  LET work_score = job.work_mode IN actor.profile.work_modes ? 1 : 0
+  LET salary_known = actor.profile.salary_min != null AND actor.profile.salary_max != null
+    AND job.salary_min != null AND job.salary_max != null
+  LET salary_overlap = !salary_known ? null :
+    actor.profile.salary_min <= job.salary_max AND actor.profile.salary_max >= job.salary_min
+  LET eligible = LENGTH(missing) == 0 AND
+    (job.min_experience_years == null OR actor.profile.experience_years >= job.min_experience_years)
+  LET score = @weights.skill * skill_score + @weights.experience * experience_score
+    + @weights.location * location_score + @weights.level * level_score + @weights.work_mode * work_score

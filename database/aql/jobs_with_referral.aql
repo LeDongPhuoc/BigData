@@ -1,0 +1,17 @@
+// @include actor.aql
+// @include matching_rows.aql
+  FILTER eligible
+  LET company_id = employer
+  LET employees = (
+    // @include employees_rows.aql
+  )
+  LET paths = (
+    // @include path_rows.aql
+  )
+  FILTER LENGTH(paths) > 0
+  LET best_path = FIRST(paths)
+  SORT score DESC, best_path.path_score DESC, job.published_at DESC, job._id ASC
+  LIMIT @job_offset, @job_limit
+  RETURN { job: { id: job._id, title: job.title, company_id: employer }, score, eligible,
+           best_path, explanation: { missing_required: missing, required_ratio, preferred_ratio,
+                                    salary_overlap, ranking: "job_score_then_path_score" } }

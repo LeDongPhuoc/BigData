@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-10-12T04:30:31.149Z",
+  "read_only": true,
+  "personal_profile_identifiers_omitted": true,
+  "top_recommendations": [
+    {
+      "job_id": "jobs/public_kms_technology_744000154652029",
+      "title": "Fresher Full-stack Test Engineer (QA/QC/Tester)",
+      "score": 0.41000000000000003,
+      "matched_skills": [
+        "Java",
+        "Playwright"
+      ]
+    },
+    {
+      "job_id": "jobs/public_kms_technology_744000154600800",
+      "title": "Senior Test Engineer (Manual/ QA/ QC)",
+      "score": 0.30000000000000004,
+      "matched_skills": [
+        "Playwright"
+      ]
+    },
+    {
+      "job_id": "jobs/public_grab_744000151320451",
+      "title": "Senior Software Engineer, Backend",
+      "score": 0.26,
+      "matched_skills": [
+        "PostgreSQL",
+        "AWS"
+      ]
+    },
+    {
+      "job_id": "jobs/public_grab_744000153410339",
+      "title": "Senior Software Engineer, Customer Data Platform",
+      "score": 0.21333333333333335,
+      "matched_skills": [
+        "AWS"
+      ]
+    }
+  ],
+  "keyword_search_counts": {
+    "Java": 5,
+    "PostgreSQL": 3,
+    "AWS": 8
+  }
+}

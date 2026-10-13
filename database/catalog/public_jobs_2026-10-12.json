@@ -1,0 +1,1484 @@
+{
+  "format_version": 1,
+  "retrieved_at": "2026-10-12T02:37:38.410Z",
+  "companies": [
+    {
+      "id": "public_kms_technology",
+      "name": "KMS Technology",
+      "slug": "kms-technology",
+      "source": {
+        "url": "https://careers.kms-technology.com/",
+        "publisher": "KMS Technology",
+        "external_id": "KMSTechnology1",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Công ty công khai; không tạo membership hoặc nhân viên đã xác minh."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group",
+      "name": "Bosch Group",
+      "slug": "bosch-group",
+      "source": {
+        "url": "https://www.bosch.com.vn/careers/",
+        "publisher": "Bosch Group",
+        "external_id": "BoschGroup",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Công ty công khai; không tạo membership hoặc nhân viên đã xác minh."
+        ]
+      }
+    },
+    {
+      "id": "public_grab",
+      "name": "Grab",
+      "slug": "grab",
+      "source": {
+        "url": "https://www.grab.careers/en/vietnam-openings/",
+        "publisher": "Grab",
+        "external_id": "Grab",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Công ty công khai; không tạo membership hoặc nhân viên đã xác minh."
+        ]
+      }
+    }
+  ],
+  "skills": [
+    {
+      "slug": "python",
+      "name": "Python",
+      "category": "language",
+      "source": {
+        "url": "https://docs.python.org/3/",
+        "publisher": "Python documentation",
+        "external_id": "python",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "sql",
+      "name": "SQL",
+      "category": "database",
+      "source": {
+        "url": "https://www.postgresql.org/docs/current/sql.html",
+        "publisher": "SQL documentation",
+        "external_id": "sql",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "arangodb",
+      "name": "ArangoDB",
+      "category": "database",
+      "source": {
+        "url": "https://docs.arango.ai/",
+        "publisher": "ArangoDB documentation",
+        "external_id": "arangodb",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "react",
+      "name": "React",
+      "category": "frontend",
+      "source": {
+        "url": "https://react.dev/",
+        "publisher": "React documentation",
+        "external_id": "react",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "typescript",
+      "name": "TypeScript",
+      "category": "language",
+      "source": {
+        "url": "https://www.typescriptlang.org/docs/",
+        "publisher": "TypeScript documentation",
+        "external_id": "typescript",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "javascript",
+      "name": "JavaScript",
+      "category": "language",
+      "source": {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "publisher": "JavaScript documentation",
+        "external_id": "javascript",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "java",
+      "name": "Java",
+      "category": "language",
+      "source": {
+        "url": "https://docs.oracle.com/en/java/",
+        "publisher": "Java documentation",
+        "external_id": "java",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "go",
+      "name": "Go",
+      "category": "language",
+      "source": {
+        "url": "https://go.dev/doc/",
+        "publisher": "Go documentation",
+        "external_id": "go",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "cpp",
+      "name": "C++",
+      "category": "language",
+      "source": {
+        "url": "https://isocpp.org/",
+        "publisher": "C++ documentation",
+        "external_id": "cpp",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "csharp",
+      "name": "C#",
+      "category": "language",
+      "source": {
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+        "publisher": "C# documentation",
+        "external_id": "csharp",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "dotnet",
+      "name": ".NET",
+      "category": "framework",
+      "source": {
+        "url": "https://learn.microsoft.com/en-us/dotnet/",
+        "publisher": ".NET documentation",
+        "external_id": "dotnet",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "nodejs",
+      "name": "Node.js",
+      "category": "runtime",
+      "source": {
+        "url": "https://nodejs.org/en/learn",
+        "publisher": "Node.js documentation",
+        "external_id": "nodejs",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "nextjs",
+      "name": "Next.js",
+      "category": "frontend",
+      "source": {
+        "url": "https://nextjs.org/docs",
+        "publisher": "Next.js documentation",
+        "external_id": "nextjs",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "vue",
+      "name": "Vue.js",
+      "category": "frontend",
+      "source": {
+        "url": "https://vuejs.org/guide/introduction.html",
+        "publisher": "Vue.js documentation",
+        "external_id": "vue",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "angular",
+      "name": "Angular",
+      "category": "frontend",
+      "source": {
+        "url": "https://angular.dev/",
+        "publisher": "Angular documentation",
+        "external_id": "angular",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "postgresql",
+      "name": "PostgreSQL",
+      "category": "database",
+      "source": {
+        "url": "https://www.postgresql.org/docs/",
+        "publisher": "PostgreSQL documentation",
+        "external_id": "postgresql",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "mysql",
+      "name": "MySQL",
+      "category": "database",
+      "source": {
+        "url": "https://dev.mysql.com/doc/",
+        "publisher": "MySQL documentation",
+        "external_id": "mysql",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "mongodb",
+      "name": "MongoDB",
+      "category": "database",
+      "source": {
+        "url": "https://www.mongodb.com/docs/",
+        "publisher": "MongoDB documentation",
+        "external_id": "mongodb",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "redis",
+      "name": "Redis",
+      "category": "database",
+      "source": {
+        "url": "https://redis.io/docs/latest/",
+        "publisher": "Redis documentation",
+        "external_id": "redis",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "docker",
+      "name": "Docker",
+      "category": "devops",
+      "source": {
+        "url": "https://docs.docker.com/",
+        "publisher": "Docker documentation",
+        "external_id": "docker",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "kubernetes",
+      "name": "Kubernetes",
+      "category": "devops",
+      "source": {
+        "url": "https://kubernetes.io/docs/home/",
+        "publisher": "Kubernetes documentation",
+        "external_id": "kubernetes",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "git",
+      "name": "Git",
+      "category": "tool",
+      "source": {
+        "url": "https://git-scm.com/doc",
+        "publisher": "Git documentation",
+        "external_id": "git",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "linux",
+      "name": "Linux",
+      "category": "platform",
+      "source": {
+        "url": "https://docs.kernel.org/",
+        "publisher": "Linux documentation",
+        "external_id": "linux",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "aws",
+      "name": "AWS",
+      "category": "cloud",
+      "source": {
+        "url": "https://docs.aws.amazon.com/",
+        "publisher": "AWS documentation",
+        "external_id": "aws",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "azure",
+      "name": "Microsoft Azure",
+      "category": "cloud",
+      "source": {
+        "url": "https://learn.microsoft.com/en-us/azure/",
+        "publisher": "Microsoft Azure documentation",
+        "external_id": "azure",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "gcp",
+      "name": "Google Cloud",
+      "category": "cloud",
+      "source": {
+        "url": "https://cloud.google.com/docs",
+        "publisher": "Google Cloud documentation",
+        "external_id": "gcp",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "selenium",
+      "name": "Selenium",
+      "category": "testing",
+      "source": {
+        "url": "https://www.selenium.dev/documentation/",
+        "publisher": "Selenium documentation",
+        "external_id": "selenium",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    },
+    {
+      "slug": "playwright",
+      "name": "Playwright",
+      "category": "testing",
+      "source": {
+        "url": "https://playwright.dev/docs/intro",
+        "publisher": "Playwright documentation",
+        "external_id": "playwright",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Tên công nghệ từ tài liệu chính thức; không sao chép toàn văn tài liệu."
+        ]
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "id": "public_kms_technology_744000154652029",
+      "company_id": "public_kms_technology",
+      "title": "Fresher Full-stack Test Engineer (QA/QC/Tester)",
+      "description": "Vị trí tuyển dụng tại KMS Technology, địa điểm Ho Chi Minh City, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "junior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T11:27:02.062Z",
+      "skill_slugs": [
+        "python",
+        "javascript",
+        "java",
+        "selenium",
+        "playwright"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000154652029-fresher-full-stack-test-engineer-qa-qc-tester-",
+        "publisher": "KMS Technology",
+        "external_id": "744000154652029",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_kms_technology_744000154600800",
+      "company_id": "public_kms_technology",
+      "title": "Senior Test Engineer (Manual/ QA/ QC)",
+      "description": "Vị trí tuyển dụng tại KMS Technology, địa điểm Ho Chi Minh City, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T07:15:38.308Z",
+      "skill_slugs": [
+        "selenium",
+        "playwright"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000154600800-senior-test-engineer-manual-qa-qc-",
+        "publisher": "KMS Technology",
+        "external_id": "744000154600800",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_kms_technology_744000154588848",
+      "company_id": "public_kms_technology",
+      "title": "Test Engineer (Manual/QA/QC), based in Da Nang",
+      "description": "Vị trí tuyển dụng tại KMS Technology, địa điểm Da Nang, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "da nang",
+      "work_mode": "hybrid",
+      "level": "unspecified",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T05:30:39.769Z",
+      "skill_slugs": [
+        "sql",
+        "selenium"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000154588848-test-engineer-manual-qa-qc-based-in-da-nang",
+        "publisher": "KMS Technology",
+        "external_id": "744000154588848",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_kms_technology_744000154586668",
+      "company_id": "public_kms_technology",
+      "title": "Test Engineer (Manual/QA/QC)",
+      "description": "Vị trí tuyển dụng tại KMS Technology, địa điểm Ho Chi Minh City, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "unspecified",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T04:57:59.585Z",
+      "skill_slugs": [
+        "sql",
+        "selenium"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000154586668-test-engineer-manual-qa-qc-",
+        "publisher": "KMS Technology",
+        "external_id": "744000154586668",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_kms_technology_744000152103869",
+      "company_id": "public_kms_technology",
+      "title": "Senior Full-stack Software Engineer (Node.js/ TypeScript)",
+      "description": "Vị trí tuyển dụng tại KMS Technology, địa điểm Ho Chi Minh City, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-09-28T08:12:51.349Z",
+      "skill_slugs": [
+        "react",
+        "typescript",
+        "javascript",
+        "nodejs",
+        "nextjs",
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000152103869-senior-full-stack-software-engineer-node-js-typescript-",
+        "publisher": "KMS Technology",
+        "external_id": "744000152103869",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154648424",
+      "company_id": "public_bosch_group",
+      "title": "Automotive Embedded Software Engineer / Software Architect / Solution Architect",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Hanoi, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hanoi",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T11:15:56.744Z",
+      "skill_slugs": [
+        "cpp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154648424-automotive-embedded-software-engineer-software-architect-solution-architect",
+        "publisher": "Bosch Group",
+        "external_id": "744000154648424",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154641689",
+      "company_id": "public_bosch_group",
+      "title": "[EPM] SiL/HiL Embedded Engineer (C++) (Joining Bonus)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Ho Chi Minh city, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "unspecified",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T10:22:31.285Z",
+      "skill_slugs": [
+        "python",
+        "cpp",
+        "docker",
+        "git"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154641689--epm-sil-hil-embedded-engineer-c-joining-bonus-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154641689",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154623580",
+      "company_id": "public_bosch_group",
+      "title": "[EAE] Automotive Embedded System Architect (with Joining Bonus)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Ho Chi Minh city, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T09:02:21.961Z",
+      "skill_slugs": [],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154623580--eae-automotive-embedded-system-architect-with-joining-bonus-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154623580",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154583399",
+      "company_id": "public_bosch_group",
+      "title": "[EMN] Electrical Design Engineer Intern (6-month fulltime Internship)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Thành phố Hồ Chí Minh, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T04:17:35.309Z",
+      "skill_slugs": [],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154583399--emn-electrical-design-engineer-intern-6-month-fulltime-internship-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154583399",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154575390",
+      "company_id": "public_bosch_group",
+      "title": "[EPC]  Embedded Software Engineer _ In-Vehicle Network Communication for EU Project (Fresher)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Ho Chi Minh city, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-09T02:47:42.742Z",
+      "skill_slugs": [],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154575390--epc-embedded-software-engineer-in-vehicle-network-communication-for-eu-project-fresher-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154575390",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154384809",
+      "company_id": "public_bosch_group",
+      "title": "[EAA] Embedded Software Test Engineer Intern (C/C++)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Ho Chi Minh, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-08T09:14:41.070Z",
+      "skill_slugs": [
+        "cpp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154384809--eaa-embedded-software-test-engineer-intern-c-c-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154384809",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154369750",
+      "company_id": "public_bosch_group",
+      "title": "[EDT] Senior System Test Engineer/Test Function Lead",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Thành phố Hồ Chí Minh, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-08T08:11:10.040Z",
+      "skill_slugs": [
+        "python",
+        "git",
+        "linux"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154369750--edt-senior-system-test-engineer-test-function-lead",
+        "publisher": "Bosch Group",
+        "external_id": "744000154369750",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154350000",
+      "company_id": "public_bosch_group",
+      "title": "[SX/EIT-MM] Component & System Test Engineer (1-year contract)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Tân Bình, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "Tân Bình",
+      "work_mode": "unspecified",
+      "level": "unspecified",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-08T06:08:54.066Z",
+      "skill_slugs": [
+        "python",
+        "cpp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154350000--sx-eit-mm-component-system-test-engineer-1-year-contract-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154350000",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154344130",
+      "company_id": "public_bosch_group",
+      "title": "[SX/EIT-MM] Embedded C++ Engineer (1-year contract)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Thành phố Hồ Chí Minh, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "unspecified",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-08T04:53:59.410Z",
+      "skill_slugs": [
+        "cpp",
+        "git"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154344130--sx-eit-mm-embedded-c-engineer-1-year-contract-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154344130",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154302375",
+      "company_id": "public_bosch_group",
+      "title": "[EPM] Software Integration & DevOps Engineer - Azure Cloud Engineer",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Thành phố Hồ Chí Minh, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "unspecified",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-08T03:11:46.707Z",
+      "skill_slugs": [
+        "docker",
+        "kubernetes",
+        "azure"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154302375--epm-software-integration-devops-engineer-azure-cloud-engineer",
+        "publisher": "Bosch Group",
+        "external_id": "744000154302375",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154236871",
+      "company_id": "public_bosch_group",
+      "title": "[BDO] Software Developer Intern (.NET & Angular)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Ho Chi Minh, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-08T01:39:54.164Z",
+      "skill_slugs": [
+        "sql",
+        "typescript",
+        "csharp",
+        "dotnet",
+        "angular",
+        "git"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154236871--bdo-software-developer-intern-net-angular-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154236871",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_bosch_group_744000154052649",
+      "company_id": "public_bosch_group",
+      "title": "[ETA] Fresher Embedded Software Engineer (C focused)",
+      "description": "Vị trí tuyển dụng tại Bosch Group, địa điểm Ho Chi Minh city, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "junior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-07T09:34:43.804Z",
+      "skill_slugs": [],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154052649--eta-fresher-embedded-software-engineer-c-focused-",
+        "publisher": "Bosch Group",
+        "external_id": "744000154052649",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000154310950",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer, Backend - Agent Exprience",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-08T03:22:47.281Z",
+      "skill_slugs": [
+        "python",
+        "java",
+        "go",
+        "cpp",
+        "csharp",
+        "nodejs"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000154310950-senior-software-engineer-backend-agent-exprience",
+        "publisher": "Grab",
+        "external_id": "744000154310950",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000154310252",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer, Backend",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-08T03:22:14.448Z",
+      "skill_slugs": [
+        "python",
+        "java",
+        "go",
+        "cpp",
+        "csharp",
+        "nodejs"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000154310252-senior-software-engineer-backend",
+        "publisher": "Grab",
+        "external_id": "744000154310252",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000154004729",
+      "company_id": "public_grab",
+      "title": "Lead Security Engineer, Red Team & Threat Intel",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-07T04:56:12.354Z",
+      "skill_slugs": [
+        "linux"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000154004729-lead-security-engineer-red-team-threat-intel",
+        "publisher": "Grab",
+        "external_id": "744000154004729",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000153691564",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer, Backend",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-06T08:26:30.974Z",
+      "skill_slugs": [
+        "go",
+        "postgresql",
+        "mysql",
+        "git",
+        "aws",
+        "gcp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000153691564-senior-software-engineer-backend",
+        "publisher": "Grab",
+        "external_id": "744000153691564",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000153692519",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer, Backend",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-06T08:26:16.419Z",
+      "skill_slugs": [
+        "go",
+        "postgresql",
+        "mysql",
+        "git",
+        "aws",
+        "gcp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000153692519-senior-software-engineer-backend",
+        "publisher": "Grab",
+        "external_id": "744000153692519",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000153410339",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer, Customer Data Platform",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": 5,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-05T06:30:38.421Z",
+      "skill_slugs": [
+        "python",
+        "kubernetes",
+        "aws"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000153410339-senior-software-engineer-customer-data-platform",
+        "publisher": "Grab",
+        "external_id": "744000153410339",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000153089529",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer in Test",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-10-02T03:25:03.527Z",
+      "skill_slugs": [
+        "python",
+        "go"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000153089529-senior-software-engineer-in-test",
+        "publisher": "Grab",
+        "external_id": "744000153089529",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000151320451",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer, Backend",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": 4,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-09-23T08:21:46.074Z",
+      "skill_slugs": [
+        "go",
+        "postgresql",
+        "mysql",
+        "aws",
+        "gcp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000151320451-senior-software-engineer-backend",
+        "publisher": "Grab",
+        "external_id": "744000151320451",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000150981069",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer, Mobile (iOS)",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-09-22T09:40:52.067Z",
+      "skill_slugs": [
+        "cpp",
+        "linux"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000150981069-senior-software-engineer-mobile-ios-",
+        "publisher": "Grab",
+        "external_id": "744000150981069",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000150666319",
+      "company_id": "public_grab",
+      "title": "Lead Product Manager, Data Platform",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "lead",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-09-21T11:11:19.362Z",
+      "skill_slugs": [
+        "sql",
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000150666319-lead-product-manager-data-platform",
+        "publisher": "Grab",
+        "external_id": "744000150666319",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000150349040",
+      "company_id": "public_grab",
+      "title": "Senior DevOps Engineer, Streaming Platform",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-09-18T11:39:34.676Z",
+      "skill_slugs": [
+        "python",
+        "java",
+        "go",
+        "docker",
+        "kubernetes",
+        "aws"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000150349040-senior-devops-engineer-streaming-platform",
+        "publisher": "Grab",
+        "external_id": "744000150349040",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    },
+    {
+      "id": "public_grab_744000150018969",
+      "company_id": "public_grab",
+      "title": "Senior Software Engineer, Fullstack",
+      "description": "Vị trí tuyển dụng tại Grab, địa điểm HCMC, Việt Nam. Thông tin được ghi nhận từ trang tuyển dụng công khai của doanh nghiệp.\n\nNội dung tại đây là bản tóm tắt thông tin đã chuẩn hóa. Hãy mở tin gốc để xem nhiệm vụ, điều kiện, quyền lợi và cách ứng tuyển đầy đủ.",
+      "location": "hcm",
+      "work_mode": "unspecified",
+      "level": "senior",
+      "min_experience_years": null,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "VND",
+      "published_at": "2026-09-17T06:35:18.940Z",
+      "skill_slugs": [
+        "sql",
+        "nodejs",
+        "vue",
+        "docker",
+        "kubernetes",
+        "git",
+        "aws",
+        "gcp"
+      ],
+      "source": {
+        "url": "https://jobs.smartrecruiters.com/Grab/744000150018969-senior-software-engineer-fullstack",
+        "publisher": "Grab",
+        "external_id": "744000150018969",
+        "retrieved_at": "2026-10-12T02:37:38.410Z",
+        "notes": [
+          "Chỉ nhập tin public/active tại Việt Nam ở thời điểm ghi nhận; trạng thái có thể thay đổi.",
+          "Địa điểm được chuẩn hóa; cấp độ quy đổi từ tiêu đề khi nhận diện được.",
+          "Kỹ năng nhận diện từ từ khóa trong qualifications, chỉ là tín hiệu ưu tiên, không phải toàn bộ yêu cầu bắt buộc.",
+          "Lương không được nhập; kinh nghiệm chỉ ghi khi nhận diện được yêu cầu số năm rõ ràng. Xem tin gốc."
+        ]
+      }
+    }
+  ],
+  "receipts": [
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/KMSTechnology1/postings?country=vn&limit=100",
+      "sha256": "4aa555e645e1020b51ca58e13b994b4509c3ff179d88cc7f03a8e16fa07488ef",
+      "total_found": 13,
+      "selected": 5
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings?country=vn&limit=100",
+      "sha256": "8b2aa6b2a483a5223ff18778fb5e6fd8dfccad88dd270cd549613d65256bf20d",
+      "total_found": 273,
+      "selected": 12
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings?country=vn&limit=100",
+      "sha256": "8bdd5b1ff79863715c82d453dbef4f3313998ae5b74660026fa0a1f0afbc2ae2",
+      "total_found": 62,
+      "selected": 12
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/KMSTechnology1/postings/744000154652029",
+      "sha256": "967160be137cb9717b458bd9148df2ce1a1965f5a35ed8702c35320f1cf729f7"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/KMSTechnology1/postings/744000154600800",
+      "sha256": "1e07dd88759adde7b59b7d22c50b9a1c7da6879c0bc086dc6fbdc3933facca8f"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/KMSTechnology1/postings/744000154588848",
+      "sha256": "04ccdd264f09ed9d818e19cffea0608e05f7705f0f97ae0b2c2ecd766531280e"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/KMSTechnology1/postings/744000154586668",
+      "sha256": "52b3be4769a01f56af889de05164334f011ef0e11b7d4512243e448702c05a91"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/KMSTechnology1/postings/744000152103869",
+      "sha256": "e08a1c6d3e417e6a553148b9f0514fab9d3b5332f133d3479b1d1065cfc20a9e"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154648424",
+      "sha256": "176eef6ecfaaa04d4ba28bc3a401985ec5e004717d21572591f12f39e5b48497"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154641689",
+      "sha256": "6505f159cd2642c32660f0b8ca1fbe01616c7a280e46dc704905a0f1d5b6b96a"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154623580",
+      "sha256": "ecdbcf22e8df14fe9893cded775ea9d2ec5aa8bcefbe1260358a3ba23fb67b7b"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154583399",
+      "sha256": "54435d9c8034fd17474ebb02c4062d41015d0f54619568940decb7df8ea51883"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154575390",
+      "sha256": "6457f94c35957e3f5548480f1f8c97cf6c5c4e398c7274cf23a51c4a4752a4d4"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154384809",
+      "sha256": "7b17b691140c229f2057165510aecd30f7614110b25b036122892ff3eef5c986"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154369750",
+      "sha256": "2142cbabbff59eb880dfc8e0784d88f8ff5d49dfcf5fdf43f9829d9b23925c85"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154350000",
+      "sha256": "99235a18906db592c5a5c65bd2a7f49e00c49a36b6f23af7f2111c3f8276e274"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154344130",
+      "sha256": "d6bf4910c76e9a1dc4c4978a47a9e934b2c82a1451883fbc7277cc41af18a05a"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154302375",
+      "sha256": "deebbef14dbc5cea2ebaf6329d847139918848e0f4e3971612d37396642b28e0"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154236871",
+      "sha256": "d2f970b77421a133dc7561114c5f083db8802625674afbf4b96c111bc650d601"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000154052649",
+      "sha256": "5cc8d5a96459ffcf066c3114e41319041fd171490ee632ae8d1915876aacef91"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000154310950",
+      "sha256": "b7389a00a4c56caf0a54f674579d9d8662d4686a34df961de0be76fea75df210"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000154310252",
+      "sha256": "9ff4550989250bdc56b926fe8ccaf2dd020b4f50b0cb6cf862af783c90c7b184"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000154004729",
+      "sha256": "329ceca0919a1a1144555eeda7df0b2e5421f9ed87a4f6326a35e3735b9561a1"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000153691564",
+      "sha256": "bf543d01081917b3d6973c9dae2ec076fd5a607be4d58ad137433a44fa35bba8"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000153692519",
+      "sha256": "1d796aa23bce0c3fc927dfd43ba5354cafdad077319ae90f1a6e28eefde2bb81"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000153410339",
+      "sha256": "bf3862d30a238142b86b22a33b43e7a30f735bb03ac5aa981b62e7f466ba47c0"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000153089529",
+      "sha256": "79f97a9086d8b341e404063c467371211d00fe9833f8c6cccd44f3eb570c81c7"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000151320451",
+      "sha256": "521ac0422a381871b45456fa2da4a5151328f2a57e7dc8d3d0fdd86633514c14"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000150981069",
+      "sha256": "c716471b17b455e2c436d28e8fec36484f7fb73907fc7b6f7dcc70192e16665a"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000150666319",
+      "sha256": "84125ea0ab07f6b53b06915c4c0b92c46754e7f163a2867cd7fd2ba3fa3b7d3c"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000150349040",
+      "sha256": "8f2c2393eddec5b5645bdb1cd107ccd23b8f1d7f65ec4b717e613403ed05da99"
+    },
+    {
+      "url": "https://api.smartrecruiters.com/v1/companies/Grab/postings/744000150018969",
+      "sha256": "4b598c6e662079f372d5f47ea87dd3141ec01f801ecebb0e31c2f9d7ad3bba4f"
+    }
+  ]
+}

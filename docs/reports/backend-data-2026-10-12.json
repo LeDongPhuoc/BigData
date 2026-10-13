@@ -1,0 +1,692 @@
+{
+  "client_date": "2026-10-12",
+  "observed_at_utc": "2026-10-12T02:19:54.925Z",
+  "observed_at_asia_saigon": "2026-10-12T09:19:54.925000+07:00",
+  "database": "job_referral",
+  "engine": "ArangoDB",
+  "version": "3.12.12",
+  "scope": "Non-system collections only; read-only transaction. Counts may change after this snapshot.",
+  "collections": [
+    {
+      "collection": "applications",
+      "type": "document",
+      "count": 1,
+      "matching_seed_ids": 1,
+      "other_ids": 0
+    },
+    {
+      "collection": "audit_logs",
+      "type": "document",
+      "count": 8,
+      "matching_seed_ids": 7,
+      "other_ids": 1
+    },
+    {
+      "collection": "auth_credentials",
+      "type": "document",
+      "count": 1,
+      "matching_seed_ids": 0,
+      "other_ids": 1
+    },
+    {
+      "collection": "auth_families",
+      "type": "document",
+      "count": 1,
+      "matching_seed_ids": 0,
+      "other_ids": 1
+    },
+    {
+      "collection": "auth_sessions",
+      "type": "document",
+      "count": 1,
+      "matching_seed_ids": 0,
+      "other_ids": 1
+    },
+    {
+      "collection": "companies",
+      "type": "document",
+      "count": 3,
+      "matching_seed_ids": 3,
+      "other_ids": 0
+    },
+    {
+      "collection": "connection_controls",
+      "type": "document",
+      "count": 0,
+      "matching_seed_ids": 0,
+      "other_ids": 0
+    },
+    {
+      "collection": "connections",
+      "type": "edge",
+      "count": 18,
+      "matching_seed_ids": 18,
+      "other_ids": 0
+    },
+    {
+      "collection": "has_skill",
+      "type": "edge",
+      "count": 4,
+      "matching_seed_ids": 4,
+      "other_ids": 0
+    },
+    {
+      "collection": "idempotency_records",
+      "type": "document",
+      "count": 0,
+      "matching_seed_ids": 0,
+      "other_ids": 0
+    },
+    {
+      "collection": "job_at_company",
+      "type": "edge",
+      "count": 6,
+      "matching_seed_ids": 6,
+      "other_ids": 0
+    },
+    {
+      "collection": "job_requires_skill",
+      "type": "edge",
+      "count": 7,
+      "matching_seed_ids": 7,
+      "other_ids": 0
+    },
+    {
+      "collection": "jobs",
+      "type": "document",
+      "count": 6,
+      "matching_seed_ids": 6,
+      "other_ids": 0
+    },
+    {
+      "collection": "migration_locks",
+      "type": "document",
+      "count": 0,
+      "matching_seed_ids": 0,
+      "other_ids": 0
+    },
+    {
+      "collection": "notifications",
+      "type": "document",
+      "count": 7,
+      "matching_seed_ids": 7,
+      "other_ids": 0
+    },
+    {
+      "collection": "rate_limits",
+      "type": "document",
+      "count": 9,
+      "matching_seed_ids": 0,
+      "other_ids": 9
+    },
+    {
+      "collection": "referral_requests",
+      "type": "document",
+      "count": 7,
+      "matching_seed_ids": 7,
+      "other_ids": 0
+    },
+    {
+      "collection": "schema_migrations",
+      "type": "document",
+      "count": 4,
+      "matching_seed_ids": 0,
+      "other_ids": 4
+    },
+    {
+      "collection": "skills",
+      "type": "document",
+      "count": 4,
+      "matching_seed_ids": 4,
+      "other_ids": 0
+    },
+    {
+      "collection": "users",
+      "type": "document",
+      "count": 25,
+      "matching_seed_ids": 24,
+      "other_ids": 1
+    },
+    {
+      "collection": "works_at",
+      "type": "edge",
+      "count": 12,
+      "matching_seed_ids": 12,
+      "other_ids": 0
+    }
+  ],
+  "total_records": 124,
+  "edge_records": 47,
+  "document_records": 77,
+  "matching_seed_records": 106,
+  "other_records": 18,
+  "statuses": {
+    "users": [
+      {
+        "value": "active",
+        "count": 24
+      },
+      {
+        "value": "suspended",
+        "count": 1
+      }
+    ],
+    "companies": [
+      {
+        "value": "active",
+        "count": 3
+      }
+    ],
+    "jobs": [
+      {
+        "value": "closed",
+        "count": 1
+      },
+      {
+        "value": "open",
+        "count": 5
+      }
+    ],
+    "skills": [
+      {
+        "value": "active",
+        "count": 4
+      }
+    ],
+    "connections": [
+      {
+        "value": "accepted",
+        "count": 15
+      },
+      {
+        "value": "blocked",
+        "count": 1
+      },
+      {
+        "value": "pending",
+        "count": 1
+      },
+      {
+        "value": "rejected",
+        "count": 1
+      }
+    ],
+    "works_at": [
+      {
+        "value": "current",
+        "count": 11
+      },
+      {
+        "value": "ended",
+        "count": 1
+      }
+    ],
+    "applications": [
+      {
+        "value": "submitted",
+        "count": 1
+      }
+    ],
+    "referral_requests": [
+      {
+        "value": "accepted",
+        "count": 1
+      },
+      {
+        "value": "cancelled",
+        "count": 1
+      },
+      {
+        "value": "completed",
+        "count": 1
+      },
+      {
+        "value": "expired",
+        "count": 1
+      },
+      {
+        "value": "pending",
+        "count": 1
+      },
+      {
+        "value": "rejected",
+        "count": 1
+      },
+      {
+        "value": "submitted",
+        "count": 1
+      }
+    ],
+    "auth_sessions": [
+      {
+        "value": "active",
+        "count": 1
+      }
+    ]
+  },
+  "user_roles": [
+    {
+      "value": "candidate",
+      "count": 25
+    },
+    {
+      "value": "referrer",
+      "count": 24
+    }
+  ],
+  "privacy": {
+    "discoverable": [
+      {
+        "value": false,
+        "count": 1
+      },
+      {
+        "value": true,
+        "count": 24
+      }
+    ],
+    "allow_in_paths": [
+      {
+        "value": false,
+        "count": 1
+      },
+      {
+        "value": true,
+        "count": 24
+      }
+    ],
+    "employment_visible": [
+      {
+        "value": false,
+        "count": 1
+      },
+      {
+        "value": true,
+        "count": 24
+      }
+    ],
+    "skills_visible": [
+      {
+        "value": true,
+        "count": 25
+      }
+    ]
+  },
+  "accounts_with_credentials": [
+    {
+      "value": false,
+      "count": 24
+    },
+    {
+      "value": true,
+      "count": 1
+    }
+  ],
+  "seed_accounts_with_credentials": 0,
+  "notifications": [
+    {
+      "read": false,
+      "count": 7
+    }
+  ],
+  "auth_families": [
+    {
+      "revoked": false,
+      "expired": false,
+      "count": 1
+    }
+  ],
+  "refresh_records_by_lifecycle": [
+    {
+      "status": "active",
+      "expired": false,
+      "count": 1
+    }
+  ],
+  "rate_limits": [
+    {
+      "operation": "login",
+      "windows": 8,
+      "requests": 8
+    },
+    {
+      "operation": "register",
+      "windows": 1,
+      "requests": 1
+    }
+  ],
+  "idempotency": [],
+  "audit_actions": [
+    {
+      "value": "auth.register",
+      "count": 1
+    },
+    {
+      "value": "demo.referral.seed",
+      "count": 7
+    }
+  ],
+  "employment": [
+    {
+      "status": "current",
+      "verified": false,
+      "count": 1
+    },
+    {
+      "status": "current",
+      "verified": true,
+      "count": 10
+    },
+    {
+      "status": "ended",
+      "verified": true,
+      "count": 1
+    }
+  ],
+  "skill_links": [
+    {
+      "verified": false,
+      "count": 4
+    }
+  ],
+  "job_skill_links": [
+    {
+      "value": "preferred",
+      "count": 1
+    },
+    {
+      "value": "required",
+      "count": 6
+    }
+  ],
+  "connections_soft_deleted": [
+    {
+      "deleted": false,
+      "count": 18
+    }
+  ],
+  "company_details": [
+    {
+      "id": "demo_z",
+      "name": "Demo Isolated Z",
+      "status": "active",
+      "jobs": [
+        {
+          "status": "open",
+          "count": 1
+        }
+      ],
+      "employment": [],
+      "members": 0,
+      "verified_members": 0
+    },
+    {
+      "id": "demo_y",
+      "name": "Demo Remote Y",
+      "status": "active",
+      "jobs": [
+        {
+          "status": "open",
+          "count": 2
+        }
+      ],
+      "employment": [
+        {
+          "status": "current",
+          "verified": true,
+          "count": 1
+        }
+      ],
+      "members": 0,
+      "verified_members": 0
+    },
+    {
+      "id": "demo_x",
+      "name": "Demo Tech X",
+      "status": "active",
+      "jobs": [
+        {
+          "status": "closed",
+          "count": 1
+        },
+        {
+          "status": "open",
+          "count": 2
+        }
+      ],
+      "employment": [
+        {
+          "status": "current",
+          "verified": false,
+          "count": 1
+        },
+        {
+          "status": "current",
+          "verified": true,
+          "count": 9
+        },
+        {
+          "status": "ended",
+          "verified": true,
+          "count": 1
+        }
+      ],
+      "members": 1,
+      "verified_members": 1
+    }
+  ],
+  "job_details": [
+    {
+      "id": "demo_backend",
+      "title": "Backend Developer (demo)",
+      "status": "open",
+      "company": "Demo Tech X",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "mid",
+      "required_skill_links": 3
+    },
+    {
+      "id": "demo_closed",
+      "title": "Closed Backend (demo)",
+      "status": "closed",
+      "company": "Demo Tech X",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "mid",
+      "required_skill_links": 1
+    },
+    {
+      "id": "demo_frontend",
+      "title": "Frontend Developer (demo)",
+      "status": "open",
+      "company": "Demo Tech X",
+      "location": "hcm",
+      "work_mode": "hybrid",
+      "level": "mid",
+      "required_skill_links": 1
+    },
+    {
+      "id": "demo_isolated",
+      "title": "Isolated Python (demo)",
+      "status": "open",
+      "company": "Demo Isolated Z",
+      "location": "hcm",
+      "work_mode": "remote",
+      "level": "mid",
+      "required_skill_links": 1
+    },
+    {
+      "id": "demo_no_requirements",
+      "title": "General Role (demo)",
+      "status": "open",
+      "company": "Demo Remote Y",
+      "location": "hcm",
+      "work_mode": "remote",
+      "level": "mid",
+      "required_skill_links": 0
+    },
+    {
+      "id": "demo_remote",
+      "title": "Remote Python (demo)",
+      "status": "open",
+      "company": "Demo Remote Y",
+      "location": "hcm",
+      "work_mode": "remote",
+      "level": "mid",
+      "required_skill_links": 1
+    }
+  ],
+  "skill_details": [
+    {
+      "name": "arango",
+      "status": "active",
+      "user_links": 0,
+      "job_links": 1
+    },
+    {
+      "name": "python",
+      "status": "active",
+      "user_links": 2,
+      "job_links": 4
+    },
+    {
+      "name": "react",
+      "status": "active",
+      "user_links": 1,
+      "job_links": 1
+    },
+    {
+      "name": "sql",
+      "status": "active",
+      "user_links": 1,
+      "job_links": 1
+    }
+  ],
+  "graph_connection_coverage": {
+    "users_with_accepted_connections": 15,
+    "users_without_accepted_connections": 10,
+    "highest_degree": 10,
+    "scope": "Stored accepted/nondeleted edges, before actor privacy/block/status filters"
+  },
+  "employment_dates": [
+    {
+      "status": "current",
+      "verified": false,
+      "started": true,
+      "not_ended": true,
+      "count": 1
+    },
+    {
+      "status": "current",
+      "verified": true,
+      "started": false,
+      "not_ended": true,
+      "count": 1
+    },
+    {
+      "status": "current",
+      "verified": true,
+      "started": true,
+      "not_ended": false,
+      "count": 1
+    },
+    {
+      "status": "current",
+      "verified": true,
+      "started": true,
+      "not_ended": true,
+      "count": 8
+    },
+    {
+      "status": "ended",
+      "verified": true,
+      "started": true,
+      "not_ended": false,
+      "count": 1
+    }
+  ],
+  "registered_account_activity": {
+    "users": 1,
+    "connections": 0,
+    "skill_links": 0,
+    "employment_links": 0,
+    "referral_participations": 0
+  },
+  "migrations": [
+    {
+      "version": 1,
+      "status": "applied"
+    },
+    {
+      "version": 2,
+      "status": "applied"
+    },
+    {
+      "version": 3,
+      "status": "applied"
+    },
+    {
+      "version": 4,
+      "status": "applied"
+    }
+  ],
+  "integrity_issues": [],
+  "graphs": [
+    {
+      "name": "jobReferralGraph",
+      "edge_definitions": [
+        {
+          "edge_collection": "connections",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "users"
+          ]
+        },
+        {
+          "edge_collection": "has_skill",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "skills"
+          ]
+        },
+        {
+          "edge_collection": "job_at_company",
+          "from_vertex_collections": [
+            "jobs"
+          ],
+          "to_vertex_collections": [
+            "companies"
+          ]
+        },
+        {
+          "edge_collection": "job_requires_skill",
+          "from_vertex_collections": [
+            "jobs"
+          ],
+          "to_vertex_collections": [
+            "skills"
+          ]
+        },
+        {
+          "edge_collection": "works_at",
+          "from_vertex_collections": [
+            "users"
+          ],
+          "to_vertex_collections": [
+            "companies"
+          ]
+        }
+      ]
+    }
+  ],
+  "indexes": {
+    "total": 57,
+    "custom": 31
+  },
+  "disposable_test_databases_remaining": 0
+}

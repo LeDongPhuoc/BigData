@@ -1,0 +1,10 @@
+// @include actor.aql
+LET company_id = @company_id
+LET company = DOCUMENT(company_id)
+FILTER company != null AND company.status == "active"
+LET employees = (
+  // @include employees_rows.aql
+)
+FOR employee IN employees
+  LIMIT @offset, @limit
+  RETURN employee
